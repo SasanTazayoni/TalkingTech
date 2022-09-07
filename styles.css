@@ -162,11 +162,10 @@ h1 {
 }
 
 @media screen and (max-width: 480px) {
-
     .icon--right,
     .icon--left {
-        height: 30px;
-        width: 30px;
+        height: 25px;
+        width: 25px;
     }
 }
 
@@ -180,11 +179,10 @@ h1 {
 }
 
 @media screen and (min-width: 768px) {
-
     .icon--right,
     .icon--left {
-        height: 50px;
-        width: 50px;
+        height: 40px;
+        width: 40px;
     }
 }
 
@@ -423,11 +421,11 @@ h1 {
 
 @media screen and (min-width: 768px) {
     .carousel__button.prev {
-        left: -80px;
+        left: -60px;
     }
 
     .carousel__button.next {
-        right: -80px;
+        right: -60px;
     }
 }
 
@@ -547,7 +545,7 @@ h1 {
     }
 
         .testimonial-text {
-            padding: 0.5rem;   
+            padding: 1rem;   
         }
 }
 
