@@ -1,0 +1,373 @@
+:root {
+    --color-primary: #fff;
+    --color-secondary: #909994;
+    --color-secondary-hover: #bcc3bf;
+    --color-tertiary: #3e4249;
+    --color-tertiary-hover: #2D2F34;
+    --color-headings: #2D2F34;
+    --color-body: #2D2F34;
+}
+
+/* #34373d */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-secondary);
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Headings */
+
+h1 {
+    color: var(--color-headings);
+    line-height: 1.1;
+    margin: 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 359px) {
+    h1 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    h1 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 42px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 60px;
+    }
+}
+
+/* Icons */
+
+.icon--left {
+    cursor: pointer;
+    fill: var(--color-tertiary);
+    height: 40px;
+    opacity: 0.6;
+    transform: rotate(90deg);
+    transition: all 0.3s;
+    width: 40px;
+}
+
+.icon--right {
+    cursor: pointer;
+    fill: var(--color-tertiary);
+    height: 40px;
+    opacity: 0.6;
+    transform: rotate(-90deg);
+    transition: all 0.3s;
+    width: 40px;
+}
+
+.icon--left:hover,
+.icon--right:hover {
+    fill: var(--color-tertiary-hover);
+}
+
+.icon--left:hover {
+    transform: rotate(90deg);
+}
+
+.icon--right:hover {
+    transform: rotate(-90deg);
+}
+
+@media screen and (max-width: 300px) {
+
+    .icon--right,
+    .icon--left {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .icon--right,
+    .icon--left {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .icon--right,
+    .icon--left {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .icon--right,
+    .icon--left {
+        height: 60px;
+        width: 60px;
+    }
+}
+
+/* Carousel */
+
+.carousel__container {
+    border-radius: 100%;
+    margin-top: 30px;
+    padding: 80px;
+}
+
+.carousel {
+    box-shadow: 0 0 20px 1px #acacac;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+    margin: 0 auto;
+    max-width: 1000px;
+    position: relative;
+}
+
+.carousel__header {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -15%;
+}
+
+.slide__title {
+    opacity: 0;
+    position: absolute;
+    width: max-content;
+}
+
+.slide__title[data-active] {
+    opacity: 1;
+}
+
+.carousel>ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 0.3s opacity ease-in-out;
+    transition-delay: 0.3s;
+}
+
+.slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
+}
+
+.slide>img {
+    border-radius: 20px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel__button {
+    position: absolute;
+    background: none;
+    border: none;
+    border-radius: 100%;
+    transform: translateY(-50%);
+    top: 50%;
+    z-index: 2;
+}
+
+.carousel__button.prev {
+    left: -70px;
+}
+
+.carousel__button.next {
+    right: -70px;
+}
+
+.carousel__tabs {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    bottom: 0%;
+    display: flex;
+    height: 50px;
+    padding: 0 20px;
+    position: absolute;
+    z-index: 2;
+}
+
+.carousel__tab {
+    display: inline-block;
+    width: 40px;
+    height: 10px;
+    border: 1px solid var(--color-secondary);
+    margin: 0 10px;
+    border-radius: 5px;
+    background: var(--color-secondary);
+    position: relative;
+    transition: 0.3s all ease-in-out;
+}
+
+.carousel__tab:hover,
+.carousel__tab:hover {
+    color: var(--color-secondary-hover);
+    background-color: var(--color-secondary-hover);
+}
+
+.carousel__tab::after,
+.carousel__tab::before {
+    --scale: 0;
+    color: var(--color-primary);
+    content: attr(data-tooltip);
+    font-size: 15px;
+    padding: 8px;
+    position: absolute;
+    border-radius: 3px;
+    bottom: 20px;
+    left: 50%;
+    width: max-content;
+    background: #333;
+    text-align: center;
+    transform: translateX(-50%) scale(var(--scale));
+    transition: 0.3s transform;
+    transform-origin: bottom center;
+}
+
+.carousel__tab:hover::before {
+    --scale: 1;
+}
+
+.carousel__tab[data-active] {
+    background: var(--color-primary);
+}
+
+@media screen and (max-width: 1023px) {
+    .carousel {
+        height: 50vh;
+        max-width: 800px;
+    }
+
+    .carousel__tab {
+        width: 30px;
+        height: 10px;
+        margin: 0 10px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .carousel__container {
+        margin-top: 0;
+    }
+
+    .carousel {
+        height: 40vh;
+        max-width: 600px;
+    }
+
+    .carousel__button.prev {
+        left: -55px;
+    }
+
+    .carousel__button.next {
+        right: -55px;
+    }
+
+    .carousel__tabs {
+        height: 25px;
+    }
+
+    .carousel__tab {
+        border-radius: 100%;
+        width: 10px;
+        height: 10px;
+        margin: 0 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .carousel__container {
+        padding: 35px;
+    }
+
+    .carousel {
+        height: 30vh;
+        max-width: 300px;
+    }
+
+    .carousel__button.prev {
+        left: -40px;
+    }
+
+    .carousel__button.next {
+        right: -40px;
+    }
+
+    .carousel__tab {
+        margin: 0 5px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .carousel {
+        max-width: 250px;
+    }
+
+    .carousel__button.prev {
+        left: -37px;
+    }
+
+    .carousel__button.next {
+        right: -37px;
+    }
+
+    .carousel__tabs {
+        padding: 0 10px;
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .carousel__button.prev {
+        left: -80px;
+    }
+
+    .carousel__button.next {
+        right: -80px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .carousel {
+        max-width: 1200px;
+        height: 75vh;
+    }
+}
