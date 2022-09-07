@@ -433,6 +433,14 @@ h1 {
     .carousel__container {
         padding: 120px;
     }
+
+    .carousel__button.prev {
+        left: -80px;
+    }
+    
+    .carousel__button.next {
+        right: -80px;
+    }
 }
 
 @media screen and (min-width: 1440px) {
