@@ -1,14 +1,12 @@
 :root {
     --color-primary: #fff;
+    --color-primary-hover: #bcc3bf;
     --color-secondary: #909994;
     --color-secondary-hover: #bcc3bf;
-    --color-tertiary: #3e4249;
-    --color-tertiary-hover: #2D2F34;
-    --color-headings: #2D2F34;
-    --color-body: #2D2F34;
+    --color-tertiary: #33363b;
+    --color-block--dark: #2D2F34;
+    --color-text: #fff;
 }
-
-/* #34373d */
 
 *,
 *::after,
@@ -17,7 +15,6 @@
 }
 
 body {
-    background-color: var(--color-secondary);
     margin: 0;
 }
 
@@ -26,10 +23,61 @@ img {
     max-width: 100%;
 }
 
+/* Blocks */
+
+.block {
+    padding: 6rem 2rem;
+}
+
+.block-header {
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.block--dark {
+    background-color: var(--color-block--dark);
+    color: var(--color-text);
+}
+
+.block--grey {
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+}
+
+@media screen and (max-width: 360px) {
+    .block {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .block {
+        padding: 4rem 2rem;
+    }
+}
+
+/* Grids */
+
+.grid {
+    display: grid;
+}
+
+@media screen and (min-width: 768px) {
+    .block .grid--1x2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .block .grid--1x2-alt {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* Headings */
 
 h1 {
-    color: var(--color-headings);
+    color: var(--color-text);
     line-height: 1.1;
     margin: 0;
     text-align: center;
@@ -63,7 +111,7 @@ h1 {
 
 .icon--left {
     cursor: pointer;
-    fill: var(--color-tertiary);
+    fill: var(--color-primary);
     height: 40px;
     opacity: 0.6;
     transform: rotate(90deg);
@@ -73,7 +121,7 @@ h1 {
 
 .icon--right {
     cursor: pointer;
-    fill: var(--color-tertiary);
+    fill: var(--color-primary);
     height: 40px;
     opacity: 0.6;
     transform: rotate(-90deg);
@@ -83,7 +131,7 @@ h1 {
 
 .icon--left:hover,
 .icon--right:hover {
-    fill: var(--color-tertiary-hover);
+    fill: var(--color-primary-hover);
 }
 
 .icon--left:hover {
@@ -133,13 +181,11 @@ h1 {
 /* Carousel */
 
 .carousel__container {
-    border-radius: 100%;
-    margin-top: 30px;
     padding: 80px;
 }
 
 .carousel {
-    box-shadow: 0 0 20px 1px #acacac;
+    box-shadow: 0 0 5px 1px var(--color-secondary);
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -246,7 +292,7 @@ h1 {
 .carousel__tab::after,
 .carousel__tab::before {
     --scale: 0;
-    color: var(--color-primary);
+    color: var(--color-text);
     content: attr(data-tooltip);
     font-size: 15px;
     padding: 8px;
@@ -267,7 +313,7 @@ h1 {
 }
 
 .carousel__tab[data-active] {
-    background: var(--color-primary);
+    background: var(--color-text);
 }
 
 @media screen and (max-width: 1023px) {
@@ -365,9 +411,57 @@ h1 {
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .carousel__container {
+        padding: 120px;
+    }
+}
+
 @media screen and (min-width: 1440px) {
     .carousel {
         max-width: 1200px;
         height: 75vh;
+    }
+}
+
+/* About block */
+
+.about-image__container {
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.about-content {
+    padding: 20px;
+}
+
+@media screen and (max-width: 360px) {
+    .about-content {
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .about-header {
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .about-content {
+        font-size: 24px;
+        padding: 0 20px;
+    }
+
+    .about__image {
+        height: 100%;
     }
 }
