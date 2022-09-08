@@ -3,8 +3,10 @@ const tabs = document.querySelectorAll('.carousel__tab');
 const slides = document.querySelectorAll('.slide');
 const titles = document.querySelectorAll('.slide__title');
 const nextCarouselButton = document.querySelector('[data-carousel-button="next"]');
-const testimonialButtons = document.querySelector('[data-testimonials-button]');
+const testimonialButtons = document.querySelectorAll('[data-testimonial-button]');
+const nextTestimonialButton = document.querySelector('[data-testimonial-button="next"]');
 let nextInterval;
+let nextTestimonialInterval;
 let intervalDelay;
 
 /* This is the interval that runs from page load until a user clicks; it
@@ -14,6 +16,9 @@ function initializeAutoAdvance() {
     nextInterval = setInterval(function() {
         clickButton(nextCarouselButton, true);
     }, 4000);
+    nextTestimonialInterval = setInterval(function() {
+        clickTestimonialButton(nextTestimonialButton, true);
+    }, 8000);
 }
 
 /* This is the timeout that starts after a person clicks; this creates a gap
@@ -28,6 +33,9 @@ function initializeAdvanceDelay() {
 function resetAutoAdvance() {
     if (nextInterval) {
         clearInterval(nextInterval);
+    }
+    if (nextTestimonialInterval) {
+        clearInterval(nextTestimonialInterval);
     }
     if (intervalDelay) {
         clearTimeout(intervalDelay);
@@ -50,7 +58,7 @@ function activeElement(dataSlides, dataTitles, dataTabs) {
     return [activeSlide, activeTitle, activeTab];
 }
 
-/* Functionality of next and prev buttons */
+/* Functionality of next and prev buttons in carousel */
 function clickButton(button, auto) {
     if (!auto) {
         resetAutoAdvance();
@@ -123,5 +131,69 @@ tabs.forEach(tab => {
         }
     });
 });
+
+/* Functionality of next and prev buttons in testimonials */
+function clickTestimonialButton(button, auto) {
+    if (!auto) {
+        resetAutoAdvance();
+    }
+
+    const offset = button.dataset.testimonialButton === "next" ? 1 : -1;
+    const testimonials = button.closest("[data-testimonials]").querySelector("[data-testimonials-content]");
+    const tabs = button.closest("[data-testimonials]").querySelector("[data-testimonial-tabs]");
+    const activeTestimonial = testimonials.querySelector("[data-active]");
+    const activeTab = tabs.querySelector("[data-active]");
+
+    // Testimonial index
+
+    let testimonialsIndex = [...testimonials.children].indexOf(activeTestimonial) + offset;
+    if (testimonialsIndex < 0) testimonialsIndex = testimonials.children.length - 1;
+    if (testimonialsIndex >= testimonials.children.length) testimonialsIndex = 0;
+
+    testimonials.children[testimonialsIndex].dataset.active = true;
+    delete activeTestimonial.dataset.active;
+
+    // Tab index
+
+    let tabIndex = [...tabs.children].indexOf(activeTab) + offset;
+    if (tabIndex < 0) tabIndex = tabs.children.length - 1;
+    if (tabIndex >= tabs.children.length) tabIndex = 0;
+
+    tabs.children[tabIndex].dataset.active = true;
+    delete activeTab.dataset.active;
+}
+
+testimonialButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        clickTestimonialButton(button, false);
+    });
+});
+
+/* Function to click on tabs to navigate in testimonials */
+// tabs.forEach(tab => {
+//     tab.addEventListener("click", function(e) {
+//         resetAutoAdvance();
+
+//         let index = parseInt(e.target.dataset.index);
+//         console.log(index);
+//         const [dataSlides, dataTitles, dataTabs] = selectElement(tab);
+//         const [activeSlide, activeTitle, activeTab] = activeElement(dataSlides, dataTitles, dataTabs);
+
+//         if (index != undefined) {
+//             if (!dataTabs.children[index].dataset.active) {
+//                 dataTabs.children[index].dataset.active = true;
+//                 delete activeTab.dataset.active;
+//             }
+//             if (!dataTitles.children[index].dataset.active) {
+//                 dataTitles.children[index].dataset.active = true;
+//                 delete activeTitle.dataset.active;
+//             }
+//             if (!dataSlides.children[index].dataset.active) {
+//                 dataSlides.children[index].dataset.active = true;
+//                 delete activeSlide.dataset.active;
+//             }
+//         }
+//     });
+// });
 
 initializeAutoAdvance();

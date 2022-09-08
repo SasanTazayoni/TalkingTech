@@ -6,7 +6,6 @@
     --color-tertiary: #33363b;
     --color-tertiary-hover: #6B6C80;
     --color-block--dark: #2D2F34;
-    --color-text: #fff;
 }
 
 *,
@@ -51,12 +50,12 @@ img {
 
 .block--dark {
     background-color: var(--color-block--dark);
-    color: var(--color-text);
+    color: var(--color-primary);
 }
 
 .block--grey {
     background-color: var(--color-tertiary);
-    color: var(--color-text);
+    color: var(--color-primary);
 }
 
 @media screen and (max-width: 768px) {
@@ -100,7 +99,7 @@ img {
 /* Headings */
 
 h1 {
-    color: var(--color-text);
+    color: var(--color-primary);
     line-height: 1.1;
     margin: 0;
     text-align: center;
@@ -320,7 +319,7 @@ h1 {
 .carousel__tab::after,
 .carousel__tab::before {
     --scale: 0;
-    color: var(--color-text);
+    color: var(--color-primary);
     content: attr(data-tooltip);
     font-size: 15px;
     padding: 8px;
@@ -341,7 +340,7 @@ h1 {
 }
 
 .carousel__tab[data-active] {
-    background: var(--color-text);
+    background: var(--color-primary);
 }
 
 @media screen and (max-width: 1023px) {
@@ -517,13 +516,16 @@ h1 {
 }
 
 .testimonial-text {
+    display: flex;
+    align-items: center;
     margin: 0;
-    padding: 2.7rem;
+    padding: 2.5rem 3.5rem;
     position: absolute;
     height: 100%;
     inset: 0;
     opacity: 0;
     text-align: center;
+    transition: 0.3s opacity ease-in-out;
 }
 
 .testimonial-text[data-active] {
@@ -539,6 +541,7 @@ h1 {
     font-size: 3rem;
     top: 50%;
     transform: translateY(-50%);
+    transition: 0.3s all ease-in-out;
     z-index: 2;
 }
 
@@ -552,12 +555,12 @@ h1 {
 }
 
 .testimonials-button.prev {
-    left: 0.5rem;
+    left: 0.05rem;
     padding: 0;
 }
 
 .testimonials-button.next {
-    right: 0.5rem;
+    right: 0.05rem;
     padding: 0;
 }
 
