@@ -564,6 +564,42 @@ h1 {
     padding: 0;
 }
 
+.testimonial__tabs {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    bottom: 0%;
+    left: 50%;
+    display: flex;
+    height: 30px;
+    padding: 0 20px;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.testimonial__tab {
+    display: inline-block;
+    width: 30px;
+    height: 10px;
+    border: 1px solid var(--color-tertiary);
+    margin: 0 10px;
+    border-radius: 5px;
+    background: var(--color-secondary);
+    position: relative;
+    transition: 0.3s all ease-in-out;
+}
+
+.testimonial__tab:hover,
+.testimonial__tab:hover {
+    color: var(--color-tertiary-hover);
+    background-color: var(--color-tertiary-hover);
+}
+
+.testimonial__tab[data-active] {
+    background: var(--color-tertiary);
+}
+
 @media screen and (max-width: 767px) {
     .testimonial-text {
         padding: 2rem;
