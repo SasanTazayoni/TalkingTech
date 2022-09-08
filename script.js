@@ -5,6 +5,7 @@ const titles = document.querySelectorAll('.slide__title');
 const nextCarouselButton = document.querySelector('[data-carousel-button="next"]');
 const testimonialButtons = document.querySelectorAll('[data-testimonial-button]');
 const nextTestimonialButton = document.querySelector('[data-testimonial-button="next"]');
+const testimonialTabs = document.querySelectorAll('.testimonial__tab');
 let nextInterval;
 let nextTestimonialInterval;
 let intervalDelay;
@@ -111,7 +112,7 @@ tabs.forEach(tab => {
         resetAutoAdvance();
 
         let index = parseInt(e.target.dataset.index);
-        console.log(index);
+        // console.log(index);
         const [dataSlides, dataTitles, dataTabs] = selectElement(tab);
         const [activeSlide, activeTitle, activeTab] = activeElement(dataSlides, dataTitles, dataTabs);
 
@@ -170,30 +171,28 @@ testimonialButtons.forEach(button => {
 });
 
 /* Function to click on tabs to navigate in testimonials */
-// tabs.forEach(tab => {
-//     tab.addEventListener("click", function(e) {
-//         resetAutoAdvance();
+testimonialTabs.forEach(tab => {
+    tab.addEventListener("click", function(e) {
+        resetAutoAdvance();
 
-//         let index = parseInt(e.target.dataset.index);
-//         console.log(index);
-//         const [dataSlides, dataTitles, dataTabs] = selectElement(tab);
-//         const [activeSlide, activeTitle, activeTab] = activeElement(dataSlides, dataTitles, dataTabs);
+        let index = parseInt(e.target.dataset.index);
+        // console.log(index);
+        const testimonials = tab.closest("[data-testimonials]").querySelector("[data-testimonials-content]");
+        const tabs = tab.closest("[data-testimonials]").querySelector("[data-testimonial-tabs]");
+        const activeTestimonial = testimonials.querySelector("[data-active]");
+        const activeTab = tabs.querySelector("[data-active]");
 
-//         if (index != undefined) {
-//             if (!dataTabs.children[index].dataset.active) {
-//                 dataTabs.children[index].dataset.active = true;
-//                 delete activeTab.dataset.active;
-//             }
-//             if (!dataTitles.children[index].dataset.active) {
-//                 dataTitles.children[index].dataset.active = true;
-//                 delete activeTitle.dataset.active;
-//             }
-//             if (!dataSlides.children[index].dataset.active) {
-//                 dataSlides.children[index].dataset.active = true;
-//                 delete activeSlide.dataset.active;
-//             }
-//         }
-//     });
-// });
+        if (index != undefined) {
+            if (!testimonials.children[index].dataset.active) {
+                testimonials.children[index].dataset.active = true;
+                delete activeTestimonial.dataset.active;
+            }
+            if (!tabs.children[index].dataset.active) {
+                tabs.children[index].dataset.active = true;
+                delete activeTab.dataset.active;
+            }
+        }
+    });
+});
 
 initializeAutoAdvance();
