@@ -41,6 +41,12 @@ img {
     }
 }
 
+@media screen and (min-width: 1024px) {
+    body {
+        font-size: 24px;
+    }
+}
+
 /* Blocks */
 
 .block {
@@ -511,10 +517,10 @@ h1 {
     position: relative;
     background: var(--color-primary);
     background: linear-gradient(135deg,
-        #bcc3bf,
-        #fff 15%,
-        #fff 85%,
-        #bcc3bf 100%);
+        #909994,
+        #bcc3bf 15%,
+        #bcc3bf 85%,
+        #909994 100%);
     border-radius: 20px;
     box-shadow: 0 0 5px 1px var(--color-secondary);
 }
@@ -542,6 +548,7 @@ h1 {
     border: none;
     color: var(--color-tertiary);
     cursor: pointer;
+    display: none;
     font-size: 3rem;
     top: 50%;
     transform: translateY(-50%);
@@ -608,11 +615,6 @@ h1 {
     .testimonial-text {
         padding: 2rem;
     }
-
-    .testimonials-button {
-        display: none;
-    }
-
 }
 
 @media screen and (max-width: 550px) {
