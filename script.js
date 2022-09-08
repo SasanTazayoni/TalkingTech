@@ -1,16 +1,9 @@
-function getElement(selection) {
-    const element = document.querySelector(selection);
-    if (element) {
-        return element;
-    }
-    throw new Error (`Please check "${selection}" selector, no such element exists`);
-}
-
 const buttons = document.querySelectorAll("[data-carousel-button");
 const tabs = document.querySelectorAll('.carousel__tab');
 const slides = document.querySelectorAll('.slide');
 const titles = document.querySelectorAll('.slide__title');
-const nextButton = document.querySelector('[data-carousel-button="next"]');
+const nextCarouselButton = document.querySelector('[data-carousel-button="next"]');
+const testimonialButtons = document.querySelector('[data-testimonials-button]');
 let nextInterval;
 let intervalDelay;
 
@@ -19,7 +12,7 @@ automatically advances the slide. Once a user clicks, there will be a delay
 before auto advance starts up again. */
 function initializeAutoAdvance() {
     nextInterval = setInterval(function() {
-        clickButton(nextButton, true);
+        clickButton(nextCarouselButton, true);
     }, 4000);
 }
 
@@ -42,6 +35,7 @@ function resetAutoAdvance() {
     initializeAdvanceDelay();
 };
 
+/* Functions to select multiple data attributes */
 function selectElement(element) {
     const dataSlides = element.closest("[data-carousel]").querySelector("[data-slides]");
     const dataTitles = element.closest("[data-carousel]").querySelector("[data-titles]");
@@ -56,6 +50,7 @@ function activeElement(dataSlides, dataTitles, dataTabs) {
     return [activeSlide, activeTitle, activeTab];
 }
 
+/* Functionality of next and prev buttons */
 function clickButton(button, auto) {
     if (!auto) {
         resetAutoAdvance();
@@ -102,6 +97,7 @@ buttons.forEach(button => {
     });
 });
 
+/* Function to click on tabs to navigate in carousel */
 tabs.forEach(tab => {
     tab.addEventListener("click", function(e) {
         resetAutoAdvance();
