@@ -1,3 +1,5 @@
+/////////////////////////////////////////   HOME PAGE   /////////////////////////////////////////
+
 const buttons = document.querySelectorAll("[data-carousel-button");
 const tabs = document.querySelectorAll('.carousel__tab');
 const slides = document.querySelectorAll('.slide');
@@ -196,3 +198,6 @@ testimonialTabs.forEach(tab => {
 });
 
 initializeAutoAdvance();
+
+/////////////////////////////////////////   FAQ PAGE   /////////////////////////////////////////
+
