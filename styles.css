@@ -738,6 +738,12 @@ h1 {
     }
 }
 
+@media screen and (min-width: 768px) {
+.question {
+        margin-bottom: 4rem;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     .center-align {
         width: 95vw;
