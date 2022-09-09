@@ -642,3 +642,14 @@ h1 {
         height: 390px;
     }
 }
+
+/* FAQ page */
+
+.faq-pic > img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.3;
+    width: 100%;
+}
