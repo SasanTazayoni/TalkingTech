@@ -56,7 +56,6 @@ img {
 .block__header {
     text-align: center;
     padding-bottom: 3rem;
-    padding-top: 1rem;
 }
 
 .block--dark {
@@ -736,7 +735,7 @@ h1 {
 }
 
 @media screen and (max-width: 300px) {
-    .faq-header {
+    .faq__header {
         margin-top: 2.5vh;
         margin-bottom: 0;
     }
@@ -752,25 +751,25 @@ h1 {
 }
 
 @media screen and (min-width: 200px) {
-    .faq-image {
+    .faq__image {
         min-height: 200px;
     }
 }
 
 @media screen and (min-width: 420px) {
-    .faq-image {
+    .faq__image {
         min-height: 300px;
     }
 }
 
 @media screen and (min-width: 600px) {
-    .faq-image {
+    .faq__image {
         min-height: 400px;
     }
 }
 
 @media screen and (min-width: 768px) { 
-    .faq-image {
+    .faq__image {
         min-height: 500px;
     }
          
@@ -780,19 +779,19 @@ h1 {
 }
 
 @media screen and (min-width: 920px) {
-    .faq-image {
+    .faq__image {
         min-height: 600px;
     }
 }
 
 @media screen and (min-width: 1160px) {
-    .faq-image {
+    .faq__image {
         min-height: 800px;
     }
 }
 
 @media screen and (min-width: 1440px) {
-    .faq-image {
+    .faq__image {
         min-height: 1000px;
     }
 
@@ -802,7 +801,28 @@ h1 {
 }
 
 @media screen and (min-width: 1800px) {
-    .faq-image {
+    .faq__image {
         min-height: 1300px;
+    }
+}
+
+/* Contact page */
+
+.contact-card__image {
+    align-items: center;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .contact__card {
+        justify-content: center;
+        padding: 3rem;
+    }
+
+    .contact__card-image {
+        height: 100%;
     }
 }
