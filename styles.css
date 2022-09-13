@@ -218,6 +218,33 @@ h1 {
     }
 }
 
+/* Cards */
+
+.card {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: #4b4f53;
+    border-radius: 20px;
+    color: var(--color-text);
+}
+
+.card__header {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .card__header {
+        padding-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card {
+        padding: 1rem;
+    }
+}
+
 /* Carousel block */
 
 .carousel__container {
@@ -814,13 +841,6 @@ h1 {
 
 /* Contact page */
 
-.contact-card {
-    background: #4b4f53;
-    border-radius: 20px;
-    color: var(--color-text);
-    padding: 1rem;
-}
-
 .contact-card__details {
     margin-bottom: 0;
 }
@@ -845,6 +865,14 @@ h1 {
     width: 100%;
 }
 
+.card__header {
+    margin-bottom: 0;
+}
+
+.fees-card > ul {
+    list-style-type: disc;
+}
+
 @media screen and (min-width: 1024px) {
     .contact-card__information {
         justify-content: center;
@@ -853,5 +881,9 @@ h1 {
 
     .contact-card__image {
         height: 100%;
+    }
+
+    .fees-card > ul {
+        padding: 3rem;
     }
 }
