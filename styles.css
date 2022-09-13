@@ -456,6 +456,10 @@ h1 {
         padding-top: 120px;   
     } */
 
+    .carousel__header {
+        top: -18%;
+    }
+
     .carousel__button.prev {
         left: -60px;
     }
@@ -468,6 +472,10 @@ h1 {
 @media screen and (min-width: 1024px) {
     .carousel__container {
         padding: 120px;
+    }
+
+    .carousel__header {
+        top: -15%;
     }
 
     .carousel__button.prev {
@@ -520,16 +528,17 @@ h1 {
 /* Testimonial block */
 
 .testimonials {
-    color: var(--color-tertiary);
+    color: var(--color-primary);
     height: 250px;
     width: 100%;
     position: relative;
     background: var(--color-primary);
-    background: linear-gradient(135deg,
+    background: #727375;
+    /* background: linear-gradient(135deg,
         #909994,
         #bcc3bf 15%,
         #bcc3bf 85%,
-        #909994 100%);
+        #909994 100%); */
     border-radius: 20px;
     box-shadow: 0 0 5px 1px var(--color-secondary);
 }
@@ -673,7 +682,7 @@ h1 {
 }
 
 .question {
-    background: var(--color-secondary-hover);
+    background: #727375;
     border-radius: 0.5rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
     color: var(--color-tertiary);
@@ -816,12 +825,13 @@ h1 {
     background: var(--color-secondary-hover);
     border-radius: 20px;
     background: var(--color-primary);
-        background: linear-gradient(135deg,
+    background: #727375;
+        /* background: linear-gradient(135deg,
             #909994,
             #bcc3bf 15%,
             #bcc3bf 85%,
-            #909994 100%);
-    color: var(--color-tertiary);
+            #909994 100%); */
+    color: var(--color-primary);
     padding: 1rem;
 }
 
