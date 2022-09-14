@@ -890,15 +890,15 @@ h1 {
     margin-bottom: 0;
 }
 
-.contact-card p > a, .contact-card__details span > a {
+.contact-card__information p > a, .contact-card__details span > a {
     color: #9ac3ff;
 }
 
-.contact-card p > a:hover, .contact-card__details span > a:hover {
+.contact-card__information p > a:hover, .contact-card__details span > a:hover {
     color: #71aaff;
 }
 
-.contact-card p > a:focus, .contact-card__details span > a:focus {
+.contact-card__information p > a:focus, .contact-card__details span > a:focus {
     color: #438fff;
 }
 
