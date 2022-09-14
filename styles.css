@@ -73,6 +73,23 @@ img {
     }
 }
 
+@media screen and (max-width: 539px) {
+    .scroll-up-link {
+        border-radius: 0.25rem;
+        bottom: 5rem;
+        font-size: 0.625rem;
+        height: 1rem; 
+        right: 1rem;    
+        width: 1rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .scroll-up-link {
+        right: 0.8rem;
+    }
+}
+
 /* Typography */
 
 .strong {
@@ -125,6 +142,18 @@ img {
 
     .block__header {
         padding-bottom: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .block {
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .block {
+        padding: 0.5rem;
     }
 }
 
@@ -864,13 +893,13 @@ h1 {
 
 @media screen and (min-width: 1160px) {
     .faq__image {
-        min-height: 800px;
+        min-height: 700px;
     }
 }
 
 @media screen and (min-width: 1440px) {
     .faq__image {
-        min-height: 1000px;
+        min-height: 800px;
     }
 
     .center-align {
@@ -880,7 +909,7 @@ h1 {
 
 @media screen and (min-width: 1800px) {
     .faq__image {
-        min-height: 1300px;
+        min-height: 900px;
     }
 }
 
