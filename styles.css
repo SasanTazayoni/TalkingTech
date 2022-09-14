@@ -831,6 +831,7 @@ h1 {
 
 .answer__text p {
     margin-bottom: 0;
+    overflow: hidden;
 }
 
 .answer__text {

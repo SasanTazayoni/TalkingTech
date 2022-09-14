@@ -84,6 +84,8 @@ function clickButton(button, auto) {
         resetAutoAdvance();
     }
 
+    if (!button) return;
+
     const offset = button.dataset.carouselButton === "next" ? 1 : -1;
     const [dataSlides, dataTitles, dataTabs] = selectElement(button);
     const [activeSlide, activeTitle, activeTab] = activeElement(dataSlides, dataTitles, dataTabs);
@@ -157,6 +159,8 @@ function clickTestimonialButton(button, auto) {
     if (!auto) {
         resetAutoAdvance();
     }
+    
+    if (!button) return;
 
     const offset = button.dataset.testimonialButton === "next" ? 1 : -1;
     const testimonials = button.closest("[data-testimonials]").querySelector("[data-testimonials-content]");
@@ -227,11 +231,35 @@ questions.forEach(function(question) {
     btn.addEventListener('click', function() {
         questions.forEach(function(item) {
             if (item !== question) {
-                item.classList.remove('show-text');
+                toggleQuestion(item, true)
             }
         });
 
-        question.classList.toggle('show-text');
+        toggleQuestion(question)
     });
 });
 
+function toggleQuestion (question, justClose = false) {
+    const opened = question.classList.contains('show-text');
+
+    if (justClose && !opened) return; 
+        
+    if (!opened) {
+        question.classList.add('show-text');
+    }
+
+    const answer = question.querySelector('.answer__text p');
+    const answerHeight = answer.getBoundingClientRect().height
+    const finalHeight = opened ? 0 : answerHeight;
+    let height = opened ? answerHeight : 0;
+    if (!opened) answer.style.height = 0;
+    
+    const interval = setInterval(() => {
+        answer.style.height = (opened ? --height : ++height) + "px";
+        if (height === finalHeight) {
+            clearInterval(interval);
+            answer.style.height = "auto";
+            if (opened) question.classList.remove('show-text');
+        }
+    }, 400 / finalHeight );
+}
