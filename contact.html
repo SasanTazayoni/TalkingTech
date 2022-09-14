@@ -69,11 +69,11 @@
       </div>
     </nav>
 
-    <!-- Contact details -->
+    <!-- Contact information -->
     <section class="block block--grey">
       <div class="container">
         <h2 class="block__header">Contact me</h2>
-        <div class="grid grid--1x2-alt card">
+        <div class="grid grid--1x2-alt card contact-card">
           <div class="contact-card__information">
             <p>
               Please refer to the <a href="faq.html" class="strong">FAQ</a> for
@@ -135,6 +135,71 @@
               hardware or software licenses.
             </li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enquiries form -->
+    <section class="block block--dark">
+      <div class="container">
+        <div class="contact-form__container">
+          <form class="contact-form__content" action="" method="POST">
+            <h3 class="block__header">Enquiries form</h3>
+            <div class="contact-form__group">
+              <label for="fullname">Full name</label>
+              <input
+                id="fullname"
+                type="text"
+                placeholder="Full name"
+                name="name"
+                required
+                minlength="1"
+                maxlength="50"
+              />
+            </div>
+            <div class="contact-form__group">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                type="email"
+                placeholder="Email"
+                name="email"
+                required
+                minlength="5"
+                maxlength="30"
+              />
+            </div>
+            <div class="contact-form__group">
+              <label for="contactnumber">Contact number</label>
+              <input
+                id="contactnumber"
+                type="tel"
+                placeholder="Contact number"
+                name="contact"
+                required
+                minlength="7"
+                maxlength="20"
+              />
+            </div>
+            <div class="contact-form__group">
+              <label for="enquiry">Your enquiry</label>
+              <textarea
+                class="contact-form__textarea"
+                id="enquiry"
+                cols="100"
+                rows="5"
+                placeholder="Your enquiry"
+                name="enquiry"
+                required
+                minlength="10"
+                maxlength="300"
+              ></textarea>
+            </div>
+            <div class="contact__btn-container">
+              <button class="btn submit-btn" type="submit">Submit</button>
+              <button class="btn reset-btn" type="reset">Reset</button>
+            </div>
+          </form>
         </div>
       </div>
     </section>

@@ -73,6 +73,62 @@ img {
     }
 }
 
+label {
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    border: 2px solid var(--color-secondary);
+    border-radius: 7px;
+    padding: 0.5rem 0.7rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 40%;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+    border-color: var(--color-secondary);
+    outline: 0;
+    transition: all 0.3s;
+}
+
+textarea {
+    resize: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        width: 60%;
+    }
+}
+
 @media screen and (max-width: 539px) {
     .scroll-up-link {
         border-radius: 0.25rem;
@@ -81,6 +137,14 @@ img {
         height: 1rem; 
         right: 1rem;    
         width: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        width: 100%;
     }
 }
 
@@ -153,11 +217,11 @@ img {
 
 @media screen and (max-width: 300px) {
     .block {
-        padding: 0.5rem;
+        padding: 1rem 0.5rem;
     }
 }
 
-@media screen and (min-width: 1024px) and (max-height: 640px) {
+@media screen and (min-width: 1024px) and (max-height: 600px) {
     .block__header {
         padding-bottom: 1rem;
     }
@@ -295,9 +359,8 @@ h1 {
 /* Cards */
 
 .card {
-    margin-bottom: 3rem;
     padding: 1.5rem;
-    background: #4b4f53;
+    background: var(--color-primary);
     border-radius: 20px;
     color: var(--color-text);
 }
@@ -316,6 +379,40 @@ h1 {
 @media screen and (max-width: 500px) {
     .card {
         padding: 1rem;
+    }
+}
+
+/* Buttons */
+
+.btn {
+    background: var(--color-secondary);
+    border-radius: 100px;
+    border: 0;
+    box-shadow: 0rem 0rem 2px var(--color-secondary);
+    color: var(--color-tertiary);
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 160px;
+}
+
+.btn:hover, .btn:focus {
+    background: var(--color-secondary-hover);
+    color: var(--color-tertiary-hover);
+}
+
+@media screen and (max-width: 767px) {
+    .btn {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .btn {
+        margin: 5px;
+        width: 80px;
     }
 }
 
@@ -916,6 +1013,10 @@ h1 {
 
 /* Contact page */
 
+.contact-card {
+    margin-bottom: 3rem;
+}
+
 .contact-card__details {
     margin-bottom: 0;
 }
@@ -960,5 +1061,47 @@ h1 {
 
     .fees-card > ul {
         padding: 0 3rem;
+    }
+}
+
+/* Enquiries form */
+
+.contact-form__container {
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    border-radius: 20px;
+    padding: 1.5rem;
+}
+
+.contact-form__content {
+    line-height: 1.5;
+    padding: 2rem;
+}
+
+.contact-form__group {
+    margin-bottom: 1rem;
+}
+
+.contact-form__textarea {
+    height: 30vh;
+    width: 100%;
+}
+
+.contact__btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 500px) {
+    .contact-form__container {
+        padding: 1rem;
+    }
+
+    .contact-form__content {
+        padding: 1rem;
+    }
+
+    .contact-form__group {
+       margin-bottom: 0.5rem;
     }
 }
