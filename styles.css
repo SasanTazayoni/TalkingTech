@@ -860,6 +860,33 @@ h1 {
     }
 }
 
+/* Services page */
+
+.services__image {
+    align-items: center;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.services__content {
+    padding-top: 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .services__content {
+        padding-left: 2rem;
+        padding-top: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .services__container:nth-of-type(even) .services__item {
+        order: 2;
+    }
+}
+
 /* FAQ page */
 
 .faq__image {
