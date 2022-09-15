@@ -27,6 +27,12 @@ let nextInterval;
 let nextTestimonialInterval;
 let intervalDelay;
 
+const Carousel = {
+    initialize() {
+        initializeAutoAdvance();
+    }
+};
+
 /* This is the interval that runs from page load until a user clicks; it
 automatically advances the slide. Once a user clicks, there will be a delay 
 before auto advance starts up again. */
@@ -84,7 +90,7 @@ function clickButton(button, auto) {
         resetAutoAdvance();
     }
 
-    if (!button) return;
+    // if (!button) return;
 
     const offset = button.dataset.carouselButton === "next" ? 1 : -1;
     const [dataSlides, dataTitles, dataTabs] = selectElement(button);
@@ -160,7 +166,7 @@ function clickTestimonialButton(button, auto) {
         resetAutoAdvance();
     }
     
-    if (!button) return;
+    // if (!button) return;
 
     const offset = button.dataset.testimonialButton === "next" ? 1 : -1;
     const testimonials = button.closest("[data-testimonials]").querySelector("[data-testimonials-content]");
@@ -218,8 +224,6 @@ testimonialTabs.forEach(tab => {
     });
 });
 
-initializeAutoAdvance();
-
 /////////////////////////////////////////   FAQ PAGE   /////////////////////////////////////////
 
 const questions = document.querySelectorAll('.question');
@@ -239,6 +243,7 @@ questions.forEach(function(question) {
     });
 });
 
+/* Function to gradually collapse/expand FAQ content */
 function toggleQuestion (question, justClose = false) {
     const opened = question.classList.contains('show-text');
 

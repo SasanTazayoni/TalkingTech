@@ -77,6 +77,10 @@ label {
     display: block;
 }
 
+input, textarea {
+    background: lightgrey;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -386,7 +390,7 @@ h1 {
 
 .btn {
     background: var(--color-secondary);
-    border-radius: 100px;
+    border-radius: 20px;
     border: 0;
     box-shadow: 0rem 0rem 2px var(--color-secondary);
     color: var(--color-tertiary);
@@ -398,9 +402,13 @@ h1 {
     width: 160px;
 }
 
-.btn:hover, .btn:focus {
+.btn:hover {
     background: var(--color-secondary-hover);
     color: var(--color-tertiary-hover);
+}
+
+.btn:focus {
+    background: var(--color-secondary);
 }
 
 @media screen and (max-width: 767px) {
@@ -1103,5 +1111,27 @@ h1 {
 
     .contact-form__group {
        margin-bottom: 0.5rem;
+    }
+}
+
+/* Modal */
+
+.modal-dialog, .modal-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-content {
+    background: lightgrey;
+    text-align: center;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+@media screen and (max-width: 575px) {
+    .modal-content {
+        width: 80%;
     }
 }
