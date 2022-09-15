@@ -919,12 +919,6 @@ h1 {
     }
 }
 
-@media screen and (min-width: 768px) {
-    .services__container:nth-of-type(even) .services__item {
-        order: 2;
-    }
-}
-
 /* FAQ page */
 
 .faq__image {
