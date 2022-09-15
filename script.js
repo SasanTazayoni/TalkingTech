@@ -27,7 +27,7 @@ let nextInterval;
 let nextTestimonialInterval;
 let intervalDelay;
 
-const Carousel = {
+const Home = {
     initialize() {
         initializeAutoAdvance();
     }
