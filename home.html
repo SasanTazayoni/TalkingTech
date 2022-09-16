@@ -15,6 +15,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -190,14 +191,14 @@
       <div class="container">
         <h2 class="block__header">About me</h2>
         <article class="grid grid--1x2-alt">
-          <div>
+          <div data-aos="zoom-in">
             <img
               src="images/bestplaceholder.jpg"
               class="about__image"
               alt="Picture of Freddie"
             />
           </div>
-          <div>
+          <div data-aos="fade">
             <p class="about__content">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
               explicabo placeat ad atque odio odit sed possimus iste ex repellat
@@ -221,7 +222,7 @@
     <section class="block block--grey">
       <div class="container">
         <h2 class="block__header">Testimonials</h2>
-        <div class="testimonials" data-testimonials>
+        <div class="testimonials" data-testimonials data-aos="flip-down">
           <!-- Testimonials -->
           <div class="testimonials__content" data-testimonials-content>
             <p class="testimonial__text" data-index="0" data-active>
@@ -288,5 +289,9 @@
     ></script>
     <script src="script.js" defer></script>
     <script src="scripts/home.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

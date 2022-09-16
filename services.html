@@ -15,6 +15,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -73,7 +74,7 @@
     <section class="block block--grey">
       <div class="container">
         <h2 class="block__header">Services</h2>
-        <div class="card fees-card">
+        <div class="card fees-card" data-aos="flip-down">
           <h3 class="card__header">Fees</h3>
           <ul>
             <li>
@@ -104,7 +105,7 @@
     <section class="block block--dark">
       <div class="container">
         <article class="grid grid--1x2-alt services">
-          <div class="services__content">
+          <div class="services__content" data-aos="fade">
             <h3 class="services__header">Consultancy & advice</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
@@ -117,7 +118,7 @@
               illum earum! Architecto, incidunt debitis!
             </p>
           </div>
-          <div class="services__image__container">
+          <div class="services__image__container" data-aos="zoom-in">
             <img
               src="images/consultancy.jpg"
               class="services__image"
@@ -132,7 +133,7 @@
     <section class="block block--grey">
       <div class="container">
         <article class="grid grid--1x2-alt services">
-          <div class="services__content-flipped">
+          <div class="services__content-flipped" data-aos="fade">
             <h3 class="services__header">Data backup & recovery</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
@@ -145,7 +146,7 @@
               illum earum! Architecto, incidunt debitis!
             </p>
           </div>
-          <div class="services__image__container">
+          <div class="services__image__container" data-aos="zoom-in">
             <img
               src="images/recovery.jpg"
               class="services__image"
@@ -160,7 +161,7 @@
     <section class="block block--dark">
       <div class="container">
         <article class="grid grid--1x2-alt services">
-          <div class="services__content">
+          <div class="services__content" data-aos="fade">
             <h3 class="services__header">Virus & malware removal</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
@@ -173,7 +174,7 @@
               illum earum! Architecto, incidunt debitis!
             </p>
           </div>
-          <div class="services__image__container">
+          <div class="services__image__container" data-aos="zoom-in">
             <img
               src="images/malware.jpg"
               class="services__image"
@@ -188,7 +189,7 @@
     <section class="block block--grey">
       <div class="container">
         <article class="grid grid--1x2-alt services">
-          <div class="services__content-flipped">
+          <div class="services__content-flipped" data-aos="fade">
             <h3 class="services__header">Performance optimisation</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
@@ -201,7 +202,7 @@
               illum earum! Architecto, incidunt debitis!
             </p>
           </div>
-          <div class="services__image__container">
+          <div class="services__image__container" data-aos="zoom-in">
             <img
               src="images/performance.jpg"
               class="services__image"
@@ -216,7 +217,7 @@
     <section class="block block--dark">
       <div class="container">
         <article class="grid grid--1x2-alt services">
-          <div class="services__content">
+          <div class="services__content" data-aos="fade">
             <h3 class="services__header">Hardware maintenance & upgrades</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
@@ -229,7 +230,7 @@
               illum earum! Architecto, incidunt debitis!
             </p>
           </div>
-          <div class="services__image__container">
+          <div class="services__image__container" data-aos="zoom-in">
             <img
               src="images/hardware.jpg"
               class="services__image"
@@ -244,7 +245,7 @@
     <section class="block block--grey">
       <div class="container">
         <article class="grid grid--1x2-alt services">
-          <div class="services__content-flipped">
+          <div class="services__content-flipped" data-aos="fade">
             <h3 class="services__header">Network setups</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
@@ -257,7 +258,7 @@
               illum earum! Architecto, incidunt debitis!
             </p>
           </div>
-          <div class="services__image__container">
+          <div class="services__image__container" data-aos="zoom-in">
             <img
               src="images/network.jpg"
               class="services__image"
@@ -272,7 +273,7 @@
     <section class="block block--dark">
       <div class="container">
         <article class="grid grid--1x2-alt services">
-          <div class="services__content">
+          <div class="services__content" data-aos="fade">
             <h3 class="services__header">Software Upgrades</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
@@ -285,7 +286,7 @@
               illum earum! Architecto, incidunt debitis!
             </p>
           </div>
-          <div class="services__image__container">
+          <div class="services__image__container" data-aos="zoom-in">
             <img
               src="images/software.jpg"
               class="services__image"
@@ -300,7 +301,7 @@
     <section class="block block--grey">
       <div class="container">
         <article class="grid grid--1x2-alt services">
-          <div class="services__content-flipped">
+          <div class="services__content-flipped" data-aos="fade">
             <h3 class="services__header">Online support</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
@@ -313,7 +314,7 @@
               illum earum! Architecto, incidunt debitis!
             </p>
           </div>
-          <div class="services__image__container">
+          <div class="services__image__container" data-aos="zoom-in">
             <img
               src="images/onlinesupport.jpg"
               class="services__image"
@@ -345,5 +346,9 @@
       crossorigin="anonymous"
     ></script>
     <script src="script.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

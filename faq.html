@@ -19,6 +19,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -71,14 +72,15 @@
     </nav>
 
     <!-- FAQ image -->
-    <div class="faq__image"></div>
+    <div class="faq__image" data-aos="fade"></div>
 
     <!-- FAQ -->
     <section class="block block--dark">
       <h2 class="block__header faq__header">Frequently Asked Questions</h2>
       <!-- Questions -->
       <div class="center-align">
-        <article class="question">
+        <!-- Question text -->
+        <article class="question" data-aos="zoom-in-up">
           <div class="question__content">
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum,
@@ -102,7 +104,8 @@
             </p>
           </div>
         </article>
-        <article class="question">
+        <!-- Question text -->
+        <article class="question" data-aos="zoom-in-up">
           <div class="question__content">
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum,
@@ -126,7 +129,8 @@
             </p>
           </div>
         </article>
-        <article class="question">
+        <!-- Question text -->
+        <article class="question" data-aos="zoom-in-up">
           <div class="question__content">
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum,
@@ -150,7 +154,8 @@
             </p>
           </div>
         </article>
-        <article class="question">
+        <!-- Question text -->
+        <article class="question" data-aos="zoom-in-up">
           <div class="question__content">
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum,
@@ -174,7 +179,8 @@
             </p>
           </div>
         </article>
-        <article class="question">
+        <!-- Question text -->
+        <article class="question" data-aos="zoom-in-up">
           <div class="question__content">
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum,
@@ -223,5 +229,9 @@
     ></script>
     <script src="script.js" defer></script>
     <script src="scripts/faq.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

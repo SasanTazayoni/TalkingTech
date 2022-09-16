@@ -15,6 +15,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -73,7 +74,7 @@
     <section class="block block--grey">
       <div class="container">
         <h2 class="block__header">Contact me</h2>
-        <div class="grid grid--1x2-alt card contact-card">
+        <div class="grid grid--1x2-alt card contact-card" data-aos="flip-down">
           <div class="contact-card__information">
             <p>
               Please refer to the <a href="faq.html" class="strong">FAQ</a> for
@@ -114,7 +115,7 @@
       </div>
       <!-- Fees card -->
       <div class="container">
-        <div class="card fees-card">
+        <div class="card fees-card" data-aos="flip-down">
           <h3 class="card__header">Fees</h3>
           <ul>
             <li>
@@ -143,7 +144,11 @@
     <section class="block block--dark">
       <div class="container">
         <div class="contact-form__container">
-          <form class="contact-form__content" action="" method="POST">
+          <form
+            class="contact-form__content"
+            action="https://formspree.io/f/xjvzyojz"
+            method="POST"
+          >
             <h3 class="block__header">Enquiries form</h3>
             <div class="contact-form__group">
               <label for="fullname">Full name</label>
@@ -204,7 +209,7 @@
       </div>
     </section>
 
-    <!-- Modal -->
+    <!-- Modal
     <div
       class="modal fade"
       id="formModal"
@@ -226,7 +231,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 bg-dark">
@@ -250,5 +255,9 @@
     ></script>
     <script src="script.js" defer></script>
     <script src="scripts/contact.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
