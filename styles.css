@@ -409,6 +409,7 @@ h1 {
 
 .btn:focus {
     background: var(--color-secondary);
+    color: var(--color-tertiary-hover);
 }
 
 @media screen and (max-width: 767px) {
@@ -862,8 +863,12 @@ h1 {
 
 /* Services page */
 
-.services__content__container {
-    padding: 2rem;
+.services__content, .services__content-flipped {
+    padding: 0 1.5rem;
+}
+
+.services__header {
+    padding-bottom: 2rem;
 }
 
 .services__image__container {
@@ -885,12 +890,12 @@ h1 {
     width: 100%;
 }
 
-.services__content {
+.services {
     padding-top: 1.5rem;
 }
 
 @media screen and (max-width: 1023px) {
-    .services__content__container {
+    .services__content {
         margin: 1rem;
         padding: 0;
     }
@@ -899,10 +904,15 @@ h1 {
         height: 35vh;
         margin: 1rem;
     }
+
+    .services__header,
+    .services__image {
+        padding-bottom: 1rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
-    .services__content__container {
+    .services__content {
         margin: 0.5rem;
     }
 
@@ -913,9 +923,8 @@ h1 {
 }
 
 @media screen and (min-width: 1024px) {
-    .services__content {
-        padding-left: 2rem;
-        padding-top: 0;
+    .services__content-flipped:nth-of-type(1) {
+        order: 1;
     }
 }
 
