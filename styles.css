@@ -137,7 +137,7 @@ input::-webkit-inner-spin-button {
         bottom: 5rem;
         font-size: 0.625rem;
         height: 1rem; 
-        right: 1.5rem;    
+        right: 1.2rem;    
         width: 1rem;
     }
 }
@@ -147,12 +147,6 @@ input::-webkit-inner-spin-button {
     input[type="email"],
     input[type="tel"] {
         width: 100%;
-    }
-}
-
-@media screen and (max-width: 300px) {
-    .scroll-up-link {
-        right: 0.8rem;
     }
 }
 
