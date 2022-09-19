@@ -693,25 +693,18 @@ h1 {
 
 /* About block */
 
-.about__image__container {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
 .about__image {
     border-radius: 20px;
-    width: 100%;
+    float: left;
+    margin-right: 1rem;
+    width: 50%;
 }
 
-.about__content {
-    padding-top: 1.5rem;
-}
-
-@media screen and (min-width: 1024px) {
-    .about__content {
-        padding-left: 2rem;
-        padding-top: 0;
+@media screen and (max-width: 1023px) {
+    .about__image {
+        margin-right: 0;
+        margin-bottom: 1rem;
+        width: 100%;
     }
 }
 
