@@ -522,7 +522,6 @@ h1 {
     transition: 0.3s all ease-in-out;
 }
 
-.carousel__tab:hover,
 .carousel__tab:hover {
     background-color: var(--color-primary-hover);
 }
