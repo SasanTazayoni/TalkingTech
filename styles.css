@@ -577,6 +577,10 @@ h1 {
         padding: 28px;
     }
 
+    .carousel {
+        height: 50vh;
+    }
+
     .carousel__button {
         font-size: 2rem;
         padding: 0 1rem 0.5rem 1rem;
@@ -594,6 +598,10 @@ h1 {
 @media screen and (max-width: 376px) {
     .carousel__tabs {
         height: 25px;
+    }
+
+    .carousel {
+        height: 40vh;
     }
     
     .carousel__tab {
