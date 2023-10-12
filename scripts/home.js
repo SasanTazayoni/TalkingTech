@@ -59,7 +59,6 @@ function activeElement(dataSlides, dataTitles, dataTabs) {
     const activeTitle = dataTitles.querySelector("[data-active]");
     const activeTab = dataTabs.querySelector("[data-active]");
 
-      
     return [activeSlide, activeTitle, activeTab];
 }
 
