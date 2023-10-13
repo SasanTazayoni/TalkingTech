@@ -618,22 +618,36 @@ input::-webkit-inner-spin-button {
 
 /* About block */
 
+.about-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+}
+
 .about__image {
     border-radius: 20px;
-    float: left;
     margin-right: 1rem;
-    width: 50%;
+    max-width: 100%;
+    /* Ensure the image doesn't exceed its container */
 }
 
 .about__content {
-    text-align: justify;;
+    text-align: justify;
 }
 
 @media screen and (max-width: 1023px) {
+    .about-section {
+        grid-template-columns: 100%;
+        /* On smaller screens, switch to a single column */
+    }
+
     .about__image {
         margin-right: 0;
         margin-bottom: 1rem;
-        width: 100%;
     }
 }
 
