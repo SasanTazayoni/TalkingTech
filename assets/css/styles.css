@@ -576,12 +576,16 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 376px) {
-    .carousel__tabs {
-        height: 25px;
-    }
-
     .carousel {
         height: 40vh;
+    }
+
+    .carousel__button {
+        font-size: 1.5rem;
+    }
+
+    .carousel__tabs {
+        height: 25px;
     }
     
     .carousel__tab {
@@ -602,7 +606,7 @@ input::-webkit-inner-spin-button {
     }
 
     .carousel__button {
-        font-size: 1.6rem;
+        font-size: 1.25rem;
         padding: 0 0.8rem 0.4rem 0.8rem;
     }
 
