@@ -162,13 +162,13 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 428px) {
-    h2 {
+    h3 {
         font-size: 18px;
     }
 }
 
 @media screen and (max-width: 324px) {
-    h2 {
+    h3 {
         font-size: 15px;
     }
     
