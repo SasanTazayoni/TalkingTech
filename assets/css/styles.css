@@ -46,6 +46,7 @@ img {
     transition: opacity 0.6s ease-in-out;
     opacity: 0;
     width: 2rem;
+    z-index: 5;
 }
 
 .scroll-up-link:hover {
