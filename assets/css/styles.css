@@ -661,9 +661,8 @@ input::-webkit-inner-spin-button {
     position: absolute;
     background: none;
     border: none;
-    color: var(--color-tertiary);
+    color: var(--color-text);
     cursor: pointer;
-    display: none;
     font-size: 3rem;
     top: 50%;
     transform: translateY(-50%);
@@ -781,7 +780,7 @@ input::-webkit-inner-spin-button {
     text-align: justify;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
     .services__image {
         margin-left: 0;
         margin-bottom: 1rem;
