@@ -320,7 +320,7 @@ input::-webkit-inner-spin-button {
     overflow: hidden;
     height: 90vh;
     width: 100%;
-    background-image: url(images/mainpic.jpg);
+    background-image: url(../images/mainpic.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -784,7 +784,7 @@ input::-webkit-inner-spin-button {
 /* FAQ page */
 
 .faq__image {
-    background: url(images/FAQ.jpeg);
+    background: url(../images/FAQ.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

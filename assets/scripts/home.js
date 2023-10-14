@@ -1,5 +1,3 @@
-/////////////////////////////////////////   HOME PAGE   /////////////////////////////////////////
-
 const buttons = document.querySelectorAll("[data-carousel-button");
 const tabs = document.querySelectorAll('.carousel__tab');
 const slides = document.querySelectorAll('.slide');
@@ -117,7 +115,6 @@ tabs.forEach(tab => {
         resetAutoAdvance();
 
         let index = parseInt(e.target.dataset.index);
-        // console.log(index);
         const [dataSlides, dataTitles, dataTabs] = selectElement(tab);
         const [activeSlide, activeTitle, activeTab] = activeElement(dataSlides, dataTitles, dataTabs);
 
@@ -143,8 +140,6 @@ function clickTestimonialButton(button, auto) {
     if (!auto) {
         resetAutoAdvance();
     }
-    
-    // if (!button) return;
 
     const offset = button.dataset.testimonialButton === "next" ? 1 : -1;
     const testimonials = button.closest("[data-testimonials]").querySelector("[data-testimonials-content]");
@@ -183,7 +178,7 @@ testimonialTabs.forEach(tab => {
         resetAutoAdvance();
 
         let index = parseInt(e.target.dataset.index);
-        // console.log(index);
+        
         const testimonials = tab.closest("[data-testimonials]").querySelector("[data-testimonials-content]");
         const tabs = tab.closest("[data-testimonials]").querySelector("[data-testimonial-tabs]");
         const activeTestimonial = testimonials.querySelector("[data-active]");

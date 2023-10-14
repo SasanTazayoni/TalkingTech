@@ -1,8 +1,7 @@
-/////////////////////////////////////////   FAQ PAGE   /////////////////////////////////////////
-
 const questions = document.querySelectorAll('.question');
 
 /* Function to expand/collapse FAQ components */
+
 questions.forEach(function(question) {
     const btn = question.querySelector('.question__btn');
 

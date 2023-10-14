@@ -1,7 +1,7 @@
-/////////////////////////////////////////   ALL PAGES   /////////////////////////////////////////
-
 const navbar = document.querySelector('.navbar');
 const scrollToTop = document.querySelector('.scroll-up-link');
+
+// Appearance of scroll-up link
 
 window.addEventListener('scroll', function () {
     const scrollHeight = window.scrollY;
