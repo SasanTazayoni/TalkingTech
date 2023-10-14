@@ -43,7 +43,9 @@ img {
     position: fixed;
     right: 3rem;
     text-align: center;
-    transition: opacity 0.6s ease-in-out;
+    transition: opacity 0.6s ease-in-out, 
+                background 0.3s ease-in-out,
+                color 0.3s ease-in-out;
     opacity: 0;
     width: 2rem;
     z-index: 5;
@@ -51,7 +53,7 @@ img {
 
 .scroll-up-link:hover {
     background: var(--color-secondary-hover);
-    color: var(--color-tertiary-hover)
+    color: var(--color-tertiary-hover);
 }
 
 .show-link {
