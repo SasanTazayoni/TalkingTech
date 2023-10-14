@@ -130,7 +130,7 @@ input::-webkit-inner-spin-button {
     }
 }
 
-@media screen and (max-width: 539px) {
+@media screen and (max-width: 540px) {
     .scroll-up-link {
         border-radius: 0.25rem;
         bottom: 5rem;
@@ -161,7 +161,17 @@ input::-webkit-inner-spin-button {
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 428px) {
+    h2 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 324px) {
+    h2 {
+        font-size: 15px;
+    }
+    
     body {
         font-size: 12px;
     }
