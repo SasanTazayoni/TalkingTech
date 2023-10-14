@@ -168,6 +168,10 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 324px) {
+    h1 {
+        font-size: 20px;
+    }
+
     h3 {
         font-size: 15px;
     }
@@ -338,6 +342,23 @@ input::-webkit-inner-spin-button {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.hero__text {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.hero__title {
+    font-size: 400%;
+}
+
+@media screen and (max-width: 376px) {
+    .hero__title {
+        font-size: 300%;
+    }
 }
 
 /* Carousel block */
