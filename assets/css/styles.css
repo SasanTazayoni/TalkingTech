@@ -684,9 +684,9 @@ input::-webkit-inner-spin-button {
     position: absolute;
     background: none;
     border: none;
-    color: var(--color-text);
+    color: var(--color-secondary);
     cursor: pointer;
-    font-size: 3rem;
+    font-size: 3.5rem;
     top: 50%;
     transform: translateY(-50%);
     transition: 0.3s all ease-in-out;
@@ -695,7 +695,7 @@ input::-webkit-inner-spin-button {
 
 .testimonials__button:hover,
 .testimonials__button:focus {
-    color: var(--color-tertiary-hover);
+    color: var(--color-secondary-hover);
 }
 
 .testimonials__button:focus {
@@ -703,12 +703,12 @@ input::-webkit-inner-spin-button {
 }
 
 .testimonials__button.prev {
-    left: 0.05rem;
+    left: 0.5rem;
     padding: 0;
 }
 
 .testimonials__button.next {
-    right: 0.05rem;
+    right: 0.5rem;
     padding: 0;
 }
 
@@ -747,9 +747,22 @@ input::-webkit-inner-spin-button {
     background: var(--color-text);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .testimonial__text {
         padding: 2rem;
+    }
+
+    .testimonials__button {
+        font-size: 2rem;
+        top: 93%;
+    }
+
+    .testimonials__button.prev {
+        left: 25%;
+    }
+
+    .testimonials__button.next {
+        right: 25%;
     }
 }
 
@@ -761,6 +774,14 @@ input::-webkit-inner-spin-button {
     .testimonial__text {
         padding: 1.5rem;
     }
+
+    .testimonials__button.prev {
+        left: 20%;
+    }
+
+    .testimonials__button.next {
+        right: 20%;
+    }
 }
 
 @media screen and (max-width: 440px) {
@@ -771,9 +792,35 @@ input::-webkit-inner-spin-button {
     .testimonial__text {
         padding: 1.2rem;   
     }
+
+    .testimonials__button {
+        top: 95%;
+    }
+
+    .testimonials__button.prev {
+        left: 15%;
+    }
+
+    .testimonials__button.next {
+        right: 15%;
+    }
+
+    .testimonial__tab {
+        width: 10px;
+    }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 376px) {
+    .testimonials__button.prev {
+        left: 10%;
+    }
+
+    .testimonials__button.next {
+        right: 10%;
+    }
+}
+
+@media screen and (max-width: 324px) {
     .testimonials {
         height: 390px;
     }
