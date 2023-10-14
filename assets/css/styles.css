@@ -602,7 +602,6 @@ input::-webkit-inner-spin-button {
 @media screen and (max-width: 324px) {
     .carousel__tabs {
         padding: 0 10px;
-        width: 200px;
     }
 
     .carousel__button {
