@@ -10,23 +10,15 @@ let nextInterval;
 let nextTestimonialInterval;
 let intervalDelay;
 
-/* This is the interval that runs from page load until a user clicks; it
-automatically advances the slide. Once a user clicks, there will be a delay 
-before auto advance starts up again. */
-function initializeAutoAdvance() {
+function initialiseCarouselAutoAdvance() {
     nextInterval = setInterval(function() {
         clickButton(nextCarouselButton, true);
     }, 4000);
-    nextTestimonialInterval = setInterval(function() {
-        clickTestimonialButton(nextTestimonialButton, true);
-    }, 8000);
 }
 
-/* This is the timeout that starts after a person clicks; this creates a gap
-between the user clicking, and the auto advancing restarting. */
-function initializeAdvanceDelay() {
+function initialiseCarouselAdvanceDelay() {
     intervalDelay = setTimeout(function() {
-        initializeAutoAdvance();
+        initialiseTestimonialAutoAdvance();
     }, 6000);
 };
 
@@ -35,16 +27,14 @@ function resetAutoAdvance() {
     if (nextInterval) {
         clearInterval(nextInterval);
     }
-    if (nextTestimonialInterval) {
-        clearInterval(nextTestimonialInterval);
-    }
     if (intervalDelay) {
         clearTimeout(intervalDelay);
     }
-    initializeAdvanceDelay();
+    initialiseCarouselAdvanceDelay();
 };
 
-/* Functions to select multiple data attributes */
+// Functions to select multiple data attributes
+
 function selectElement(element) {
     const dataSlides = element.closest("[data-carousel]").querySelector("[data-slides]");
     const dataTitles = element.closest("[data-carousel]").querySelector("[data-titles]");
@@ -60,7 +50,8 @@ function activeElement(dataSlides, dataTitles, dataTabs) {
     return [activeSlide, activeTitle, activeTab];
 }
 
-/* Functionality of next and prev buttons in carousel */
+// Carousel buttons (next and prev)
+
 function clickButton(button, auto) {
     if (!auto) {
         resetAutoAdvance();
@@ -102,14 +93,12 @@ function clickButton(button, auto) {
 
 buttons.forEach(button => {
     button.addEventListener("click", () => {
-        /* Don't hook up the clickButton directly; hook up an anonymous listener 
-        so that we can pass the auto parameter, which differentiates between user clicks
-        and the auto advance functionality. */
         clickButton(button, false);
     });
 });
 
-/* Function to click on tabs to navigate in carousel */
+// Navigate carousel tabs
+
 tabs.forEach(tab => {
     tab.addEventListener("click", function(e) {
         resetAutoAdvance();
@@ -135,10 +124,19 @@ tabs.forEach(tab => {
     });
 });
 
-/* Functionality of next and prev buttons in testimonials */
+// Interval delays between testimonial slides
+
+function initialiseTestimonialAutoAdvance() {
+    nextTestimonialInterval = setInterval(function() {
+        clickTestimonialButton(nextTestimonialButton, true);
+    }, 12000);
+}
+
+// Testimonials buttons (next and prev)
+
 function clickTestimonialButton(button, auto) {
     if (!auto) {
-        resetAutoAdvance();
+        resetTestimonialAutoAdvance();
     }
 
     const offset = button.dataset.testimonialButton === "next" ? 1 : -1;
@@ -172,10 +170,11 @@ testimonialButtons.forEach(button => {
     });
 });
 
-/* Function to click on tabs to navigate in testimonials */
+// Navigate testimonials tabs
+
 testimonialTabs.forEach(tab => {
     tab.addEventListener("click", function(e) {
-        resetAutoAdvance();
+        resetTestimonialAutoAdvance();
 
         let index = parseInt(e.target.dataset.index);
         
@@ -197,4 +196,25 @@ testimonialTabs.forEach(tab => {
     });
 });
 
-initializeAutoAdvance();
+// Trigger delay timer for testimonial when button or tab clicked
+
+function resetTestimonialAutoAdvance() {
+    if (nextTestimonialInterval) {
+        clearInterval(nextTestimonialInterval);
+    }
+    if (intervalDelay) {
+        clearTimeout(intervalDelay);
+    }
+    initialiseTestimonialAdvanceDelay();
+};
+
+// Delay timer
+
+function initialiseTestimonialAdvanceDelay() {
+    intervalDelay = setTimeout(function() {
+        initialiseTestimonialAutoAdvance();
+    }, 8000);
+}
+
+initialiseCarouselAutoAdvance();
+initialiseTestimonialAutoAdvance();
