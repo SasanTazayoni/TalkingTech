@@ -850,44 +850,6 @@ input::-webkit-inner-spin-button {
     }
 }
 
-/* Services page */
-
-.services__header {
-    text-align: center;
-}
-
-.services__image {
-    border-radius: 20px;
-    float: right;
-    margin-left: 1rem;
-    width: 50%;
-}
-
-.services__image--flipped {
-    border-radius: 20px;
-    float: left;
-    margin-right: 1rem;
-    width: 50%;
-}
-
-.services__content {
-    text-align: justify;
-}
-
-@media screen and (max-width: 1024px) {
-    .services__image {
-        margin-left: 0;
-        margin-bottom: 1rem;
-        width: 100%;
-    }
-
-    .services__image--flipped {
-        margin-right: 0;
-        margin-bottom: 1rem;
-        width: 100%;
-    }
-}
-
 /* FAQ page */
 
 .faq__image {
@@ -1138,27 +1100,5 @@ input::-webkit-inner-spin-button {
 
     .contact-form__group {
        margin-bottom: 0.5rem;
-    }
-}
-
-/* Modal */
-
-.modal-dialog, .modal-footer {
-    display: flex;
-    justify-content: center;
-}
-
-.modal-content {
-    background: lightgrey;
-    text-align: center;
-}
-
-.modal-footer {
-    border-top: none;
-}
-
-@media screen and (max-width: 575px) {
-    .modal-content {
-        width: 80%;
     }
 }
