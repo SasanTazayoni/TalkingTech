@@ -1,3 +1,9 @@
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 90deg;
+    inherits: false;
+}
+
 :root {
     --color-text: #fff;
     --color-primary: #4b4f53;
@@ -366,7 +372,7 @@ input::-webkit-inner-spin-button {
 }
 
 .carousel {
-    box-shadow: 0 0 3px 1px var(--color-secondary);
+    background: var(--color-tertiary);
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -374,6 +380,30 @@ input::-webkit-inner-spin-button {
     margin: 0 auto;
     max-width: 1200px;
     position: relative;
+}
+
+.carousel::before,
+.carousel::after {
+    content: '';
+    position: absolute;
+    inset: -0.25rem;
+    background: conic-gradient(
+        from var(--gradient-angle),
+        var(--color-secondary-hover),
+        var(--color-dark),
+        var(--color-secondary-hover)
+    );
+    border-radius: inherit;
+    animation: rotation 3s linear infinite;
+}
+
+@keyframes rotation {
+    0%  { --gradient-angle: 0deg; }
+    100% { --gradient-angle: 360deg; }
+}
+
+.carousel::after {
+    filter: blur(2.5rem);
 }
 
 .carousel__header {
