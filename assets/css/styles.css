@@ -822,7 +822,7 @@ input::-webkit-inner-spin-button {
 
 @media screen and (max-width: 768px) {
     .testimonial__text {
-        padding: 2rem;
+        padding-top: 1.5rem;
     }
 
     .testimonials__button {
@@ -845,7 +845,8 @@ input::-webkit-inner-spin-button {
     }
 
     .testimonial__text {
-        padding: 1.5rem;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
     }
 
     .testimonials__button.prev {
@@ -863,11 +864,11 @@ input::-webkit-inner-spin-button {
     }
 
     .testimonial__text {
-        padding: 1.2rem;   
+        padding-top: 1rem;   
     }
 
     .testimonials__button {
-        top: 95%;
+        top: 94%;
     }
 
     .testimonials__button.prev {
@@ -884,18 +885,16 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 376px) {
+    .testimonial__text {
+        font-size: 13px;
+    }
+
     .testimonials__button.prev {
         left: 10%;
     }
 
     .testimonials__button.next {
         right: 10%;
-    }
-}
-
-@media screen and (max-width: 324px) {
-    .testimonials {
-        height: 390px;
     }
 }
 
