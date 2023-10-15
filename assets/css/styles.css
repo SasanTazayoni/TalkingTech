@@ -394,7 +394,7 @@ input::-webkit-inner-spin-button {
         var(--color-secondary-hover)
     );
     border-radius: inherit;
-    animation: rotation 3s linear infinite;
+    animation: rotation 4s linear infinite;
 }
 
 @keyframes rotation {
