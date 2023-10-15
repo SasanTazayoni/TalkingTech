@@ -333,6 +333,27 @@ input::-webkit-inner-spin-button {
     }
 }
 
+/* Navbar */
+
+.logo {
+    height: 60px;
+    width: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .logo {
+        height: 40px;
+        width: 40px;
+    }
+}
+
 /* Hero block */
 
 .hero__container {
