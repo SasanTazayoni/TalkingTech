@@ -10,28 +10,13 @@ let nextInterval;
 let nextTestimonialInterval;
 let intervalDelay;
 
+// Interval delays between carousel slides
+
 function initialiseCarouselAutoAdvance() {
     nextInterval = setInterval(function() {
         clickButton(nextCarouselButton, true);
     }, 4000);
 }
-
-function initialiseCarouselAdvanceDelay() {
-    intervalDelay = setTimeout(function() {
-        initialiseTestimonialAutoAdvance();
-    }, 6000);
-};
-
-/* Clear any existing intervals/timeouts */
-function resetAutoAdvance() {
-    if (nextInterval) {
-        clearInterval(nextInterval);
-    }
-    if (intervalDelay) {
-        clearTimeout(intervalDelay);
-    }
-    initialiseCarouselAdvanceDelay();
-};
 
 // Functions to select multiple data attributes
 
@@ -91,6 +76,8 @@ function clickButton(button, auto) {
     delete activeTab.dataset.active;
 }
 
+// Add listener for click to trigger a delay
+
 buttons.forEach(button => {
     button.addEventListener("click", () => {
         clickButton(button, false);
@@ -123,6 +110,26 @@ tabs.forEach(tab => {
         }
     });
 });
+
+// Trigger delay timer for carousel when button or tab clicked
+
+function resetAutoAdvance() {
+    if (nextInterval) {
+        clearInterval(nextInterval);
+    }
+    if (intervalDelay) {
+        clearTimeout(intervalDelay);
+    }
+    initialiseCarouselAdvanceDelay();
+};
+
+// Carousel delay timer
+
+function initialiseCarouselAdvanceDelay() {
+    intervalDelay = setTimeout(function() {
+        initialiseTestimonialAutoAdvance();
+    }, 6000);
+};
 
 // Interval delays between testimonial slides
 
@@ -163,6 +170,8 @@ function clickTestimonialButton(button, auto) {
     tabs.children[tabIndex].dataset.active = true;
     delete activeTab.dataset.active;
 }
+
+// Add listener for click to trigger a delay
 
 testimonialButtons.forEach(button => {
     button.addEventListener("click", () => {
@@ -208,7 +217,7 @@ function resetTestimonialAutoAdvance() {
     initialiseTestimonialAdvanceDelay();
 };
 
-// Delay timer
+// Testimonials delay timer
 
 function initialiseTestimonialAdvanceDelay() {
     intervalDelay = setTimeout(function() {
