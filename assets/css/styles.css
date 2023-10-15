@@ -926,6 +926,18 @@ input::-webkit-inner-spin-button {
     }
 }
 
+@media screen and (max-width: 428px) {
+    .github-link i {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 324px) {
+    .github-link i {
+        font-size: 15px;
+    }
+}
+
 /* FAQ page */
 
 .faq__image {
