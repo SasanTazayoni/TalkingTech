@@ -904,6 +904,10 @@ input::-webkit-inner-spin-button {
     text-align: center;
 }
 
+.footer__text {
+    color: var(--color-secondary);
+}
+
 .github-link i {
     font-size: 30px;
     color: var(--color-primary);
