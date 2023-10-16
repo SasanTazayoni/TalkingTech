@@ -409,6 +409,12 @@ input::-webkit-inner-spin-button {
     }
 }
 
+@media screen and (max-width: 324px) {
+    .hero__container {
+        background-image: url(../images/mainpic-xsmall.webp);
+    }
+}
+
 /* Carousel block */
 
 .carousel__container {
