@@ -338,6 +338,12 @@ input::-webkit-inner-spin-button {
     }
 }
 
+@media screen and (max-width: 428px) {
+    .btn {
+        font-size: 0.8rem;
+    }
+}
+
 /* Navbar */
 
 .logo {
