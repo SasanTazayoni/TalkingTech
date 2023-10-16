@@ -154,42 +154,56 @@
           <button
             class="carousel__tab"
             data-tooltip="Data Backup & Recovery"
+            data-bs-target="#recoveryModalToggle"
+            data-bs-toggle="modal"
             data-index="1"
             aria-label="Open Data Backup & Recovery Modal"
           ></button>
           <button
             class="carousel__tab"
             data-tooltip="Virus & Malware Removals"
+            data-bs-target="#malwareModalToggle"
+            data-bs-toggle="modal"
             data-index="2"
             aria-label="Open Virus & Malware Removals Modal"
           ></button>
           <button
             class="carousel__tab"
             data-tooltip="Performance Optimisation"
+            data-bs-target="#performanceModalToggle"
+            data-bs-toggle="modal"
             data-index="3"
             aria-label="Open Performance Optimisation Modal"
           ></button>
           <button
             class="carousel__tab"
             data-tooltip="Hardware Maintenance"
+            data-bs-target="#hardwareModalToggle"
+            data-bs-toggle="modal"
             data-index="4"
             aria-label="Open Hardware Maintenance Modal"
           ></button>
           <button
             class="carousel__tab"
             data-tooltip="Network Setups"
+            data-bs-target="#networkModalToggle"
+            data-bs-toggle="modal"
             data-index="5"
             aria-label="Open Network Setups Modal"
           ></button>
           <button
             class="carousel__tab"
             data-tooltip="Software Upgrades"
+            data-bs-target="#softwareModalToggle"
+            data-bs-toggle="modal"
             data-index="6"
             aria-label="Open Software Upgrades Modal"
           ></button>
           <button
             class="carousel__tab"
             data-tooltip="Online Support"
+            data-bs-target="#onlinesupportModalToggle"
+            data-bs-toggle="modal"
             data-index="7"
             aria-label="Open Online Support Modal"
           ></button>
@@ -197,7 +211,7 @@
       </div>
     </section>
 
-    <!-- Modals -->
+    <!-- Consultancy & Advice modal -->
     <div class="modal fade" id="consultancyModalToggle" aria-hidden="true" aria-labelledby="consultancyModalToggleLabel"
       tabindex="-1">
       <div class="modal-dialog modal-dialog-centered">
@@ -209,28 +223,175 @@
           <div class="modal-body">
             I will assess your home setup, identify opportunities for improvement and offer personalised advice to help you make informed decisions, whether it's about upgrading your hardware, optimizing performance, or enhancing your security.
           </div>
-          <!-- <div class="modal-footer">
-            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second
-              modal</button>
-          </div> -->
-          <!-- <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
-            tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  Hide this modal and show the first with the button below.
-                </div>
-                <div class="modal-footer">
-                  <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to
-                    first</button>
-                </div>
-              </div>
-            </div>
-          </div> -->
+          <div class="modal-footer btn-container">
+            <button class="btn" data-bs-target="#onlinesupportModalToggle" data-bs-toggle="modal">
+              Previous
+            </button>
+            <button class="btn" data-bs-target="#recoveryModalToggle" data-bs-toggle="modal">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Data Backup & Recovery modal -->
+    <div class="modal fade" id="recoveryModalToggle" aria-hidden="true" aria-labelledby="recoveryModalToggleLabel"
+      tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="recoveryModalToggleLabel">Data Backup & Recovery</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            I provide data backup solutions to safeguard your important files and offer data recovery services in case of accidental deletion, hardware failures, or data corruption, so you never have to worry about data loss.
+          </div>
+          <div class="modal-footer btn-container">
+            <button class="btn" data-bs-target="#consultancyModalToggle" data-bs-toggle="modal">
+              Previous
+            </button>
+            <button class="btn" data-bs-target="#malwareModalToggle" data-bs-toggle="modal">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Virus & Malware Removals modal -->
+    <div class="modal fade" id="malwareModalToggle" aria-hidden="true" aria-labelledby="malwareModalToggleLabel"
+      tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="malwareModalToggleLabel">Virus & Malware Removals</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            My virus and malware removal service ensures your devices are clean and secure. I will perform thorough scans and remove any threats, keeping your system free from harm.
+          </div>
+          <div class="modal-footer btn-container">
+            <button class="btn" data-bs-target="#recoveryModalToggle" data-bs-toggle="modal">
+              Previous
+            </button>
+            <button class="btn" data-bs-target="#performanceModalToggle" data-bs-toggle="modal">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Performance Optimisation modal -->
+    <div class="modal fade" id="performanceModalToggle" aria-hidden="true" aria-labelledby="performanceModalToggleLabel"
+      tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="performanceModalToggleLabel">Performance Optimisation</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            My performance optimisation service will boost the speed and responsiveness of your devices. I will fine-tune your systems, remove unnecessary clutter, and make sure everything runs at its best, giving you an enhanced computing experience at home.
+          </div>
+          <div class="modal-footer btn-container">
+            <button class="btn" data-bs-target="#malwareModalToggle" data-bs-toggle="modal">
+              Previous
+            </button>
+            <button class="btn" data-bs-target="#hardwareModalToggle" data-bs-toggle="modal">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hardware Maintenance modal -->
+    <div class="modal fade" id="hardwareModalToggle" aria-hidden="true" aria-labelledby="hardwareModalToggleLabel"
+      tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="hardwareModalToggleLabel">Hardware Maintenance</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            I offer comprehensive hardware maintenance services, addressing issues such as system overheating, faulty components or hardware upgrades.
+          </div>
+          <div class="modal-footer btn-container">
+            <button class="btn" data-bs-target="#performanceModalToggle" data-bs-toggle="modal">
+              Previous
+            </button>
+            <button class="btn" data-bs-target="#networkModalToggle" data-bs-toggle="modal">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Networks Setups modal -->
+    <div class="modal fade" id="networkModalToggle" aria-hidden="true" aria-labelledby="networkModalToggleLabel"
+      tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="networkModalToggleLabel">Networks Setups</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            A reliable home network is crucial for seamless connectivity. I specialise in setting up and optimising home networks, making sure your devices are connected securely and efficiently, providing you with smooth access to the internet and all your connected devices.
+          </div>
+          <div class="modal-footer btn-container">
+            <button class="btn" data-bs-target="#hardwareModalToggle" data-bs-toggle="modal">
+              Previous
+            </button>
+            <button class="btn" data-bs-target="#softwareModalToggle" data-bs-toggle="modal">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Software Upgrades modal -->
+    <div class="modal fade" id="softwareModalToggle" aria-hidden="true" aria-labelledby="softwareModalToggleLabel"
+      tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="softwareModalToggleLabel">Software Upgrades</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Keeping your software up to date is essential for security and functionality. I manage software upgrades, ensuring you have the latest features and security patches.
+          </div>
+          <div class="modal-footer btn-container">
+            <button class="btn" data-bs-target="#networkModalToggle" data-bs-toggle="modal">
+              Previous
+            </button>
+            <button class="btn" data-bs-target="#onlinesupportModalToggle" data-bs-toggle="modal">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Online Support modal -->
+    <div class="modal fade" id="onlinesupportModalToggle" aria-hidden="true" aria-labelledby="onlinesupportModalToggleLabel"
+      tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="onlinesupportModalToggleLabel">Online Support</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            I can help you troubleshoot and resolve software issues, configure devices or guide you through any technology-related questions you may have, all from the comfort of your home.
+          </div>
+          <div class="modal-footer btn-container">
+            <button class="btn" data-bs-target="#softwareModalToggle" data-bs-toggle="modal">
+              Previous
+            </button>
+            <button class="btn" data-bs-target="#consultancyModalToggle" data-bs-toggle="modal">
+              Next
+            </button>
+          </div>
         </div>
       </div>
     </div>

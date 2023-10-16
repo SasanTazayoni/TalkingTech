@@ -320,6 +320,11 @@ input::-webkit-inner-spin-button {
     color: var(--color-tertiary-hover);
 }
 
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
 @media screen and (max-width: 767px) {
     .btn {
         width: 100px;
@@ -1196,11 +1201,6 @@ input::-webkit-inner-spin-button {
 .contact-form__textarea {
     height: 30vh;
     width: 100%;
-}
-
-.contact__btn-container {
-    display: flex;
-    justify-content: center;
 }
 
 @media screen and (max-width: 500px) {
