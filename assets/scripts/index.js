@@ -84,33 +84,6 @@ buttons.forEach(button => {
     });
 });
 
-// Navigate carousel tabs
-
-tabs.forEach(tab => {
-    tab.addEventListener("click", function(e) {
-        resetAutoAdvance();
-
-        let index = parseInt(e.target.dataset.index);
-        const [dataSlides, dataTitles, dataTabs] = selectElement(tab);
-        const [activeSlide, activeTitle, activeTab] = activeElement(dataSlides, dataTitles, dataTabs);
-
-        if (index != undefined) {
-            if (!dataTabs.children[index].dataset.active) {
-                dataTabs.children[index].dataset.active = true;
-                delete activeTab.dataset.active;
-            }
-            if (!dataTitles.children[index].dataset.active) {
-                dataTitles.children[index].dataset.active = true;
-                delete activeTitle.dataset.active;
-            }
-            if (!dataSlides.children[index].dataset.active) {
-                dataSlides.children[index].dataset.active = true;
-                delete activeSlide.dataset.active;
-            }
-        }
-    });
-});
-
 // Trigger delay timer for carousel when button or tab clicked
 
 function resetAutoAdvance() {
