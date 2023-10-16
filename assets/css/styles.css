@@ -391,6 +391,18 @@ input::-webkit-inner-spin-button {
     font-size: 400%;
 }
 
+@media screen and (max-width: 1024px) {
+    .hero__container {
+        background-image: url(../images/mainpic-medium.webp);
+    }
+}
+
+@media screen and (max-width: 428px) {
+    .hero__container {
+        background-image: url(../images/mainpic-small.webp);
+    }
+}
+
 @media screen and (max-width: 376px) {
     .hero__title {
         font-size: 300%;
