@@ -142,50 +142,98 @@
         </ul>
         <!-- Carousel tabs -->
         <div class="carousel__tabs" data-tabs>
-          <div
+          <button
             class="carousel__tab"
             data-tooltip="Consultancy & Advice"
+            data-bs-target="#consultancyModalToggle"
+            data-bs-toggle="modal"
             data-index="0"
+            aria-label="Open Consultancy & Advice Modal"
             data-active
-          ></div>
-          <div
+          ></button>
+          <button
             class="carousel__tab"
             data-tooltip="Data Backup & Recovery"
             data-index="1"
-          ></div>
-          <div
+            aria-label="Open Data Backup & Recovery Modal"
+          ></button>
+          <button
             class="carousel__tab"
             data-tooltip="Virus & Malware Removals"
             data-index="2"
-          ></div>
-          <div
+            aria-label="Open Virus & Malware Removals Modal"
+          ></button>
+          <button
             class="carousel__tab"
             data-tooltip="Performance Optimisation"
             data-index="3"
-          ></div>
-          <div
+            aria-label="Open Performance Optimisation Modal"
+          ></button>
+          <button
             class="carousel__tab"
             data-tooltip="Hardware Maintenance"
             data-index="4"
-          ></div>
-          <div
+            aria-label="Open Hardware Maintenance Modal"
+          ></button>
+          <button
             class="carousel__tab"
             data-tooltip="Network Setups"
             data-index="5"
-          ></div>
-          <div
+            aria-label="Open Network Setups Modal"
+          ></button>
+          <button
             class="carousel__tab"
             data-tooltip="Software Upgrades"
             data-index="6"
-          ></div>
-          <div
+            aria-label="Open Software Upgrades Modal"
+          ></button>
+          <button
             class="carousel__tab"
             data-tooltip="Online Support"
             data-index="7"
-          ></div>
+            aria-label="Open Online Support Modal"
+          ></button>
         </div>
       </div>
     </section>
+
+    <!-- Modals -->
+    <div class="modal fade" id="consultancyModalToggle" aria-hidden="true" aria-labelledby="consultancyModalToggleLabel"
+      tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="consultancyModalToggleLabel">Consultancy & Advice</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            I will assess your home setup, identify opportunities for improvement and offer personalised advice to help you make informed decisions, whether it's about upgrading your hardware, optimizing performance, or enhancing your security.
+          </div>
+          <!-- <div class="modal-footer">
+            <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Open second
+              modal</button>
+          </div> -->
+          <!-- <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Hide this modal and show the first with the button below.
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to
+                    first</button>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
 
     <!-- About me -->
     <section class="block block--dark">
