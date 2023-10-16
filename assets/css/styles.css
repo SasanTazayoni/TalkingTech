@@ -821,6 +821,7 @@ input::-webkit-inner-spin-button {
 }
 
 .testimonial__tab {
+    cursor: pointer;
     display: inline-block;
     width: 30px;
     height: 10px;
