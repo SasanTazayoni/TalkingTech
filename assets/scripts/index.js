@@ -100,7 +100,7 @@ function resetAutoAdvance() {
 
 function initialiseCarouselAdvanceDelay() {
     intervalDelay = setTimeout(function() {
-        initialiseTestimonialAutoAdvance();
+        initialiseCarouselAutoAdvance();
     }, 6000);
 };
 
