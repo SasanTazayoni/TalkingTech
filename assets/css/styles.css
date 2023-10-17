@@ -1139,17 +1139,26 @@ input::-webkit-inner-spin-button {
     background-color: var(--color-primary);
     border-radius: 20px;
     padding: 1.5rem;
+    justify-items: center;
 }
 
 .signup-form__content {
     line-height: 1.5;
     padding: 2rem;
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    align-items: center;
 }
 
-.signup-form__group {
-    margin-bottom: 1rem;
+.signup__input-field {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.signup__address-line {
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 /* Contact page */
@@ -1223,7 +1232,7 @@ input::-webkit-inner-spin-button {
     margin-bottom: 1rem;
 }
 
-.contact__input-fields {
+.contact__input-field {
     width: 40%;
 }
 
@@ -1233,13 +1242,13 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 1024px) {
-    .contact__input-fields {
+    .contact__input-field {
         width: 50%;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .contact__input-fields {
+    .contact__input-field {
         width: 60%;
     }
 }
@@ -1259,7 +1268,7 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 480px) {
-    .contact__input-fields {
+    .contact__input-field {
         width: 100%;
     }
 }
