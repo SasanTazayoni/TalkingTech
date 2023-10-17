@@ -175,7 +175,7 @@ input::-webkit-inner-spin-button {
 
 .block__header {
     text-align: center;
-    padding-bottom: 3rem;
+    padding-bottom: 2.5rem;
 }
 
 .block--dark {
@@ -1122,6 +1122,17 @@ input::-webkit-inner-spin-button {
 }
 
 /* Sign up page */
+
+.signup-form__header {
+    margin: 0;
+}
+
+.signup__note {
+    font-size: 80%;
+    font-style: italic;
+    text-align: center;
+    margin: 0;
+}
 
 .signup-form__container {
     color: var(--color-text);
