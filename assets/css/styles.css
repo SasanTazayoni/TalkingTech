@@ -93,17 +93,11 @@ textarea {
     padding: 0.5rem 0.7rem;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"] {
-    width: 40%;
-}
-
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
 textarea:focus {
-    border-color: var(--color-secondary);
+    border-color: var(--color-dark);
     outline: 0;
     transition: all 0.3s;
 }
@@ -118,22 +112,6 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-@media screen and (max-width: 1024px) {
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"] {
-        width: 50%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"] {
-        width: 60%;
-    }
-}
-
 @media screen and (max-width: 540px) {
     .scroll-up-link {
         border-radius: 0.25rem;
@@ -142,14 +120,6 @@ input::-webkit-inner-spin-button {
         height: 1rem; 
         right: 1.2rem;    
         width: 1rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"] {
-        width: 100%;
     }
 }
 
@@ -1151,6 +1121,26 @@ input::-webkit-inner-spin-button {
     }
 }
 
+/* Sign up page */
+
+.signup-form__container {
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    border-radius: 20px;
+    padding: 1.5rem;
+}
+
+.signup-form__content {
+    line-height: 1.5;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+.signup-form__group {
+    margin-bottom: 1rem;
+}
+
 /* Contact page */
 
 .contact-card {
@@ -1222,9 +1212,25 @@ input::-webkit-inner-spin-button {
     margin-bottom: 1rem;
 }
 
+.contact__input-fields {
+    width: 40%;
+}
+
 .contact-form__textarea {
     height: 30vh;
     width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .contact__input-fields {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact__input-fields {
+        width: 60%;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -1238,5 +1244,11 @@ input::-webkit-inner-spin-button {
 
     .contact-form__group {
        margin-bottom: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact__input-fields {
+        width: 100%;
     }
 }
