@@ -293,6 +293,8 @@ input::-webkit-inner-spin-button {
 .btn-container {
     display: flex;
     justify-content: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 @media screen and (max-width: 767px) {
