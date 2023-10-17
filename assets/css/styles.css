@@ -268,7 +268,7 @@ input::-webkit-inner-spin-button {
 
 .btn {
     background: var(--color-secondary);
-    border-radius: 20px;
+    border-radius: 10px;
     border: 0;
     box-shadow: 0rem 0rem 2px var(--color-secondary);
     color: var(--color-tertiary);
