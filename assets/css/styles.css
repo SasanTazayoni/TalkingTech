@@ -87,6 +87,7 @@ input, textarea {
 input[type="text"],
 input[type="email"],
 input[type="tel"],
+input[type="password"],
 textarea {
     border: 2px solid var(--color-secondary);
     border-radius: 7px;
@@ -96,6 +97,7 @@ textarea {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
+input[type="password"]:focus,
 textarea:focus {
     border-color: var(--color-text);
     outline: 0;
@@ -1180,6 +1182,12 @@ input::-webkit-inner-spin-button {
     width: 50%;
 }
 
+.signup__error {
+    text-align: center;
+    color: rgb(255, 65, 65);
+    font-style: bold;
+}
+
 .signup__footnote {
     text-align: center;
     font-size: 80%;
@@ -1213,7 +1221,11 @@ input::-webkit-inner-spin-button {
     }
 
     .signup__note {
-        padding-bottom: 1rem;
+        padding-bottom: 0.8rem;
+    }
+
+    .signup__error {
+        padding-top: 0.8rem;
     }
 
     .signup__footnote {

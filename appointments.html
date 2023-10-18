@@ -75,12 +75,21 @@
                         <input id="surname" type="text" placeholder="Surname" name="lname" required minlength="1" maxlength="50" class="signup__input-field"/>
                     </div>
                     <div class="signup__line">
-                        <label for="email">Email</label>
+                        <label for="email">Email (username)</label>
                         <input id="email" type="email" placeholder="Email" name="email" required minlength="5" maxlength="30" class="signup__input-field"/>
                     </div>
                     <div class="signup__line">
                         <label for="phonenumber">Phone number</label>
                         <input id="phonenumber" type="tel" placeholder="Phone number" name="contact" required minlength="7" maxlength="20" class="signup__input-field"/>
+                    </div>
+                    <div class="signup__line">
+                        <label for="password">Password</label>
+                        <input id="password" type="password" placeholder="Password" name="password" required minlength="5" maxlength="50"
+                            class="signup__input-field" />
+                    </div>
+                    <div class="signup__line">
+                        <label for="confirmation">Confirm password</label>
+                        <input id="confirmation" type="password" placeholder="Confirm password" name="confirmation" required minlength="5" maxlength="50" class="signup__input-field" />
                     </div>
                     <div class="signup__address-line">
                         <label for="addressline1">Address line 1</label>
@@ -95,10 +104,12 @@
                         <input id="postcode" type="text" placeholder="Post code" name="postcode" required minlength="4" maxlength="9" class="signup__postcode-field"/>
                     </div>
                     <div class="btn-container">
-                        <button class="btn submit-btn" type="submit">Submit</button>
-                        <button class="btn reset-btn" type="reset">Reset</button>
+                        <button class="btn" type="submit">Submit</button>
+                        <button class="btn" data-reset type="reset">Reset</button>
                     </div>
                 </form>
+                <!-- Error message for password mismatch -->
+                <p class="signup__error" data-error></p>
                 <p class="signup__footnote">Already signed up? Login here</p>
             </div>
         </div>

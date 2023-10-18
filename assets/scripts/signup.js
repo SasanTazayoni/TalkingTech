@@ -6,6 +6,12 @@ import {
     addDoc
 } from 'firebase/firestore'
 
+const form = document.querySelector("form[data-form]")
+const password = document.querySelector("#password")
+const confirmation = document.querySelector("#confirmation")
+const errorMessage = document.querySelector("[data-error]")
+const resetBtn = document.querySelector("[data-reset]")
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCbhyBW7m8Anzi5xD-NwzVcWAViETcY3Qw",
@@ -14,10 +20,10 @@ const firebaseConfig = {
   storageBucket: "talkingtech-df5d4.appspot.com",
   messagingSenderId: "619342140520",
   appId: "1:619342140520:web:c210dd45a2f16f89de57dd"
-};
+}
 
 // Initialise firebase
-initializeApp(firebaseConfig);
+initializeApp(firebaseConfig)
 
 // Initialise services
 const db = getFirestore()
@@ -37,20 +43,27 @@ getDocs(colRef).then((snapshot) => {
 })
 
 // Adding user data
-const addUserInfo = document.querySelector('[data-form]')
-
-addUserInfo.addEventListener('submit', e => {
+form.addEventListener('submit', e => {
     e.preventDefault()
 
-    addDoc(colRef, {
-        firstname: addUserInfo.fname.value,
-        lastname: addUserInfo.lname.value,
-        email: addUserInfo.email.value,
-        phone: addUserInfo.contact.value,
-        address: addUserInfo.address.value,
-        address2: addUserInfo.address2.value,
-        postcode: addUserInfo.postcode.value
-    }).then(() => {
-        addUserInfo.reset()
-    })
+    if (password.value !== confirmation.value) {
+        errorMessage.textContent = "Passwords do not match"
+    } else {
+        errorMessage.textContent = ""
+        addDoc(colRef, {
+            firstname: form.fname.value,
+            lastname: form.lname.value,
+            email: form.email.value,
+            phone: form.contact.value,
+            address: form.address.value,
+            address2: form.address2.value,
+            postcode: form.postcode.value
+        }).then(() => {
+            form.reset()
+        })
+    }
 })
+
+resetBtn.addEventListener("click", () => {
+    errorMessage.textContent = "";
+});
