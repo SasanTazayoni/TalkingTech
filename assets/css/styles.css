@@ -566,6 +566,10 @@ input::-webkit-inner-spin-button {
     background: var(--color-text);
 }
 
+.callout-btns {
+    margin-top: 4rem;
+}
+
 @media screen and (max-width: 1024px) {
     .carousel__container {
         padding: 48px;
@@ -625,6 +629,10 @@ input::-webkit-inner-spin-button {
         width: 20px;
         height: 10px;
     }
+
+    .callout-btns {
+        margin-top: 2.5rem;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -653,6 +661,10 @@ input::-webkit-inner-spin-button {
 
     .carousel__button.next {
         right: 0.5rem;
+    }
+
+    .callout-btns {
+        margin-top: 2rem;
     }
 }
 
