@@ -277,6 +277,7 @@ input::-webkit-inner-spin-button {
     margin: 10px;
     padding: 10px;
     text-align: center;
+    transition: all 0.3s;
     width: 160px;
 }
 
@@ -1213,6 +1214,10 @@ input::-webkit-inner-spin-button {
 
     .signup__note {
         padding-bottom: 1rem;
+    }
+
+    .signup__footnote {
+        padding-top: 0.8rem;
     }
 }
 
