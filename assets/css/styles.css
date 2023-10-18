@@ -1167,6 +1167,11 @@ input::-webkit-inner-spin-button {
     width: 50%;
 }
 
+.signup__footnote {
+    text-align: center;
+    font-size: 80%;
+}
+
 @media screen and (max-width: 768px) {
     .signup-form__content {
         padding: 1rem;
@@ -1200,6 +1205,10 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 324px) {
+    .signup__note {
+        font-size: 100%;
+    }
+
     .signup__postcode-field {
         width: 100%;
     }
