@@ -3,10 +3,17 @@ import {
     getFirestore,
     collection,
     getDocs,
-    addDoc
+    addDoc,
+    query,
+    where
 } from 'firebase/firestore'
+import {
+    getAuth,
+    createUserWithEmailAndPassword
+} from 'firebase/auth'
 
 const form = document.querySelector("form[data-form]")
+const email = document.querySelector("#email")
 const password = document.querySelector("#password")
 const confirmation = document.querySelector("#confirmation")
 const errorMessage = document.querySelector("[data-error]")
@@ -27,43 +34,49 @@ initializeApp(firebaseConfig)
 
 // Initialise services
 const db = getFirestore()
+const auth = getAuth()
 
 // Collection reference
 const colRef = collection(db, 'Users')
 
-// Get collection data
-getDocs(colRef).then((snapshot) => {
-    let users = []
-    snapshot.docs.forEach((doc) => {
-        users.push({ ...doc.data(), id: doc.id })
-    })
-    console.log(users)
-}).catch(err => {
-    console.log(err.message)
-})
-
 // Adding user data
-form.addEventListener('submit', e => {
+form.addEventListener('submit', async (e) => {
     e.preventDefault()
 
-    if (password.value !== confirmation.value) {
-        errorMessage.textContent = "Passwords do not match"
+    const emailInput = email.value
+    const passwordInput = password.value
+
+    if (passwordInput !== confirmation.value) {
+        errorMessage.textContent = 'Passwords do not match'
     } else {
-        errorMessage.textContent = ""
-        addDoc(colRef, {
-            firstname: form.fname.value,
-            lastname: form.lname.value,
-            email: form.email.value,
-            phone: form.contact.value,
-            address: form.address.value,
-            address2: form.address2.value,
-            postcode: form.postcode.value
-        }).then(() => {
-            form.reset()
-        })
+        errorMessage.textContent = ''
+        try {
+            // Check if email already exists
+            const querySnapshot = await getDocs(query(collection(db, 'Users'), where('email', '==', emailInput)))
+            if (!querySnapshot.empty) {
+                errorMessage.textContent = 'Email already in use'
+            } else {
+                const cred = await createUserWithEmailAndPassword(auth, emailInput, passwordInput)
+                console.log('User created:', cred.user)
+
+                await addDoc(colRef, {
+                    firstname: form.fname.value,
+                    lastname: form.lname.value,
+                    email: emailInput,
+                    phone: form.contact.value,
+                    address: form.address.value,
+                    address2: form.address2.value,
+                    postcode: form.postcode.value
+                })
+                form.reset()
+            }
+        } catch (error) {
+            console.error('Error checking email in Firestore or signing up:', error)
+        }
     }
 })
 
 resetBtn.addEventListener("click", () => {
-    errorMessage.textContent = "";
-});
+    errorMessage.textContent = ""
+})
+
