@@ -130,7 +130,7 @@ onAuthStateChanged(auth, (user) => {
         logoutBtn.classList.add('logged-in')
         blockTopElement.classList.remove('logged-out')
 
-        setLoginSuccessMessage(user.email)
+        setEmail(user.email)
         
         loginModal.show()
     } else {
@@ -138,13 +138,15 @@ onAuthStateChanged(auth, (user) => {
         loginBtn.classList.remove('logged-in')
         logoutBtn.classList.remove('logged-in')
         blockTopElement.classList.add('logged-out')
+
+        setEmail('')
     }
 })
 
-function setLoginSuccessMessage(email) {
+function setEmail(email) {
     const emailSpan = loginSuccessMessage.querySelector('.blue')
-    emailSpan.textContent = email
     const userEmail = userStatus.querySelector('.user-email')
+    emailSpan.textContent = email
     userEmail.textContent = email
 }
 
