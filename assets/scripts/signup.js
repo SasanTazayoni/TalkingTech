@@ -109,6 +109,7 @@ loginForm.addEventListener('submit', e => {
     signInWithEmailAndPassword(auth, email, password)
         .then(() => {
             loginPromptModal.hide()
+            loginForm.reset()
         })
         .catch((err) => {
             console.log(err.message)
