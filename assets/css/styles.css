@@ -213,6 +213,10 @@ input::-webkit-inner-spin-button {
         padding: 6rem 1rem 1rem 1rem;
     }
 
+    .block-top.logged-out {
+        padding: 4rem 1rem 1rem 1rem;
+    }
+
     .block {
         padding: 1rem;
     }
@@ -222,11 +226,19 @@ input::-webkit-inner-spin-button {
     .block-top {
         padding-top: 7rem;
     }
+
+    .block-top.logged-out {
+        padding-top: 4rem;
+    }
 }
 
 @media screen and (max-width: 324px) {
     .block-top {
         padding: 7rem 0.5rem 1rem 0.5rem;
+    }
+
+    .block-top.logged-out {
+        padding: 4rem 0.5rem 1rem 0.5rem;
     }
 
     .block {
@@ -368,9 +380,17 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
+.login-btn.logged-in {
+    display: none;
+}
+
 .logout-btn {
     margin: 0;
     display: none;
+}
+
+.logout-btn.logged-in {
+    display: block;
 }
 
 .login-form {
@@ -427,7 +447,8 @@ input::-webkit-inner-spin-button {
 
 @media screen and (max-width: 376px) {
     .user-status__container {
-        width: 200px;
+        width: max-content;
+        max-width: 200px;
     }
 }
 

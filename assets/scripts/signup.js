@@ -23,12 +23,15 @@ const confirmation = document.querySelector("#confirmation")
 const errorMessage = document.querySelector("[data-error]")
 const resetBtn = document.querySelector("[data-reset]")
 const loginForm = document.querySelector("[data-login-form]")
+const loginBtn = document.querySelector('[data-login-btn]')
 const logoutBtn = document.querySelector('[data-logout-btn]')
 const confirmLoginBtn = document.querySelector('#loginButton')
 const cancelLoginBtn = document.querySelector('#cancelButton')
 const loginPromptModal = new bootstrap.Modal(document.getElementById('loginModalToggle'))
 const loginModal = new bootstrap.Modal(document.getElementById('loggedinModalToggle'))
 const logoutModal = new bootstrap.Modal(document.getElementById('logoutModalToggle'))
+const userStatus = document.querySelector('[data-user-status]')
+const blockTopElement = document.querySelector('.block-top')
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -121,7 +124,16 @@ onAuthStateChanged(auth, (user) => {
     console.log('user status:', user)
 
     if (user) {
+        userStatus.classList.add('logged-in')
+        loginBtn.classList.add('logged-in')
+        logoutBtn.classList.add('logged-in')
+        blockTopElement.classList.remove('logged-out')
         loginModal.show()
+    } else {
+        userStatus.classList.remove('logged-in')
+        loginBtn.classList.remove('logged-in')
+        logoutBtn.classList.remove('logged-in')
+        blockTopElement.classList.add('logged-out')
     }
 })
 
