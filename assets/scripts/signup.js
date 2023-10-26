@@ -5,11 +5,14 @@ import {
     getDocs,
     addDoc,
     query,
-    where
+    where,
+    getDoc
 } from 'firebase/firestore'
 import {
     getAuth,
-    createUserWithEmailAndPassword
+    createUserWithEmailAndPassword,
+    signOut,
+    signInWithEmailAndPassword
 } from 'firebase/auth'
 
 const form = document.querySelector("form[data-form]")
@@ -18,6 +21,9 @@ const password = document.querySelector("#password")
 const confirmation = document.querySelector("#confirmation")
 const errorMessage = document.querySelector("[data-error]")
 const resetBtn = document.querySelector("[data-reset]")
+const loginForm = document.querySelector("[data-login-form]")
+const logout = document.querySelector('.logout')
+const login = document.querySelector('.login')
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -80,3 +86,25 @@ resetBtn.addEventListener("click", () => {
     errorMessage.textContent = ""
 })
 
+logout.addEventListener('click', () => {
+    signOut(auth).then(() => {
+        console.log('signed out')
+    })
+    .catch((err) => {
+        console.log(err.message)
+    })
+})
+
+loginForm.addEventListener('submit', e => {
+    e.preventDefault()
+
+    const email = loginForm.email.value
+    const password = loginForm.password.value
+
+    signInWithEmailAndPassword(auth, email, password).then((cred) => {
+        console.log('user logged in:', cred.user)
+    })
+    .catch((err) => {
+        console.log(err.message)
+    })
+})
