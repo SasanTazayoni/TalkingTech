@@ -59,8 +59,10 @@
             <p class="user-status">
                 Logged in as <span class="user-email">verylongemailexample@gmail.com</span>
             </p>
-            <button class="btn login-btn" data-bs-target="#loginModalToggle"
-          data-bs-toggle="modal">Log in</button>
+            <button class="btn login-btn" data-bs-target="#loginModalToggle" data-bs-toggle="modal">
+                Log in
+            </button>
+            <button class="btn logout-btn" data-logout-btn>Log out</button>
         </div>
     </nav>
 
@@ -90,8 +92,43 @@
             </div>
         </div>
     </div>
-
-    <button class="logout">logout</button>
+    <!-- Successful login modal -->
+    <div class="modal fade" id="loggedinModalToggle" aria-hidden="true" aria-labelledby="loggedinModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="loggedinModalToggleLabel">Login successful</h1>
+                </div>
+                <div class="modal-body">
+                    You have logged in as ???.
+                </div>
+                <div class="modal-footer btn-container">
+                    <button class="btn" id="cancelButton" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Logout modal -->
+    <div class="modal fade" id="logoutModalToggle" aria-hidden="true" aria-labelledby="logoutModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="logoutModalToggleLabel">Logged out</h1>
+                </div>
+                <div class="modal-body">
+                    You have logged out of your account.
+                </div>
+                <div class="modal-footer btn-container">
+                    <button class="btn" id="cancelButton" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section class="block-top block--dark">
         <div class="container">

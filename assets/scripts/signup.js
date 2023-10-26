@@ -23,9 +23,12 @@ const confirmation = document.querySelector("#confirmation")
 const errorMessage = document.querySelector("[data-error]")
 const resetBtn = document.querySelector("[data-reset]")
 const loginForm = document.querySelector("[data-login-form]")
-const logout = document.querySelector('.logout')
+const logoutBtn = document.querySelector('[data-logout-btn]')
 const confirmLoginBtn = document.querySelector('#loginButton')
 const cancelLoginBtn = document.querySelector('#cancelButton')
+const loginPromptModal = new bootstrap.Modal(document.getElementById('loginModalToggle'))
+const loginModal = new bootstrap.Modal(document.getElementById('loggedinModalToggle'))
+const logoutModal = new bootstrap.Modal(document.getElementById('logoutModalToggle'))
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -87,10 +90,14 @@ resetBtn.addEventListener("click", () => {
     errorMessage.textContent = ""
 })
 
-logout.addEventListener('click', () => {
-    signOut(auth).catch((err) => {
-        console.log(err.message)
-    })
+logoutBtn.addEventListener('click', () => {
+    signOut(auth)
+        .then(() => {
+            logoutModal.show()
+        })
+        .catch((err) => {
+            console.log(err.message)
+        })
 })
 
 loginForm.addEventListener('submit', e => {
@@ -99,14 +106,22 @@ loginForm.addEventListener('submit', e => {
     const email = loginForm.email.value
     const password = loginForm.password.value
 
-    signInWithEmailAndPassword(auth, email, password).catch((err) => {
-        console.log(err.message)
-    })
+    signInWithEmailAndPassword(auth, email, password)
+        .then(() => {
+            loginPromptModal.hide()
+        })
+        .catch((err) => {
+            console.log(err.message)
+        })
 })
 
 // subscribing to auth changes
 onAuthStateChanged(auth, (user) => {
     console.log('user status:', user)
+
+    if (user) {
+        loginModal.show()
+    }
 })
 
 confirmLoginBtn.addEventListener('click', () => {

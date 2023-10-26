@@ -368,6 +368,11 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
+.logout-btn {
+    margin: 0;
+    display: none;
+}
+
 .login-form {
     padding: 0 20px;
 }
@@ -408,7 +413,7 @@ input::-webkit-inner-spin-button {
         flex-direction: column;
     }
 
-    .login-btn {
+    .login-btn, .logout-btn {
         padding: 5px;
     }
 }
