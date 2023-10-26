@@ -171,6 +171,10 @@ input::-webkit-inner-spin-button {
 
 /* Blocks */
 
+.block-top {
+    padding: 5rem 0;
+}
+
 .block {
     padding: 3rem 0;
 }
@@ -191,6 +195,10 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 768px) {
+    .block-top {
+        padding: 5rem 1.5rem 2rem 1.5rem;
+    }
+
     .block {
         padding: 2rem 1.5rem;
     }
@@ -201,24 +209,28 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 540px) {
+    .block-top {
+        padding: 6rem 1rem 1rem 1rem;
+    }
+
     .block {
         padding: 1rem;
     }
 }
 
-@media screen and (max-width: 300px) {
-    .block {
-        padding: 1rem 0.5rem;
+@media screen and (max-width: 376px) {
+    .block-top {
+        padding-top: 7rem;
     }
 }
 
-@media screen and (min-width: 1024px) and (max-height: 600px) {
-    .block__header {
-        padding-bottom: 1rem;
+@media screen and (max-width: 324px) {
+    .block-top {
+        padding: 7rem 0.5rem 1rem 0.5rem;
     }
 
-    .navbar {
-        padding: 0;
+    .block {
+        padding: 1rem 0.5rem;
     }
 }
 
@@ -321,9 +333,51 @@ input::-webkit-inner-spin-button {
 
 /* Navbar */
 
+.navbar {
+    position: relative;
+}
+
 .logo {
     height: 60px;
     width: 60px;
+}
+
+.user-status__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 110%;
+    right: 50%;
+    transform: translateX(50%);
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    font-style: italic;
+    border-radius: 10px;
+    width: max-content;
+    gap: 15px;
+    text-align: center;
+}
+
+.user-status {
+    margin-block-end: 0;
+    display: none;
+}
+
+.user-status.active {
+    display: block;
+}
+
+.login-btn {
+    margin: 0;
+}
+
+@media screen and (max-width: 1280px) {
+    .user-status__container {
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -331,12 +385,32 @@ input::-webkit-inner-spin-button {
         height: 50px;
         width: 50px;
     }
+
+    .user-status__container {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .user-status__container {
+        flex-direction: column;
+    }
+
+    .login-btn {
+        padding: 5px;
+    }
 }
 
 @media screen and (max-width: 428px) {
     .logo {
         height: 40px;
         width: 40px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .user-status__container {
+        width: 200px;
     }
 }
 
@@ -381,12 +455,6 @@ input::-webkit-inner-spin-button {
 @media screen and (max-width: 376px) {
     .hero__title {
         font-size: 300%;
-    }
-}
-
-@media screen and (max-width: 324px) {
-    .hero__container {
-        background-image: url(../images/mainpic-xsmall.webp);
     }
 }
 
