@@ -240,14 +240,8 @@ input::-webkit-inner-spin-button {
     display: grid;
 }
 
-@media screen and (min-width: 768px) {
-    .block .grid--1x2 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 @media screen and (min-width: 1024px) {
-    .block .grid--1x2-alt {
+    .block-top .grid--1x2 {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -599,6 +593,7 @@ input::-webkit-inner-spin-button {
     width: 35px;
     height: 15px;
     border: 1px solid var(--color-secondary);
+    padding: 0;
     margin: 0 10px;
     border-radius: 5px;
     background: var(--color-primary);
@@ -838,7 +833,7 @@ input::-webkit-inner-spin-button {
     position: relative;
     background: var(--color-primary);
     border-radius: 20px;
-    box-shadow: 0 0 2px 1px var(--color-secondary);
+    border: 2px solid var(--color-secondary);
 }
 
 .testimonial__text {
@@ -1225,6 +1220,7 @@ input::-webkit-inner-spin-button {
     border-radius: 20px;
     padding: 1.5rem;
     justify-items: center;
+    border: 2px solid var(--color-secondary);
 }
 
 .signup-form__content {
@@ -1315,6 +1311,7 @@ input::-webkit-inner-spin-button {
 
 .contact-card {
     margin-bottom: 3rem;
+    border: 2px solid var(--color-secondary);
 }
 
 .contact-card__details {
@@ -1345,6 +1342,10 @@ input::-webkit-inner-spin-button {
     margin-bottom: 0;
 }
 
+.fees-card {
+    border: 2px solid var(--color-secondary);
+}
+
 .fees-card > ul {
     list-style-type: disc;
 }
@@ -1371,6 +1372,7 @@ input::-webkit-inner-spin-button {
     background-color: var(--color-primary);
     border-radius: 20px;
     padding: 1.5rem;
+    border: 2px solid var(--color-secondary);
 }
 
 .contact-form__content {
