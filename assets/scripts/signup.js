@@ -12,7 +12,8 @@ import {
     getAuth,
     createUserWithEmailAndPassword,
     signOut,
-    signInWithEmailAndPassword
+    signInWithEmailAndPassword,
+    onAuthStateChanged
 } from 'firebase/auth'
 
 const form = document.querySelector("form[data-form]")
@@ -63,7 +64,6 @@ form.addEventListener('submit', async (e) => {
                 errorMessage.textContent = 'Email already in use'
             } else {
                 const cred = await createUserWithEmailAndPassword(auth, emailInput, passwordInput)
-                console.log('User created:', cred.user)
 
                 await addDoc(colRef, {
                     firstname: form.fname.value,
@@ -87,10 +87,7 @@ resetBtn.addEventListener("click", () => {
 })
 
 logout.addEventListener('click', () => {
-    signOut(auth).then(() => {
-        console.log('signed out')
-    })
-    .catch((err) => {
+    signOut(auth).catch((err) => {
         console.log(err.message)
     })
 })
@@ -101,10 +98,12 @@ loginForm.addEventListener('submit', e => {
     const email = loginForm.email.value
     const password = loginForm.password.value
 
-    signInWithEmailAndPassword(auth, email, password).then((cred) => {
-        console.log('user logged in:', cred.user)
-    })
-    .catch((err) => {
+    signInWithEmailAndPassword(auth, email, password).catch((err) => {
         console.log(err.message)
     })
+})
+
+// subscribing to auth changes
+onAuthStateChanged(auth, (user) => {
+    console.log('user status changed:', user)
 })
