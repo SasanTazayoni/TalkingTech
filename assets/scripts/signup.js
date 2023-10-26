@@ -32,6 +32,7 @@ const loginModal = new bootstrap.Modal(document.getElementById('loggedinModalTog
 const logoutModal = new bootstrap.Modal(document.getElementById('logoutModalToggle'))
 const userStatus = document.querySelector('[data-user-status]')
 const blockTopElement = document.querySelector('.block-top')
+const loginSuccessMessage = document.querySelector("[data-login-success-message]")
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -128,6 +129,9 @@ onAuthStateChanged(auth, (user) => {
         loginBtn.classList.add('logged-in')
         logoutBtn.classList.add('logged-in')
         blockTopElement.classList.remove('logged-out')
+
+        setLoginSuccessMessage(user.email)
+        
         loginModal.show()
     } else {
         userStatus.classList.remove('logged-in')
@@ -137,6 +141,11 @@ onAuthStateChanged(auth, (user) => {
     }
 })
 
+function setLoginSuccessMessage(email) {
+    const emailSpan = loginSuccessMessage.querySelector(".blue")
+    emailSpan.textContent = email
+}
+
 confirmLoginBtn.addEventListener('click', () => {
     document.querySelector('[data-login-form] .login').click()
 })
@@ -144,3 +153,4 @@ confirmLoginBtn.addEventListener('click', () => {
 cancelLoginBtn.addEventListener('click', () => {
     loginForm.reset()
 })
+
