@@ -24,7 +24,8 @@ const errorMessage = document.querySelector("[data-error]")
 const resetBtn = document.querySelector("[data-reset]")
 const loginForm = document.querySelector("[data-login-form]")
 const logout = document.querySelector('.logout')
-const login = document.querySelector('.login')
+const confirmLoginBtn = document.querySelector('#loginButton')
+const cancelLoginBtn = document.querySelector('#cancelButton')
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -106,4 +107,12 @@ loginForm.addEventListener('submit', e => {
 // subscribing to auth changes
 onAuthStateChanged(auth, (user) => {
     console.log('user status:', user)
+})
+
+confirmLoginBtn.addEventListener('click', () => {
+    document.querySelector('[data-login-form] .login').click()
+})
+
+cancelLoginBtn.addEventListener('click', () => {
+    loginForm.reset()
 })

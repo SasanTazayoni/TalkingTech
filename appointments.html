@@ -56,12 +56,42 @@
             </div>
         </div>
         <div class="user-status__container">
-            <p class="user-status active">
+            <p class="user-status">
                 Logged in as <span class="user-email">verylongemailexample@gmail.com</span>
             </p>
-            <button class="btn login-btn">Log in</button>
+            <button class="btn login-btn" data-bs-target="#loginModalToggle"
+          data-bs-toggle="modal">Log in</button>
         </div>
     </nav>
+
+    <!-- Log in modal -->
+    <div class="modal fade" id="loginModalToggle" aria-hidden="true" aria-labelledby="loginModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="loginModalToggleLabel">Enter you login details</h1>
+                </div>
+                <div class="modal-body">
+                    <form class="login-form" data-login-form>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email">
+                        <label for="password">Password:</label>
+                        <input type="password" name="password">
+                        <button class="login">login</button>
+                    </form>
+                </div>
+                <div class="modal-footer btn-container">
+                    <button class="btn" id="loginButton">Login</button>
+                    <button class="btn" id="cancelButton" data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="logout">logout</button>
 
     <section class="block-top block--dark">
         <div class="container">
@@ -116,20 +146,14 @@
                 </form>
                 <!-- Error message for password mismatch -->
                 <p class="signup__error" data-error></p>
-                <p class="signup__footnote">Already signed up? Login here</p>
+                <p class="signup__footnote">Already signed up? Login 
+                    <button class="btn-small login-btn" data-bs-target="#loginModalToggle" data-bs-toggle="modal">
+                        here
+                    </button>
+                </p>
             </div>
         </div>
     </section>
-
-<form data-login-form>
-    <label for="email">email:</label>
-    <input type="email" name="email">
-    <label for="password">password:</label>
-    <input type="password" name="password">
-    <button class="login">login</button>
-</form>
-
-<button class="logout">logout</button>
 
 <!-- Footer -->
     <footer class="footer mt-auto py-3 bg-dark">
