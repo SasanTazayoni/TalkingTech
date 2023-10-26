@@ -16,13 +16,13 @@ import {
     onAuthStateChanged
 } from 'firebase/auth'
 
-const form = document.querySelector("form[data-form]")
-const email = document.querySelector("#email")
-const password = document.querySelector("#password")
-const confirmation = document.querySelector("#confirmation")
-const errorMessage = document.querySelector("[data-error]")
-const resetBtn = document.querySelector("[data-reset]")
-const loginForm = document.querySelector("[data-login-form]")
+const form = document.querySelector('form[data-form]')
+const email = document.querySelector('#email')
+const password = document.querySelector('#password')
+const confirmation = document.querySelector('#confirmation')
+const errorMessage = document.querySelector('[data-error]')
+const resetBtn = document.querySelector('[data-reset]')
+const loginForm = document.querySelector('[data-login-form]')
 const loginBtn = document.querySelector('[data-login-btn]')
 const logoutBtn = document.querySelector('[data-logout-btn]')
 const confirmLoginBtn = document.querySelector('#loginButton')
@@ -32,7 +32,7 @@ const loginModal = new bootstrap.Modal(document.getElementById('loggedinModalTog
 const logoutModal = new bootstrap.Modal(document.getElementById('logoutModalToggle'))
 const userStatus = document.querySelector('[data-user-status]')
 const blockTopElement = document.querySelector('.block-top')
-const loginSuccessMessage = document.querySelector("[data-login-success-message]")
+const loginSuccessMessage = document.querySelector('[data-login-success-message]')
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -90,8 +90,8 @@ form.addEventListener('submit', async (e) => {
     }
 })
 
-resetBtn.addEventListener("click", () => {
-    errorMessage.textContent = ""
+resetBtn.addEventListener('click', () => {
+    errorMessage.textContent = ''
 })
 
 logoutBtn.addEventListener('click', () => {
@@ -142,8 +142,10 @@ onAuthStateChanged(auth, (user) => {
 })
 
 function setLoginSuccessMessage(email) {
-    const emailSpan = loginSuccessMessage.querySelector(".blue")
+    const emailSpan = loginSuccessMessage.querySelector('.blue')
     emailSpan.textContent = email
+    const userEmail = userStatus.querySelector('.user-email')
+    userEmail.textContent = email
 }
 
 confirmLoginBtn.addEventListener('click', () => {
