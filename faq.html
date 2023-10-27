@@ -18,7 +18,6 @@
   <link rel="manifest" href="/site.webmanifest">
   <script src="assets/scripts/script.js" defer></script>
   <script src="assets/scripts/faq.js" defer></script>
-  <script src="dist/bundle.js" defer></script>
   <title>TalkingTech - FAQ page</title>
 </head>
 <body>
@@ -27,24 +26,40 @@
     <div class="container">
       <!-- Logo -->
       <a href="index.html">
-        <img src="assets/images/talkingtechlogo.webp" alt="TalkingTech logo" class="rounded-circle logo" />
+        <img
+          src="assets/images/talkingtechlogo.webp"
+          alt="TalkingTech logo"
+          class="rounded-circle logo"
+        />
       </a>
       <!-- Navbar toggler -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarSupportedContent"
+      >
         <!-- Navbar menu -->
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item p-3 fs-5">
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item p-3 fs-5">
-            <a class="nav-link" href="faq.html">FAQ</a>
+            <a class="nav-link active" aria-current="page" href="faq.html"
+              >FAQ</a
+            >
           </li>
           <li class="nav-item p-3 fs-5">
-            <a id="signupTab" class="nav-link active" aria-current="page" href="appointments.html">Sign up</a>
+            <a class="nav-link" href="appointments.html">Appointments</a>
           </li>
           <li class="nav-item p-3 fs-5">
             <a class="nav-link fw-bold" href="contact.html">Contact</a>
@@ -52,83 +67,7 @@
         </ul>
       </div>
     </div>
-    <div class="user-status__container">
-      <p class="user-status" data-user-status>
-        Logged in as <span class="user-email">verylongemailexample@gmail.com</span>
-      </p>
-      <button class="btn login-btn" data-login-btn data-bs-target="#loginModalToggle" data-bs-toggle="modal">
-        Log in
-      </button>
-      <button class="btn logout-btn" data-logout-btn>Log out</button>
-    </div>
   </nav>
-  
-  <!-- Login prompt modal -->
-  <div class="modal fade" id="loginModalToggle" aria-hidden="true" aria-labelledby="loginModalToggleLabel" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="loginModalToggleLabel">Enter you login details</h1>
-        </div>
-        <div class="modal-body">
-          <form class="login-form" data-login-form>
-            <label for="email">Email:</label>
-            <input type="email" name="email">
-            <label for="password">Password:</label>
-            <input type="password" name="password">
-            <button class="login">login</button>
-          </form>
-          <div class="error-message__container">
-            <p class="login__error" data-login-error></p>
-          </div>
-        </div>
-        <div class="modal-footer btn-container">
-          <button class="btn" id="loginButton">Login</button>
-          <button class="btn" id="cancelButton" data-bs-dismiss="modal">
-            Cancel
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Successful login modal -->
-  <div class="modal fade" id="loggedinModalToggle" aria-hidden="true" aria-labelledby="loggedinModalToggleLabel"
-    tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="loggedinModalToggleLabel">Login successful</h1>
-        </div>
-        <div class="modal-body" data-login-success-message>
-          You have logged in as <span class="blue"></span>.
-        </div>
-        <div class="modal-footer btn-container">
-          <button class="btn" id="cancelButton" data-bs-dismiss="modal">
-            Close
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Logout modal -->
-  <div class="modal fade" id="logoutModalToggle" aria-hidden="true" aria-labelledby="logoutModalToggleLabel"
-    tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="logoutModalToggleLabel">Logged out</h1>
-        </div>
-        <div class="modal-body">
-          You have logged out of your account.
-        </div>
-        <div class="modal-footer btn-container">
-          <button class="btn" id="cancelButton" data-bs-dismiss="modal">
-            Close
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- FAQ image -->
   <div class="faq__image" data-aos="fade"></div>
