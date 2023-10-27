@@ -82,6 +82,9 @@
                         <input type="password" name="password">
                         <button class="login">login</button>
                     </form>
+                    <div class="error-message__container">
+                        <p class="login__error" data-login-error></p>
+                    </div>
                 </div>
                 <div class="modal-footer btn-container">
                     <button class="btn" id="loginButton">Login</button>
@@ -183,7 +186,7 @@
                 </form>
                 <!-- Error message -->
                 <div class="error-message__container">
-                    <p class="signup__error" data-error></p>
+                    <p class="signup__error" data-signup-error></p>
                 </div>
                 <p class="signup__footnote">Already signed up? Login 
                     <button class="btn-small login-btn" data-bs-target="#loginModalToggle" data-bs-toggle="modal">

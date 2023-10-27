@@ -19,7 +19,8 @@ const form = document.querySelector('form[data-form]')
 const email = document.querySelector('#email')
 const password = document.querySelector('#password')
 const confirmation = document.querySelector('#confirmation')
-const errorMessage = document.querySelector('[data-error]')
+const signUpErrorMessage = document.querySelector('[data-signup-error]')
+const loginErrorMessage = document.querySelector('[data-login-error]')
 const resetBtn = document.querySelector('[data-reset]')
 const loginForm = document.querySelector('[data-login-form]')
 const loginBtn = document.querySelector('[data-login-btn]')
@@ -65,14 +66,14 @@ form.addEventListener('submit', async (e) => {
     const passwordInput = password.value
 
     if (passwordInput !== confirmation.value) {
-        errorMessage.textContent = 'Passwords do not match'
+        signUpErrorMessage.textContent = 'Passwords do not match'
     } else {
-        errorMessage.textContent = ''
+        signUpErrorMessage.textContent = ''
         try {
             // Check if email already exists
             const querySnapshot = await getDocs(query(collection(db, 'Users'), where('email', '==', emailInput)))
             if (!querySnapshot.empty) {
-                errorMessage.textContent = 'Email already in use'
+                signUpErrorMessage.textContent = 'Email already in use'
             } else {
                 await createUserWithEmailAndPassword(auth, emailInput, passwordInput)
 
@@ -91,11 +92,12 @@ form.addEventListener('submit', async (e) => {
             }
         } catch (error) {
             if (error.code === 'auth/email-already-in-use') {
-                errorMessage.textContent =
+                signUpErrorMessage.textContent =
                 'There is a problem with your account. Please contact TalkingTech.'
             } else {
-                errorMessage.textContent =
+                signUpErrorMessage.textContent =
                 'An error occurred during sign-up. Please try again later.'
+
             }
             console.error('Error checking email in Firestore or signing up:', error)
         }
@@ -103,7 +105,7 @@ form.addEventListener('submit', async (e) => {
 })
 
 resetBtn.addEventListener('click', () => {
-    errorMessage.textContent = ''
+    signUpErrorMessage.textContent = ''
 })
 
 logoutBtn.addEventListener('click', () => {
@@ -116,26 +118,34 @@ logoutBtn.addEventListener('click', () => {
         })
 })
 
-loginForm.addEventListener('submit', e => {
+loginForm.addEventListener('submit', async (e) => {
     e.preventDefault()
 
     const email = loginForm.email.value
     const password = loginForm.password.value
 
-    signInWithEmailAndPassword(auth, email, password)
-        .then(() => {
-            loginPromptModal.hide()
-            loginForm.reset()
-            loginModal.show()
-        })
-        .catch((err) => {
-            console.log(err.message)
-        })
+    try {
+        await signInWithEmailAndPassword(auth, email, password)
+        loginPromptModal.hide()
+        loginForm.reset()
+        loginModal.show()
+        loginErrorMessage.textContent = ''
+        loginErrorMessage.classList.remove('active')
+    } catch (error) {
+        if (['auth/invalid-email', 'auth/missing-password', 'auth/invalid-login-credentials']
+        .includes(error.code)) {
+            loginErrorMessage.textContent = 'Invalid login credentials.'
+            loginErrorMessage.classList.add('active')
+        } else {
+            loginErrorMessage.textContent = 'An error occurred. Please try again later.'
+            loginErrorMessage.classList.add('active')
+        }
+        console.log(error.code)
+    }
 })
 
 // subscribing to auth changes
 onAuthStateChanged(auth, (user) => {
-    console.log('user status:', user)
 
     if (user) {
         userStatus.classList.add('logged-in')
@@ -173,5 +183,7 @@ confirmLoginBtn.addEventListener('click', () => {
 
 cancelLoginBtn.addEventListener('click', () => {
     loginForm.reset()
+    loginErrorMessage.textContent = ''
+    loginErrorMessage.classList.remove('active')
 })
 
