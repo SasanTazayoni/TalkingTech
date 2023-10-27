@@ -1265,6 +1265,14 @@ input::-webkit-inner-spin-button {
 
 /* Sign up page */
 
+.signup-section.logged-in {
+    display: none;
+}
+
+.signup-section {
+    display: block;
+}
+
 .signup-form__header {
     margin: 0;
 }

@@ -35,6 +35,7 @@ const blockTopElement = document.querySelector('.block-top')
 const loginSuccessMessage = document.querySelector('[data-login-success-message]')
 const signUpSuccessMessage = document.querySelector('[data-signup-success-message]')
 const signupTab = document.querySelector('#signupTab')
+const signupSection = document.querySelector('[data-signup-section]')
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -143,6 +144,7 @@ onAuthStateChanged(auth, (user) => {
         blockTopElement.classList.remove('logged-out')
 
         signupTab.textContent = 'Appointments'
+        signupSection.classList.add('logged-in')
         setEmail(user.email)
     } else {
         userStatus.classList.remove('logged-in')
@@ -151,6 +153,7 @@ onAuthStateChanged(auth, (user) => {
         blockTopElement.classList.add('logged-out')
 
         signupTab.textContent = 'Sign up'
+        signupSection.classList.remove('logged-in')
         setEmail('')
     }
 })
