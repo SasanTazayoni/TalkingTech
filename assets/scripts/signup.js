@@ -5,8 +5,7 @@ import {
     getDocs,
     addDoc,
     query,
-    where,
-    getDoc
+    where
 } from 'firebase/firestore'
 import {
     getAuth,
@@ -72,7 +71,7 @@ form.addEventListener('submit', async (e) => {
             if (!querySnapshot.empty) {
                 errorMessage.textContent = 'Email already in use'
             } else {
-                const cred = await createUserWithEmailAndPassword(auth, emailInput, passwordInput)
+                await createUserWithEmailAndPassword(auth, emailInput, passwordInput)
 
                 await addDoc(colRef, {
                     firstname: form.fname.value,
