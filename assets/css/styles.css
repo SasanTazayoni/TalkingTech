@@ -1308,10 +1308,21 @@ input::-webkit-inner-spin-button {
     width: 50%;
 }
 
+.error-message__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .signup__error {
     text-align: center;
-    color: rgb(255, 118, 118);
-    font-style: bold;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    font-size: 32px;
+    background: rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    padding: 0 20px;
+    border-radius: 10px;
 }
 
 .signup__footnote {
@@ -1342,6 +1353,10 @@ input::-webkit-inner-spin-button {
     .btn-small {
         font-size: 14px;
     }
+
+    .signup__error {
+        font-size: 24px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1358,6 +1373,11 @@ input::-webkit-inner-spin-button {
         grid-column-start: 1;
         grid-column-end: 3;
         margin-bottom: 1rem;
+    }
+
+    .signup__error {
+        font-size: 18px;
+        padding: 10px;
     }
 
     .btn-small {
@@ -1380,11 +1400,11 @@ input::-webkit-inner-spin-button {
     }
 
     .signup__error {
-        padding-top: 0.8rem;
+        margin-top: 1rem;
     }
 
     .signup__footnote {
-        padding-top: 0.8rem;
+        padding-top: 0.5rem;
     }
 }
 
@@ -1395,6 +1415,10 @@ input::-webkit-inner-spin-button {
 
     .signup__postcode-field {
         width: 100%;
+    }
+
+    .signup__error {
+        font-size: 16px;
     }
 
     .signup__footnote {
