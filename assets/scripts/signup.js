@@ -33,6 +33,7 @@ const logoutModal = new bootstrap.Modal(document.getElementById('logoutModalTogg
 const userStatus = document.querySelector('[data-user-status]')
 const blockTopElement = document.querySelector('.block-top')
 const loginSuccessMessage = document.querySelector('[data-login-success-message]')
+const signupTab = document.querySelector('#signupTab')
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -130,6 +131,7 @@ onAuthStateChanged(auth, (user) => {
         logoutBtn.classList.add('logged-in')
         blockTopElement.classList.remove('logged-out')
 
+        signupTab.textContent = 'Appointments'
         setEmail(user.email)
         
         loginModal.show()
@@ -139,6 +141,7 @@ onAuthStateChanged(auth, (user) => {
         logoutBtn.classList.remove('logged-in')
         blockTopElement.classList.add('logged-out')
 
+        signupTab.textContent = 'Sign up'
         setEmail('')
     }
 })
