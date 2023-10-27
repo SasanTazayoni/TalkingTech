@@ -29,9 +29,11 @@ const cancelLoginBtn = document.querySelector('#cancelButton')
 const loginPromptModal = new bootstrap.Modal(document.getElementById('loginModalToggle'))
 const loginModal = new bootstrap.Modal(document.getElementById('loggedinModalToggle'))
 const logoutModal = new bootstrap.Modal(document.getElementById('logoutModalToggle'))
+const signupModal = new bootstrap.Modal(document.getElementById('signupModalToggle'))
 const userStatus = document.querySelector('[data-user-status]')
 const blockTopElement = document.querySelector('.block-top')
 const loginSuccessMessage = document.querySelector('[data-login-success-message]')
+const signUpSuccessMessage = document.querySelector('[data-signup-success-message]')
 const signupTab = document.querySelector('#signupTab')
 
 // Your web app's Firebase configuration
@@ -83,6 +85,8 @@ form.addEventListener('submit', async (e) => {
                     postcode: form.postcode.value
                 })
                 form.reset()
+
+                signupModal.show()
             }
         } catch (error) {
             console.error('Error checking email in Firestore or signing up:', error)
@@ -114,6 +118,7 @@ loginForm.addEventListener('submit', e => {
         .then(() => {
             loginPromptModal.hide()
             loginForm.reset()
+            loginModal.show()
         })
         .catch((err) => {
             console.log(err.message)
@@ -132,8 +137,6 @@ onAuthStateChanged(auth, (user) => {
 
         signupTab.textContent = 'Appointments'
         setEmail(user.email)
-        
-        loginModal.show()
     } else {
         userStatus.classList.remove('logged-in')
         loginBtn.classList.remove('logged-in')
@@ -146,9 +149,11 @@ onAuthStateChanged(auth, (user) => {
 })
 
 function setEmail(email) {
-    const emailSpan = loginSuccessMessage.querySelector('.blue')
+    const signUpEmailSpan = signUpSuccessMessage.querySelector('.blue')
+    const loginEmailSpan = loginSuccessMessage.querySelector('.blue')
     const userEmail = userStatus.querySelector('.user-email')
-    emailSpan.textContent = email
+    signUpEmailSpan.textContent = email
+    loginEmailSpan.textContent = email
     userEmail.textContent = email
 }
 

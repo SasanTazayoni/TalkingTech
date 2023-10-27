@@ -192,6 +192,26 @@
         </div>
     </section>
 
+    <!-- Successful sign up modal -->
+    <div class="modal fade" id="signupModalToggle" aria-hidden="true" aria-labelledby="signupModalToggleLabel"
+        tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="signupModalToggleLabel">New account created</h1>
+                </div>
+                <div class="modal-body" data-signup-success-message>
+                    You have successfully signed up and logged in as <span class="blue"></span>. You can now access the available appointment slots on the calendar via your account.
+                </div>
+                <div class="modal-footer btn-container">
+                    <button class="btn" id="cancelButton" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <!-- Footer -->
     <footer class="footer mt-auto py-3 bg-dark">
       <div class="container">
