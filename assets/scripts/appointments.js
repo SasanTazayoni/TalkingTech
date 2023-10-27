@@ -36,6 +36,7 @@ const blockTopElement = document.querySelector('.block-top')
 const loginSuccessMessage = document.querySelector('[data-login-success-message]')
 const signUpSuccessMessage = document.querySelector('[data-signup-success-message]')
 const signupSection = document.querySelector('[data-signup-section]')
+const calendly = document.querySelector('#calendly')
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -139,7 +140,6 @@ loginForm.addEventListener('submit', async (e) => {
             loginErrorMessage.textContent = 'An error occurred. Please try again later.'
             loginErrorMessage.classList.add('active')
         }
-        console.log(error.code)
     }
 })
 
@@ -151,6 +151,7 @@ onAuthStateChanged(auth, (user) => {
         loginBtn.classList.add('logged-in')
         logoutBtn.classList.add('logged-in')
         blockTopElement.classList.remove('logged-out')
+        calendly.classList.add('logged-in')
 
         signupSection.classList.add('logged-in')
         setEmail(user.email)
@@ -159,6 +160,7 @@ onAuthStateChanged(auth, (user) => {
         loginBtn.classList.remove('logged-in')
         logoutBtn.classList.remove('logged-in')
         blockTopElement.classList.add('logged-out')
+        calendly.classList.remove('logged-in')
 
         signupSection.classList.remove('logged-in')
         setEmail('')

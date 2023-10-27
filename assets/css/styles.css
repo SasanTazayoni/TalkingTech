@@ -357,7 +357,7 @@ input::-webkit-inner-spin-button {
     top: 110%;
     right: 50%;
     transform: translateX(50%);
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
     color: #fff;
     padding: 10px;
     font-size: 16px;
@@ -1373,6 +1373,16 @@ input::-webkit-inner-spin-button {
 }
 
 .login__error.active {
+    display: block;
+}
+
+#calendly {
+    min-width: 320px;
+    height: 700px;
+    display: none;
+}
+
+#calendly.logged-in {
     display: block;
 }
 
