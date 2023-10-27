@@ -1378,12 +1378,26 @@ input::-webkit-inner-spin-button {
 
 #calendly {
     min-width: 320px;
-    height: 700px;
+    height: 900px;
     display: none;
+    background: var(--color-dark);
+    margin: auto 0;
 }
 
 #calendly.logged-in {
     display: block;
+}
+
+.small-screen__container {
+    display: none;
+    height: 100vh;
+    background: var(--color-dark);
+    color: var(--color-text);
+    padding: 20px;
+}
+
+.small-screen__link {
+    color: #9ac3ff;
 }
 
 @media screen and (max-width: 1024px) {
@@ -1423,6 +1437,10 @@ input::-webkit-inner-spin-button {
 
     .btn-small {
         font-size: 12px;
+    }
+
+    #calendly {
+        margin: auto 0;
     }
 }
 
@@ -1469,6 +1487,16 @@ input::-webkit-inner-spin-button {
 
     .signup__footnote {
         font-size: 100%;
+    }
+
+    #calendly.logged-in {
+        display: none;
+    }
+
+    .small-screen__container {
+        display: flex;
+        align-items: center;
+        text-align: center;
     }
 }
 
