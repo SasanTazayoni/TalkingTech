@@ -89,6 +89,13 @@ form.addEventListener('submit', async (e) => {
                 signupModal.show()
             }
         } catch (error) {
+            if (error.code === 'auth/email-already-in-use') {
+                errorMessage.textContent =
+                'There is a problem with your account. Please contact TalkingTech.'
+            } else {
+                errorMessage.textContent =
+                'An error occurred during sign-up. Please try again later.'
+            }
             console.error('Error checking email in Firestore or signing up:', error)
         }
     }
