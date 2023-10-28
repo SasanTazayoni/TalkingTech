@@ -147,3 +147,40 @@ The wireframes do not fully correspond with the end product due to multiple chan
 
 * Implementing an AI-powered chatbot to handle basic customer inquiries and provide responses to straightforward questions.
 * Incorporating a customer feedback and review system that empowers clients to share their opinions and rate the quality of services received. Positive reviews contribute to building credibility and trust, while constructive feedback serves as a valuable resource for service enhancement.
+* Google Geocoding API to verify that user addresses are real.
+* Google Distance API to plan journeys when seeing multiple customers in a day.
+
+# Technologies used
+
+## Languages
+
+* HTML
+* CSS
+* JavaScript
+
+## Frameworks, libraries and programs used
+
+* [Font Awesome](https://fontawesome.com/) used for icons.
+* [Coolors](https://coolors.co/) used to display colour palette used on the website.
+* [Google Fonts](https://fonts.google.com/) used to import 'Poppins' and 'Noto Serif' fonts.
+* [Github](https://github.com/) used to host repository.
+* [VSCode](https://code.visualstudio.com/) used as an integrated development environment (IDE) to develop project.
+* [Github pages](https://pages.github.com/) used to deploy the website.
+* [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) used for performance review.
+* [Caniuse](https://caniuse.com/) used to check compatibility of code syntax with other browsers.
+* [PowerMapper](https://www.powermapper.com/) used to check compatibility of website with other browsers.
+* [Amiresposive](https://amiresponsive.co.uk/) used to display website on the most common devices.
+* [Photoshop](https://www.adobe.com/uk/products/photoshop/) used to resize photos.
+* [Tinypng](https://tinypng.com/) used to compress image files for better performance.
+* [Block-element-modifier naming convention](https://www.geeksforgeeks.org/understanding-the-css-bem-convention/) used for naming CSS classes.
+* [AOS animations](https://github.com/michalsnik/aos) is a library used to offer dynamic JavaScript-based animations that can be utilised to create captivating visual effects, including smooth fade-ins and delightful flipping transitions throughout the website.
+* [Formspree](https://formspree.io/) used in the enquiries form to provide a backend, enabling efficient routing of email enquiries directly to the business owner.
+* [ChatGPT](https://chat.openai.com/) used to generate placeholder text and to verify code.
+* [Unsplash](https://unsplash.com/) used to obtain placeholder pictures for the gallery and services page.
+* [Pexels](https://www.pexels.com/) used to obtain placeholder pictures for the gallery and services page, and the hero image on the home page.
+* [StackOverflow](https://stackoverflow.com/) used to problem solve and deal with queries.
+* [Cloudconvert](https://cloudconvert.com/) used to convert images to webp format.
+* [Favicon.io](https://favicon.io/) used to generate favicon.
+* [Bootstrap](https://getbootstrap.com/) used for standard styling convention and break points.
+* [Firebase](https://firebase.google.com/) used for Firestore, to store user data and Authentication to store user credentials.
+* [Webpack](https://webpack.js.org/) used as a module bundler.
