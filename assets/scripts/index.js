@@ -1,7 +1,4 @@
 const buttons = document.querySelectorAll("[data-carousel-button")
-const tabs = document.querySelectorAll('.carousel__tab')
-const slides = document.querySelectorAll('.slide')
-const titles = document.querySelectorAll('.slide__title')
 const nextCarouselButton = document.querySelector('[data-carousel-button="next"]')
 const testimonialButtons = document.querySelectorAll('[data-testimonial-button]')
 const nextTestimonialButton = document.querySelector('[data-testimonial-button="next"]')
