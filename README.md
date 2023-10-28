@@ -26,7 +26,7 @@ The website can be accessed [here](https://sasantazayoni.github.io/TalkingTech).
 * As a new visitor, I want to easily understand the services offered by TalkingTech, so I can quickly determine if it meets my needs.
 * As a potential client, I want to be able to browse through the list of services provided and access detailed information about each service, so I can make an informed decision.
 * As a user of the appointment scheduling application, I want a user-friendly and intuitive interface to make the process of booking appointments straightforward and efficient.
-* As a client who has booked an appointment, I want to receive confirmation of my booking and automated appointment reminders via email and text messages to ensure that I am well-informed about my scheduled appointments and have details about what to expect during the appointment.
+* As a client who has booked an appointment, I want to receive confirmation of my booking and automated appointment reminders via email to ensure that I am well-informed about my scheduled appointments and have details about what to expect during the appointment.
 * As a user looking for tech support, I want to access a comprehensive FAQ section to find answers to common tech-related questions.
 * As a user, I want to be able to use a contact form or find contact details to reach out for enquiries or support.
 
@@ -184,3 +184,61 @@ The wireframes do not fully correspond with the end product due to multiple chan
 * [Bootstrap](https://getbootstrap.com/) used for standard styling convention and break points.
 * [Firebase](https://firebase.google.com/) used for Firestore, to store user data and Authentication to store user credentials.
 * [Webpack](https://webpack.js.org/) used as a module bundler.
+* [Responsinator](http://www.responsinator.com/) used to check if site was responsive on different screen sizes.
+
+# Testing
+
+## Validating
+
+* [HTML validator](https://validator.w3.org/)
+* [CSS validator](https://jigsaw.w3.org/css-validator/)
+* [JavaScript validator](https://jshint.com/)
+
+## Testing User Stories from (UX) section
+
+* As a new visitor, I want to easily understand the services offered by TalkingTech, so I can quickly determine if it meets my needs.
+  * The website's Home page prominently displays a carousel with tabs that showcase various IT consultancy services. Visitors can easily browse through these services to get a quick overview. Additionally when clicked, each tab opens modal that provides detailed information about each service, helping new visitors make informed decisions.
+* As a potential client, I want to be able to browse through the list of services provided and access detailed information about each service, so I can make an informed decision.
+  * Each tab on the carousel can be clicked to open a modal. The modals offer more information about each service.
+* As a user of the appointment scheduling application, I want a user-friendly and intuitive interface to make the process of booking appointments straightforward and efficient.
+  * The website features an appointment scheduling system with a user-friendly interface which becomes available when a user is logged in. Clients can easily browse the consultant's availability, select suitable time slots, and submit their appointment requests through an intuitive process. The inclusion of a deposit system and automated appointment reminders enhances the commitment and convenience of this process.
+* As a client who has booked an appointment, I want to receive confirmation of my booking and automated appointment reminders via email to ensure that I am well-informed about my scheduled appointments and have details about what to expect during the appointment.
+  * The appointment scheduling system provides confirmation of bookings, and automated appointment reminders are sent to clients via email. This ensures that clients are well-informed about their upcoming appointments and have all the necessary information.
+* As a user looking for tech support, I want to access a comprehensive FAQ section to find answers to common tech-related questions.
+  * The website offers a dedicated "FAQ" page where users can find answers to common tech-related questions. This section is designed to provide quick and helpful responses to users seeking tech support.
+* As a user, I want to be able to use a contact form or find contact details to reach out for enquiries or support.
+  * The "Contact" page provides a contact form, making it easy for users to reach out for enquiries or support.
+
+## Personal testing
+
+* Samsung Galaxy S9
+  * Google Chrome
+  * Mozilla Firefox
+  * Microsoft Edge
+  * Samsung Internet
+* iPhone 6
+  * Safari
+* iPhone SE
+  * Safari
+  * Google Chrome
+* iPhone 12 Mini
+  * Safari
+* iPhone 14
+  * Safari
+* iPad 11" Pro
+  * Safari
+* Aorus 7
+  * Google Chrome
+  * Mozilla Firefox
+  * Microsoft Edge
+  * Opera
+  * Brave
+
+## Responsinator
+
+When there were browsers that were inaccessible at the time of testing, responsinator was used to make sure that the website was fully responsive on all devices. The results can be viewed for the following:
+
+[Home page](http://www.responsinator.com/?url=https%3A%2F%2Fsasantazayoni.github.io%2FTalkingTech%2Findex.html) <br >
+[FAQ page](http://www.responsinator.com/?url=https%3A%2F%2Fsasantazayoni.github.io%2FTalkingTech%2Ffaq.html) <br >
+[Appointments page](http://www.responsinator.com/?url=https%3A%2F%2Fsasantazayoni.github.io%2FTalkingTech%2Fappointments.html) <br >
+[Contact page](http://www.responsinator.com/?url=https%3A%2F%2Fsasantazayoni.github.io%2FTalkingTech%2Fcontact.html) <br >
