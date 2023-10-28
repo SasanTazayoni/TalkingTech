@@ -899,7 +899,7 @@ input::-webkit-inner-spin-button {
 
 .testimonials {
     color: var(--color-text);
-    height: 250px;
+    height: 360px;
     width: 100%;
     position: relative;
     background: var(--color-primary);
@@ -911,7 +911,8 @@ input::-webkit-inner-spin-button {
     display: flex;
     align-items: center;
     margin: 0;
-    padding: 2.5rem 3.5rem;
+    padding: 3.5rem;
+    padding-top: 2.5rem;
     position: absolute;
     height: 100%;
     inset: 0;
@@ -1012,10 +1013,6 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 550px) {
-    .testimonials {
-        height: 250px;
-    }
-
     .testimonial__text {
         padding-left: 1.2rem;
         padding-right: 1.2rem;
@@ -1031,10 +1028,6 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 440px) {
-    .testimonials {
-        height: 320px;
-    }
-
     .testimonial__text {
         padding-top: 1rem;   
     }
@@ -1057,6 +1050,10 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 376px) {
+    .testimonials {
+        height: 400px;
+    }
+
     .testimonial__text {
         font-size: 13px;
     }
