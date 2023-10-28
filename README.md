@@ -242,3 +242,5 @@ When there were browsers that were inaccessible at the time of testing, responsi
 [FAQ page](http://www.responsinator.com/?url=https%3A%2F%2Fsasantazayoni.github.io%2FTalkingTech%2Ffaq.html) <br >
 [Appointments page](http://www.responsinator.com/?url=https%3A%2F%2Fsasantazayoni.github.io%2FTalkingTech%2Fappointments.html) <br >
 [Contact page](http://www.responsinator.com/?url=https%3A%2F%2Fsasantazayoni.github.io%2FTalkingTech%2Fcontact.html) <br >
+
+
