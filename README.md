@@ -58,3 +58,27 @@ Poppins, a sans-serif font with a modern, clean appearance, is suitable for head
 ## Imagery
 
 By integrating carefully selected images, the overall user experience is enhanced and crucial messages are conveyed. Images can visually represent TalkingTech's expertise, professionalism and commitment to service. The images not only make the website visually engaging but also help visitors to connect with the brand on a personal level. Effective imagery is a powerful tool that can communicate complex ideas and evoke emotions, ensuring that the message and the essence of the IT consultancy services resonate with its audience. In a digital world, where first impressions matter, imagery adds depth and relatability to the online presence, making it an integral part of the website's success.
+
+# Wireframes
+
+All Wireframes were designed for larger screens such as laptops or computers; for medium sized screens such as tablets or large phones; and for small screens down to the smallest phone display. The wireframes can be viewed here:
+
+* Home page and home page mobile respectively: <br>
+
+![Home page wireframe](documentation/home.jpg) ![Home page mobile wireframe](documentation/homemobile.jpg) <br>
+
+* Services page and services page mobile respectively: <br>
+
+![Services page wireframe](documentation/services.jpg) ![Services page mobile wireframe](documentation/servicesmobile.jpg) <br>
+
+* FAQ page and FAQ page mobile respectively: <br>
+
+![FAQ page wireframe](documentation/faq.jpg) ![FAQ page mobile wireframe](documentation/faqmobile.jpg) <br>
+
+* Contact page and contact page mobile respectively: <br>
+
+![Services page wireframe](documentation/contact.jpg) ![Services page mobile wireframe](documentation/contactmobile.jpg) <br>
+
+The wireframes do not fully correspond with the end product due to multiple changes made throughout the production phase.
+
+
