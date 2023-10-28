@@ -261,7 +261,7 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (min-width: 1024px) {
-    .block-top .grid--1x2 {
+    .block .grid--1x2 {
         grid-template-columns: repeat(2, 1fr);
     }
 }
