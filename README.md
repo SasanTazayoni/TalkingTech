@@ -168,7 +168,6 @@ The wireframes do not fully correspond with the end product due to multiple chan
 * [Github pages](https://pages.github.com/) used to deploy the website.
 * [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) used for performance review.
 * [Caniuse](https://caniuse.com/) used to check compatibility of code syntax with other browsers.
-* [PowerMapper](https://www.powermapper.com/) used to check compatibility of website with other browsers.
 * [Amiresposive](https://amiresponsive.co.uk/) used to display website on the most common devices.
 * [Photoshop](https://www.adobe.com/uk/products/photoshop/) used to resize photos.
 * [Tinypng](https://tinypng.com/) used to compress image files for better performance.
@@ -176,8 +175,9 @@ The wireframes do not fully correspond with the end product due to multiple chan
 * [AOS animations](https://github.com/michalsnik/aos) is a library used to offer dynamic JavaScript-based animations that can be utilised to create captivating visual effects, including smooth fade-ins and delightful flipping transitions throughout the website.
 * [Formspree](https://formspree.io/) used in the enquiries form to provide a backend, enabling efficient routing of email enquiries directly to the business owner.
 * [ChatGPT](https://chat.openai.com/) used to generate placeholder text and to verify code.
-* [Unsplash](https://unsplash.com/) used to obtain placeholder pictures for the gallery and services page.
-* [Pexels](https://www.pexels.com/) used to obtain placeholder pictures for the gallery and services page, and the hero image on the home page.
+* [Unsplash](https://unsplash.com/) used to obtain pictures.
+* [Pexels](https://www.pexels.com/) used to obtain pictures.
+* [Shutterstock](https://www.shutterstock.com/) used to obtain pictures.
 * [StackOverflow](https://stackoverflow.com/) used to problem solve and deal with queries.
 * [Cloudconvert](https://cloudconvert.com/) used to convert images to webp format.
 * [Favicon.io](https://favicon.io/) used to generate favicon.
@@ -243,4 +243,45 @@ When there were browsers that were inaccessible at the time of testing, responsi
 [Appointments page](http://www.responsinator.com/?url=https%3A%2F%2Fsasantazayoni.github.io%2FTalkingTech%2Fappointments.html) <br >
 [Contact page](http://www.responsinator.com/?url=https%3A%2F%2Fsasantazayoni.github.io%2FTalkingTech%2Fcontact.html) <br >
 
+## Lighthouse testing
 
+![Lighthouse testing for TalkingTech](documentation/lighthouse.png)
+
+The Lighthouse testing results for the TalkingTech website reflect a commendable performance in several key areas. With a perfect score of 100 in SEO, the website is well-optimized for search engines, ensuring that users can easily find and access its valuable content. The high scores in best practices (91) and accessibility (95) highlight the website's commitment to adhering to industry standards and ensuring inclusivity for all users. However, the performance score (74) reveals an area for improvement. This rating is primarily affected by the image quality, which can lead to slower loading times when images are resized. Enhancing the image optimization will contribute to a more responsive and efficient user experience, further elevating the overall quality of the website. Unfortunately it was difficult to come across high quality images that were specifically required for particular services offered by TalkingTech.
+
+## Bugs
+
+* The "@property" is not compatible with Mozilla Firefox on Android phones and displays an error in the CSS validation. When the property is not recognised by a browser, the carousel just stops animating and the page functions as normal. This property is a newer one and is still recognised by nearly all browsers: <br>
+
+![Caniuse screenshot](documentation/caniuse.png)
+
+# Deployment
+
+For Firebase:
+
+1. Go to the [Firebase console](https://firebase.google.com/products-build) provided by Google.
+2. Click "Add project" and then name your project and continue.
+3. Disable Google analytics and continue to create the project.
+4. When the project is created, continue to the dashboard.
+5. Click on web app indicated by "</>", name the application then click "Register".
+6. Type "npm install firebase" in your IDE command line interface to install Firebase (MUST HAVE NODE.JS INSTALLED).
+7. Copy the provided code and paste it into your JavaScript file where your coding for the database will take place.
+8. This will connect your project to your application.
+9. Initialise the app with "initializeApp(firebaseConfig)".
+
+For deployment of the website:
+
+1. Log into [GitHub](https://github.com/).
+2. Locate the [repository](https://github.com/SasanTazayoni/Rock-paper-scissors-lizard-spock-game-CI-PP2).
+3. Locate the settings option along the options bar at the top of the page.
+4. Locate the 'Pages' option on the left side bar and click on it.
+5. Under the 'Branch' subheading there should be a drop-down menu - select 'Master' from the branch options.
+6. Click the save button.
+7. Github pages will build your website with the code supplied and begin hosting it when it is completed - the process usually takes a few minutes.
+8. The website URL will now be visible on the green bar under the section header. This will remain there permanently and you can refer back to it at any time.
+
+# Credits
+
+* Thanks to [Kevin Powell](https://www.youtube.com/@KevinPowell) for advanced CSS tips.
+* Thanks to [Don Hansen](https://www.youtube.com/@DonTheDeveloper) for recommendation of the tech required to build this project.
+* Thanks to [Net Ninja](https://www.youtube.com/@NetNinja) for a [tutorial](https://www.youtube.com/watch?v=9zdvmgGsww0&list=PL4cUxeGkcC9jERUGvbudErNCeSZHWUVlb&index=1) on Firebase.
