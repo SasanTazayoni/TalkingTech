@@ -143,3 +143,7 @@ The wireframes do not fully correspond with the end product due to multiple chan
 
 ![Enquiries form](documentation/enquiries.png) <br>
 
+## Future features
+
+* Implementing an AI-powered chatbot to handle basic customer inquiries and provide responses to straightforward questions.
+* Incorporating a customer feedback and review system that empowers clients to share their opinions and rate the quality of services received. Positive reviews contribute to building credibility and trust, while constructive feedback serves as a valuable resource for service enhancement.
