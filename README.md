@@ -81,4 +81,65 @@ All Wireframes were designed for larger screens such as laptops or computers; fo
 
 The wireframes do not fully correspond with the end product due to multiple changes made throughout the production phase.
 
+# Features
+
+## Current features
+
+* All pages are designed using Responsive Design and are fully responsive on all devices.
+* The navigation menu collapses on smaller viewports allowing for a more compact view.
+* Company logo: <br>
+
+![Company logo](documentation/logo.png) <br>
+
+* A navbar menu with an active state (white) and hover effect: <br>
+
+![Navbar menu](documentation/menu.png) <br>
+
+* A hamburger menu toggler with a drop-down for smaller screens: <br>
+
+![Dropdown menu](documentation/dropdownmenu.png) <br>
+
+* A carousel displaying all services with an animated border on the home page. The carousel also can be manually toggled and has tabs that open up a modal to give more details about a particular service: <br>
+
+![Carousel](documentation/carousel.png) ![Carousel modal](documentation/carouselmodal.png) <br>
+
+* Buttons with a hover effect that lightens the button: <br>
+
+![Buttons](documentation/buttons.png) <br>
+
+* A testimonials slider on the home page: <br>
+
+![Testimonials slider](documentation/testimonials.png) <br>
+
+* A pulsing arrow to scroll to the top of the page on every page: <br>
+
+![Scroll up arrow](documentation/scrollup.png) <br>
+
+* Question tabs with drop-down answers on the FAQ page: <br>
+
+![FAQ tabs](documentation/faq.png) <br>
+
+* A sign up form, which stores user data and authentication on cloud Firestore, on the appointments page: <br>
+
+![Sign up form](documentation/signupform.png) <br>
+
+* A modal which appears when a user signs up: <br>
+
+![Sign up sucess modal](documentation/signupmodal.png) <br>
+
+* A login modal which is accessed through the "login" buttons on the appointments page: <br>
+
+![Log in prompt modal](documentation/loginmodal.png) <br>
+
+* A different user interface when logged in on the appointments page: <br>
+
+![Logged in UI](documentation/loggedin.png) <br>
+
+* An embedded web scheduling application (Calendly) to book new appointments on the appointments page: <br>
+
+![Calendly](documentation/calendly.png) <br>
+
+* An enquiries form on the contact page: <br>
+
+![Enquiries form](documentation/enquiries.png) <br>
 
