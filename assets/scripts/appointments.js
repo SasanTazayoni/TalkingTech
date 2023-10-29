@@ -71,7 +71,6 @@ form.addEventListener('submit', async (e) => {
     } else {
         signUpErrorMessage.textContent = ''
         signUpErrorMessage.classList.remove('active')
-
         try {
             // Check if email already exists
             const querySnapshot = await getDocs(query(collection(db, 'Users'), where('email', '==', emailInput)))

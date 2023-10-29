@@ -1334,9 +1334,9 @@ input::-webkit-inner-spin-button {
     font-weight: bold;
     font-size: 32px;
     background: rgba(0, 0, 0, 0.4);
+    display: none;
     padding: 0 20px;
     border-radius: 10px;
-    display: none;
 }
 
 .signup__error.active {
