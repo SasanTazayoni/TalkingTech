@@ -67,13 +67,17 @@ form.addEventListener('submit', async (e) => {
 
     if (passwordInput !== confirmation.value) {
         signUpErrorMessage.textContent = 'Passwords do not match'
+        signUpErrorMessage.classList.add('active')
     } else {
         signUpErrorMessage.textContent = ''
+        signUpErrorMessage.classList.remove('active')
+
         try {
             // Check if email already exists
             const querySnapshot = await getDocs(query(collection(db, 'Users'), where('email', '==', emailInput)))
             if (!querySnapshot.empty) {
                 signUpErrorMessage.textContent = 'Email already in use'
+                signUpErrorMessage.classList.add('active')
             } else {
                 await createUserWithEmailAndPassword(auth, emailInput, passwordInput)
 
@@ -94,10 +98,11 @@ form.addEventListener('submit', async (e) => {
             if (error.code === 'auth/email-already-in-use') {
                 signUpErrorMessage.textContent =
                 'There is a problem with your account. Please contact TalkingTech.'
+                signUpErrorMessage.classList.add('active')
             } else {
                 signUpErrorMessage.textContent =
                 'An error occurred during sign-up. Please try again later.'
-
+                signUpErrorMessage.classList.add('active')
             }
             console.error('Error checking email in Firestore or signing up:', error)
         }
@@ -106,6 +111,7 @@ form.addEventListener('submit', async (e) => {
 
 resetBtn.addEventListener('click', () => {
     signUpErrorMessage.textContent = ''
+    signUpErrorMessage.classList.remove('active')
 })
 
 logoutBtn.addEventListener('click', () => {
