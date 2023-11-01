@@ -12,7 +12,8 @@ import {
     createUserWithEmailAndPassword,
     signOut,
     signInWithEmailAndPassword,
-    onAuthStateChanged
+    onAuthStateChanged,
+    sendPasswordResetEmail
 } from 'firebase/auth'
 
 const form = document.querySelector('form[data-form]')
@@ -37,6 +38,10 @@ const loginSuccessMessage = document.querySelector('[data-login-success-message]
 const signUpSuccessMessage = document.querySelector('[data-signup-success-message]')
 const signupSection = document.querySelector('[data-signup-section]')
 const calendly = document.querySelector('#calendly')
+const confirmResetButton = document.querySelector('#confirmResetButton')
+const resetForm = document.querySelector('[data-reset-form]')
+const resetSuccessModal = new bootstrap.Modal(document.getElementById('resetSuccessModalToggle'))
+const resetModal = new bootstrap.Modal(document.getElementById('resetModalToggle'))
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -123,6 +128,10 @@ logoutBtn.addEventListener('click', () => {
         })
 })
 
+confirmLoginBtn.addEventListener('click', () => {
+    document.querySelector('[data-login-form] .login').click()
+})
+
 loginForm.addEventListener('submit', async (e) => {
     e.preventDefault()
 
@@ -145,6 +154,30 @@ loginForm.addEventListener('submit', async (e) => {
             loginErrorMessage.textContent = 'An error occurred. Please try again later.'
             loginErrorMessage.classList.add('active')
         }
+    }
+})
+
+confirmResetButton.addEventListener('click', () => {
+    document.querySelector('.reset-form .reset').click()
+})
+
+resetForm.addEventListener('submit', async (e) => {
+    e.preventDefault()
+
+    const email = resetForm.email.value
+
+    try {
+        const querySnapshot = await getDocs(query(collection(db, 'Users'), where('email', '==', email)))
+
+        if (!querySnapshot.empty) {
+            await sendPasswordResetEmail(auth, email)
+            resetSuccessModal.show()
+            resetModal.hide()
+        } else {
+            console.error('Email is not signed up in our database')
+        }
+    } catch (error) {
+        console.error('Error sending the password reset email:', error)
     }
 })
 
@@ -180,10 +213,6 @@ function setEmail(email) {
     loginEmailSpan.textContent = email
     userEmail.textContent = email
 }
-
-confirmLoginBtn.addEventListener('click', () => {
-    document.querySelector('[data-login-form] .login').click()
-})
 
 cancelLoginBtn.addEventListener('click', () => {
     loginForm.reset()

@@ -478,6 +478,10 @@ input::-webkit-inner-spin-button {
         height: 40px;
         width: 40px;
     }
+
+    .login-form, .reset-form {
+        padding: 0 12px;
+    }
 }
 
 @media screen and (max-width: 376px) {
