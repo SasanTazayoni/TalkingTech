@@ -420,8 +420,30 @@ input::-webkit-inner-spin-button {
     display: none;
 }
 
-.blue {
+.pw-reset-btn {
+    margin: 0.8rem;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: var(--color-primary);
+    transition: all 0.3s;
     color: #9ac3ff;
+}
+
+.pw-reset-btn:hover {
+    color: #71aaff;
+}
+
+.reset-form {
+    padding: 0 20px;
+}
+
+.reset-form input[type="email"] {
+    width: 100%;
+}
+
+.reset {
+    display: none;
 }
 
 @media screen and (max-width: 1280px) {

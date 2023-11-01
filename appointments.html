@@ -80,8 +80,11 @@
                         <input type="email" name="email">
                         <label for="password">Password:</label>
                         <input type="password" name="password">
-                        <button class="login">login</button>
+                        <button type="submit" class="login">login</button>
                     </form>
+                    <div class="text-center">
+                        <button class="pw-reset-btn" data-bs-target="#resetModalToggle" data-bs-toggle="modal">Forgot password? Click here</button>
+                    </div>
                     <div class="error-message__container">
                         <p class="login__error" data-login-error></p>
                     </div>
@@ -127,6 +130,32 @@
                 <div class="modal-footer btn-container">
                     <button class="btn" data-bs-dismiss="modal">
                         Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Password reset modal -->
+    <div class="modal fade" id="resetModalToggle" aria-hidden="true" aria-labelledby="resetModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="resetModalToggleLabel">Reset your password</h2>
+                </div>
+                <div class="modal-body">
+                    <form class="reset-form" data-reset-form>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email">
+                        <button type="submit" class="reset">reset</button>
+                    </form>
+                    <div class="error-message__container">
+                        <p class="email__error" data-email-error></p>
+                    </div>
+                </div>
+                <div class="modal-footer btn-container">
+                    <button class="btn" id="confirmResetButton">Reset</button>
+                    <button class="btn" id="cancelResetButton" data-bs-target="#loginModalToggle" data-bs-toggle="modal">
+                        Cancel
                     </button>
                 </div>
             </div>
