@@ -43,6 +43,7 @@ const resetForm = document.querySelector('[data-reset-form]')
 const resetSuccessModal = new bootstrap.Modal(document.getElementById('resetSuccessModalToggle'))
 const resetModal = new bootstrap.Modal(document.getElementById('resetModalToggle'))
 const emailErrorMessage = document.querySelector('[data-email-error]')
+const cancelResetButton = document.querySelector('#cancelResetButton')
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -179,9 +180,9 @@ resetForm.addEventListener('submit', async (e) => {
         if (!querySnapshot.empty) {
             await sendPasswordResetEmail(auth, email)
             resetSuccessModal.show()
-            resetModal.hide()
             emailErrorMessage.textContent = ''
             emailErrorMessage.classList.remove('active')
+            resetModal.hide()
         } else {
             emailErrorMessage.textContent = 'This email is not signed up in our database.'
             emailErrorMessage.classList.add('active')
@@ -190,6 +191,15 @@ resetForm.addEventListener('submit', async (e) => {
         emailErrorMessage.textContent = 'Error sending the password reset email: ' + error.message
         emailErrorMessage.classList.add('active')
     }
+})
+
+cancelResetButton.addEventListener('click', e => {
+    e.preventDefault()
+
+    emailErrorMessage.textContent = ''
+    emailErrorMessage.classList.remove('active')
+    resetForm.reset()
+    resetModal.hide()
 })
 
 // subscribing to auth changes
