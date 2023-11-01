@@ -257,6 +257,17 @@ The Lighthouse testing results for the TalkingTech website reflect a commendable
 
 # Deployment
 
+For Node.JS:
+
+1. Go to the node [website](https://nodejs.org/en).
+2. Click on the "DOWNLOAD" tab at the top of the page.
+3. Click on the appropriate installer for your operating system (in my case it is Windows) and this will download node to your computer.
+4. Open the downloaded file and run the installation.
+5. Follow through the instructions, clicking "next" where necessary and accepting the terms.
+6. When the installation is complete, node.js will be installed into your computer.
+7. You can check your version of node in a terminal by typing in "node -v".
+8. Type "NPM init -y" to create a JSON package that will keep a record of the installation dependencies required for the project.
+
 For Firebase:
 
 1. Go to the [Firebase console](https://firebase.google.com/products-build) provided by Google.
