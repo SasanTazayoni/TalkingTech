@@ -1411,6 +1411,24 @@ input::-webkit-inner-spin-button {
     display: block;
 }
 
+.email__error {
+    text-align: center;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    font-size: 32px;
+    background: rgba(0, 0, 0, 0.4);
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    line-height: 40px;
+    margin: 1rem;
+    display: none;
+}
+
+.email__error.active {
+    display: block;
+}
+
 #calendly {
     min-width: 320px;
     height: 900px;
@@ -1440,8 +1458,12 @@ input::-webkit-inner-spin-button {
         font-size: 14px;
     }
 
-    .signup__error, .login__error {
+    .signup__error, .login__error, .email__error {
         font-size: 24px;
+    }
+
+    .email__error {
+        line-height: 30px;
     }
 }
 
@@ -1466,7 +1488,7 @@ input::-webkit-inner-spin-button {
         padding: 10px;
     }
 
-    .login__error {
+    .login__error, .email__error {
         font-size: 18px;
     }
 
@@ -1500,6 +1522,10 @@ input::-webkit-inner-spin-button {
     .signup__footnote {
         padding-top: 0.5rem;
     }
+
+    .email__error {
+        line-height: 20px;
+    }
 }
 
 @media screen and (max-width: 324px) {
@@ -1519,7 +1545,7 @@ input::-webkit-inner-spin-button {
         font-size: 16px;
     }
 
-    .login__error {
+    .login__error, .email__error {
         font-size: 16px;
         line-height: 20px;
     }
