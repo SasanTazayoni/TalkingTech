@@ -185,6 +185,7 @@ The wireframes do not fully correspond with the end product due to multiple chan
 * [Firebase](https://firebase.google.com/) used for Firestore, to store user data and Authentication to store user credentials.
 * [Webpack](https://webpack.js.org/) used as a module bundler.
 * [Responsinator](http://www.responsinator.com/) used to check if site was responsive on different screen sizes.
+* [Calendly](https://calendly.com/) used to establish appointments.
 
 # Testing
 
