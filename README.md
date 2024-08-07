@@ -187,6 +187,7 @@ The wireframes do not fully correspond with the end product due to multiple chan
 -   [Firebase](https://firebase.google.com/) used for Firestore, to store user data and Authentication to store user credentials.
 -   [Webpack](https://webpack.js.org/) used as a module bundler.
 -   [Responsinator](http://www.responsinator.com/) used to check if site was responsive on different screen sizes.
+-   [Calendly](https://calendly.com/) used to establish appointments.
 
 # Testing
 
@@ -258,6 +259,17 @@ The Lighthouse testing results for the TalkingTech website reflect a commendable
 ![Caniuse screenshot](documentation/caniuse.png)
 
 # Deployment
+
+For Node.JS:
+
+1. Go to the node [website](https://nodejs.org/en).
+2. Click on the "DOWNLOAD" tab at the top of the page.
+3. Click on the appropriate installer for your operating system (in my case it is Windows) and this will download node to your computer.
+4. Open the downloaded file and run the installation.
+5. Follow through the instructions, clicking "next" where necessary and accepting the terms.
+6. When the installation is complete, node.js will be installed into your computer.
+7. You can check your version of node in a terminal by typing in "node -v".
+8. Type "NPM init -y" to create a JSON package that will keep a record of the installation dependencies required for the project.
 
 For Firebase:
 
