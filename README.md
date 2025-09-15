@@ -1,6 +1,6 @@
 # TalkingTech
 
-![HTML](tech/html.png) ![CSS](tech/css.png) ![Javascript](tech/javascript.png) ![Bootstrap](tech/bootstrap.png) ![Firebase](tech/firebase.png) ![Webpack](tech/webpack.png) ![Node](tech/node.png)
+![HTML](tech/html.png) ![CSS](tech/css.png) ![Javascript](tech/javascript.png) ![Bootstrap](tech/bootstrap.png) ![Firebase](tech/firebase.png) ![Webpack](tech/webpack.png) ![Node](tech/node.png) ![Gitpod](tech/gitpod.png) ![ChatGPT](tech/chatgpt.png)
 
 # Introduction
 
