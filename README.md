@@ -2,6 +2,15 @@
 
 ![HTML](tech/html.png) ![CSS](tech/css.png) ![Javascript](tech/javascript.png) ![Bootstrap](tech/bootstrap.png) ![Firebase](tech/firebase.png) ![Webpack](tech/webpack.png) ![Node](tech/node.png) ![Gitpod](tech/gitpod.png) ![ChatGPT](tech/chatgpt.png)
 
+# 🎯 Quick Links
+
+- [Live Site](https://sasantazayoni.github.io/TalkingTech) - View the deployed application
+- [User Stories](#user-stories) - Full list of features and requirements
+- [Features](#current-features) - Detailed feature breakdown
+- [Technologies Used](#technologies-used) - Tech stack and tools
+- [Testing](#testing) - Testing documentation
+- [Deployment](#deployment) - Setup and deployment guide
+
 # Introduction
 
 The TalkingTech website was built with a clear purpose in mind. It is a platform that offers a range of IT consultancy services while also featuring an innovative appointment scheduling application. This README will provide you with insights into the website's primary objectives and features.
@@ -20,6 +29,36 @@ The scheduling application includes several features to enhance the user experie
 The website can be accessed [here](https://sasantazayoni.github.io/TalkingTech).
 
 ![TalkingTech on various devices](documentation/responsiveness.png)
+
+# 🔧 Key Technical Challenges Solved
+
+### 1. Firebase Authentication & User Management
+**Challenge:** Needed secure user authentication without building a custom backend.  
+**Solution:** Integrated Firebase Authentication to handle user sign-up, login, and credential storage in cloud Firestore. Implemented session management to display different UI states based on authentication status.
+
+### 2. Appointment Scheduling with Deposit System
+**Challenge:** Required professional booking system with deposit management to reduce no-shows.  
+**Solution:** Integrated Calendly API for appointment scheduling while implementing a deposit system that requires upfront commitment. Automated email reminders ensure clients stay informed about upcoming appointments.
+
+### 3. Webpack Module Bundling
+**Challenge:** Managing multiple JavaScript modules and dependencies efficiently for production deployment.  
+**Solution:** Configured Webpack as module bundler to optimize code, bundle dependencies, and improve loading performance. This ensured clean, maintainable code structure while delivering optimized assets to users.
+
+### 4. Dynamic Service Carousel with Modals
+**Challenge:** Presenting multiple IT services in an engaging, interactive format without overwhelming users.  
+**Solution:** Built custom carousel with animated borders and tab-based navigation. Each service tab opens a detailed modal, allowing users to explore services at their own pace while maintaining clean interface.
+
+### 5. Automated Email Notifications
+**Challenge:** Ensuring clients receive timely appointment confirmations and reminders without manual intervention.  
+**Solution:** Integrated automated email system using Formspree for contact form and Calendly's built-in notifications for appointment reminders, reducing last-minute cancellations and improving customer communication.
+
+### 6. Responsive Design Across All Devices
+**Challenge:** IT consultancy clients access services from various devices (phones, tablets, desktops).  
+**Solution:** Implemented Bootstrap framework with custom responsive breakpoints, thorough testing across 10+ devices and browsers, and mobile-first design approach ensuring consistent experience everywhere.
+
+### 7. Form Backend Without Custom Server
+**Challenge:** Needed functional contact form without building and maintaining backend infrastructure.  
+**Solution:** Integrated Formspree API to handle form submissions and route enquiries directly to business owner's email, providing reliable contact functionality with minimal overhead.
 
 # User experience (UX)
 
