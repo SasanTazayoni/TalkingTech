@@ -13,7 +13,7 @@
 
 # Introduction
 
-The TalkingTech website was built with a clear purpose in mind. It is a platform that offers a range of IT consultancy services while also featuring an innovative appointment scheduling application. This README will provide you with insights into the website's primary objectives and features.
+The TalkingTech website was built with a clear purpose in mind. It is a platform that offers a range of IT consultancy services while also featuring an innovative appointment scheduling application. This README will provide you with insights into the website's primary objectives and features. This full-stack application combines Firebase authentication, Calendly integration, and automated email workflows to create a comprehensive business solution for IT consulting services.
 
 This project serves two core objectives:
 
