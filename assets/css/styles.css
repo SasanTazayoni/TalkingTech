@@ -180,7 +180,7 @@ input::-webkit-inner-spin-button {
 /* Blocks */
 
 .block-top {
-    padding: 5rem 0;
+    padding: 3rem 0;
 }
 
 .block {
@@ -358,9 +358,13 @@ input::-webkit-inner-spin-button {
 }
 
 .user-status__container {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+}
+
+.user-status__container:has(.logout-btn.logged-in) {
+    display: flex;
     position: absolute;
     top: 110%;
     right: 50%;

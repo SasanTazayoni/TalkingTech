@@ -24,7 +24,6 @@ const signUpErrorMessage = document.querySelector('[data-signup-error]')
 const loginErrorMessage = document.querySelector('[data-login-error]')
 const resetBtn = document.querySelector('[data-reset]')
 const loginForm = document.querySelector('[data-login-form]')
-const loginBtn = document.querySelector('[data-login-btn]')
 const logoutBtn = document.querySelector('[data-logout-btn]')
 const confirmLoginBtn = document.querySelector('#loginButton')
 const cancelLoginBtn = document.querySelector('#cancelButton')
@@ -206,7 +205,6 @@ onAuthStateChanged(auth, (user) => {
 
     if (user) {
         userStatus.classList.add('logged-in')
-        loginBtn.classList.add('logged-in')
         logoutBtn.classList.add('logged-in')
         blockTopElement.classList.remove('logged-out')
         calendly.classList.add('logged-in')
@@ -215,7 +213,6 @@ onAuthStateChanged(auth, (user) => {
         setEmail(user.email)
     } else {
         userStatus.classList.remove('logged-in')
-        loginBtn.classList.remove('logged-in')
         logoutBtn.classList.remove('logged-in')
         blockTopElement.classList.add('logged-out')
         calendly.classList.remove('logged-in')

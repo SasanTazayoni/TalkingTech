@@ -32,9 +32,6 @@ function injectNavbar() {
     <p class="user-status" data-user-status>
       Logged in as <span class="user-email">verylongemailexample@gmail.com</span>
     </p>
-    <button class="btn login-btn" data-login-btn data-bs-target="#loginModalToggle" data-bs-toggle="modal">
-      Log in
-    </button>
     <button class="btn logout-btn" data-logout-btn>Log out</button>
   </div>` : ''
 
