@@ -225,7 +225,6 @@ The wireframes do not fully correspond with the end product due to multiple chan
 - [Bootstrap](https://getbootstrap.com/) used for standard styling convention and break points.
 - [Firebase](https://firebase.google.com/) used for Firestore, to store user data and Authentication to store user credentials.
 - [Webpack](https://webpack.js.org/) used as a module bundler.
-- [Responsinator](http://www.responsinator.com/) used to check if site was responsive on different screen sizes.
 - [Calendly](https://calendly.com/) used to establish appointments.
 
 # Testing
@@ -275,15 +274,6 @@ The wireframes do not fully correspond with the end product due to multiple chan
   - Microsoft Edge
   - Opera
   - Brave
-
-## Responsinator
-
-When there were browsers that were inaccessible at the time of testing, responsinator was used to make sure that the website was fully responsive on all devices. The results can be viewed for the following:
-
-[Home page](http://www.responsinator.com/?url=https%3A%2F%2Fsasantazayoni.github.io%2FTalkingTech%2Findex.html) <br >
-[FAQ page](http://www.responsinator.com/?url=https%3A%2F%2Fsasantazayoni.github.io%2FTalkingTech%2Ffaq.html) <br >
-[Appointments page](http://www.responsinator.com/?url=https%3A%2F%2Fsasantazayoni.github.io%2FTalkingTech%2Fappointments.html) <br >
-[Contact page](http://www.responsinator.com/?url=https%3A%2F%2Fsasantazayoni.github.io%2FTalkingTech%2Fcontact.html) <br >
 
 ## Lighthouse testing
 
