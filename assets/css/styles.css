@@ -1117,8 +1117,48 @@ input::-webkit-inner-spin-button {
 
 /* Footer */
 
+.terms__content {
+    max-width: 720px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.terms__content h2 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.terms__content p,
+.terms__content ul {
+    color: var(--color-secondary);
+}
+
+.terms__content a {
+    color: #9ac3ff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.terms__content ul {
+    padding-left: 1.5rem;
+}
+
 .footer {
     text-align: center;
+}
+
+.footer__link {
+    display: block;
+    color: var(--color-secondary);
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color 0.3s;
+}
+
+.footer__link:hover {
+    color: var(--color-secondary);
+    text-decoration-color: currentColor;
 }
 
 .footer__text {

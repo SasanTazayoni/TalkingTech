@@ -44,7 +44,7 @@ jobs:
       - name: Prepare deploy directory
         run: |
           mkdir -p _site
-          cp -r index.html faq.html appointments.html contact.html assets dist site.webmanifest _site/
+          cp -r index.html faq.html appointments.html contact.html terms.html assets dist site.webmanifest _site/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

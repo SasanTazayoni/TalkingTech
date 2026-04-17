@@ -66,6 +66,7 @@ function injectFooter() {
 
   placeholder.outerHTML = `<footer class="footer mt-auto py-3 bg-dark">
   <div class="container">
+    <a href="terms.html" class="footer__link">Terms &amp; Conditions</a>
     <span class="footer__text">
       &copy; TalkingTech 2022. All rights reserved
       <a href="https://github.com/SasanTazayoni/TalkingTech" target="_blank" rel="noopener" class="github-link" aria-label="Github profile link">
