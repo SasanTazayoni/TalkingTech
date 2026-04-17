@@ -9,9 +9,11 @@ questions.forEach(function(question) {
         questions.forEach(function(item) {
             if (item !== question) {
                 item.classList.remove('show-text')
+                item.querySelector('.question__btn').setAttribute('aria-expanded', 'false')
             }
         })
 
-        question.classList.toggle('show-text')
+        const isExpanded = question.classList.toggle('show-text')
+        btn.setAttribute('aria-expanded', isExpanded ? 'true' : 'false')
     })
 })
