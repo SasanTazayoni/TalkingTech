@@ -45,14 +45,13 @@ const resetModal = new bootstrap.Modal(document.getElementById('resetModalToggle
 const emailErrorMessage = document.querySelector('[data-email-error]')
 const cancelResetButton = document.querySelector('#cancelResetButton')
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCbhyBW7m8Anzi5xD-NwzVcWAViETcY3Qw",
-  authDomain: "talkingtech-df5d4.firebaseapp.com",
-  projectId: "talkingtech-df5d4",
-  storageBucket: "talkingtech-df5d4.appspot.com",
-  messagingSenderId: "619342140520",
-  appId: "1:619342140520:web:c210dd45a2f16f89de57dd"
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID
 }
 
 // Initialise firebase
