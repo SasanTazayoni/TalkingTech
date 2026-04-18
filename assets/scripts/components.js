@@ -69,6 +69,7 @@ function injectFooter() {
     <div class="footer__links">
       <a href="terms.html" class="footer__link">Terms &amp; Conditions</a>
       <a href="cookie-policy.html" class="footer__link">Cookie Policy</a>
+      <a href="privacy-policy.html" class="footer__link">Privacy Policy</a>
     </div>
     <span class="footer__text">
       &copy; TalkingTech 2022. All rights reserved

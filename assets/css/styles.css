@@ -1175,7 +1175,7 @@ input::-webkit-inner-spin-button {
 .terms__content a {
   color: #9ac3ff;
   font-weight: 600;
-  text-decoration: none;
+  text-decoration: underline;
   transition: all 0.3s;
 }
 
@@ -1204,6 +1204,7 @@ input::-webkit-inner-spin-button {
 
 .footer__link {
   color: var(--color-secondary);
+  font-size: 14px;
   font-weight: 600;
   text-decoration: underline;
   text-decoration-color: transparent;
@@ -1244,7 +1245,7 @@ input::-webkit-inner-spin-button {
 @media screen and (max-width: 768px) {
   .footer__links {
     flex-direction: column;
-    gap: 0;
+    gap: 8px;
   }
 
   .footer__link {
@@ -1558,6 +1559,7 @@ input::-webkit-inner-spin-button {
 
 .small-screen__link {
   color: #9ac3ff;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 1024px) {
