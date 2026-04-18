@@ -1,11 +1,12 @@
-const buttons = document.querySelectorAll("[data-carousel-button")
+const buttons = document.querySelectorAll("[data-carousel-button]")
 const nextCarouselButton = document.querySelector('[data-carousel-button="next"]')
 const testimonialButtons = document.querySelectorAll('[data-testimonial-button]')
 const nextTestimonialButton = document.querySelector('[data-testimonial-button="next"]')
 const testimonialTabs = document.querySelectorAll('.testimonial__tab')
 let nextInterval
 let nextTestimonialInterval
-let intervalDelay
+let carouselDelay
+let testimonialDelay
 
 // Interval delays between carousel slides
 
@@ -85,8 +86,8 @@ function resetAutoAdvance() {
     if (nextInterval) {
         clearInterval(nextInterval)
     }
-    if (intervalDelay) {
-        clearTimeout(intervalDelay)
+    if (carouselDelay) {
+        clearTimeout(carouselDelay)
     }
     initialiseCarouselAdvanceDelay()
 }
@@ -94,7 +95,7 @@ function resetAutoAdvance() {
 // Carousel delay timer
 
 function initialiseCarouselAdvanceDelay() {
-    intervalDelay = setTimeout(function() {
+    carouselDelay = setTimeout(function() {
         initialiseCarouselAutoAdvance()
     }, 6000)
 }
@@ -160,7 +161,7 @@ testimonialTabs.forEach(tab => {
         const activeTestimonial = testimonials.querySelector("[data-active]")
         const activeTab = tabs.querySelector("[data-active]")
 
-        if (index != undefined) {
+        if (!isNaN(index)) {
             if (!testimonials.children[index].dataset.active) {
                 testimonials.children[index].dataset.active = true
                 delete activeTestimonial.dataset.active
@@ -179,8 +180,8 @@ function resetTestimonialAutoAdvance() {
     if (nextTestimonialInterval) {
         clearInterval(nextTestimonialInterval)
     }
-    if (intervalDelay) {
-        clearTimeout(intervalDelay)
+    if (testimonialDelay) {
+        clearTimeout(testimonialDelay)
     }
     initialiseTestimonialAdvanceDelay()
 }
@@ -188,7 +189,7 @@ function resetTestimonialAutoAdvance() {
 // Testimonials delay timer
 
 function initialiseTestimonialAdvanceDelay() {
-    intervalDelay = setTimeout(function() {
+    testimonialDelay = setTimeout(function() {
         initialiseTestimonialAutoAdvance()
     }, 8000)
 }
