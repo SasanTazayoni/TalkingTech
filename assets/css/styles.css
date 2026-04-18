@@ -307,6 +307,7 @@ input::-webkit-inner-spin-button {
 .card__header {
   text-align: center;
   padding-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -1335,15 +1336,12 @@ input::-webkit-inner-spin-button {
 .answer__text {
   padding: 1rem 0 1.5rem 0;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
+  display: none;
 }
 
 .answer__text p {
   margin-bottom: 0;
   overflow: hidden;
-}
-
-.answer__text {
-  display: none;
 }
 
 .show-text .answer__text {
@@ -1520,13 +1518,12 @@ input::-webkit-inner-spin-button {
   color: var(--color-tertiary-hover);
 }
 
-.login__error {
+.form__error {
   text-align: center;
   color: rgb(255, 0, 0);
   font-weight: bold;
   font-size: 32px;
   background: rgba(0, 0, 0, 0.4);
-  display: inline-block;
   padding: 10px;
   border-radius: 10px;
   line-height: 40px;
@@ -1534,25 +1531,7 @@ input::-webkit-inner-spin-button {
   display: none;
 }
 
-.login__error.active {
-  display: block;
-}
-
-.email__error {
-  text-align: center;
-  color: rgb(255, 0, 0);
-  font-weight: bold;
-  font-size: 32px;
-  background: rgba(0, 0, 0, 0.4);
-  display: inline-block;
-  padding: 10px;
-  border-radius: 10px;
-  line-height: 40px;
-  margin: 1rem;
-  display: none;
-}
-
-.email__error.active {
+.form__error.active {
   display: block;
 }
 
@@ -1586,12 +1565,11 @@ input::-webkit-inner-spin-button {
   }
 
   .signup__error,
-  .login__error,
-  .email__error {
+  .form__error {
     font-size: 24px;
   }
 
-  .email__error {
+  .form__error {
     line-height: 30px;
   }
 }
@@ -1617,8 +1595,7 @@ input::-webkit-inner-spin-button {
     padding: 10px;
   }
 
-  .login__error,
-  .email__error {
+  .form__error {
     font-size: 18px;
   }
 
@@ -1653,7 +1630,7 @@ input::-webkit-inner-spin-button {
     padding-top: 0.5rem;
   }
 
-  .email__error {
+  .form__error {
     line-height: 20px;
   }
 }
@@ -1675,8 +1652,7 @@ input::-webkit-inner-spin-button {
     font-size: 16px;
   }
 
-  .login__error,
-  .email__error {
+  .form__error {
     font-size: 16px;
     line-height: 20px;
   }
@@ -1729,10 +1705,6 @@ input::-webkit-inner-spin-button {
   display: flex;
   justify-content: center;
   width: 100%;
-}
-
-.card__header {
-  margin-bottom: 0;
 }
 
 .fees-card {
