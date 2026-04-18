@@ -50,10 +50,10 @@
         <h3 class="slide__title" data-index="7">Online Support</h3>
       </header>
       <!-- Carousel controls -->
-      <button class="carousel__button prev" data-carousel-button="prev">
+      <button class="carousel__button prev" data-carousel-button="prev" aria-label="Previous slide">
         &#8656;
       </button>
-      <button class="carousel__button next" data-carousel-button="next">
+      <button class="carousel__button next" data-carousel-button="next" aria-label="Next slide">
         &#8658;
       </button>
       <!-- Carousel images -->
@@ -64,7 +64,7 @@
             srcset="assets/images/consultancy-medium.webp 1000w,
                     assets/images/consultancy-large.webp 1500w,
                     assets/images/consultancy.webp 2000w"
-            sizes="100vw"
+            sizes="(min-width: 1200px) 1200px, 100vw"
             alt="Consultancy & advice image"
           >
         </li>
@@ -73,7 +73,7 @@
             src="assets/images/recovery.webp"
             srcset="assets/images/recovery-small.webp 500w,
                     assets/images/recovery.webp 1000w"
-            sizes="100vw"
+            sizes="(min-width: 1200px) 1200px, 100vw"
             alt="Data backup & recovery image"
           >
         </li>
@@ -82,7 +82,7 @@
             src="assets/images/malware.webp"
             srcset="assets/images/malware-small.webp 500w,
                     assets/images/malware.webp 820w"
-            sizes="100vw"
+            sizes="(min-width: 1200px) 1200px, 100vw"
             alt="Virus & malware removal image"
           >
         </li>
@@ -93,7 +93,7 @@
                     assets/images/performance-medium.webp 1000w,
                     assets/images/performance-large.webp 1500w,
                     assets/images/performance.webp 2000w"
-            sizes="100vw"
+            sizes="(min-width: 1200px) 1200px, 100vw"
             alt="Performance optimisation image"
           >
         </li>
@@ -104,7 +104,7 @@
                     assets/images/hardware-medium.webp 1000w,
                     assets/images/hardware-large.webp 1500w,
                     assets/images/hardware.webp 2000w"
-            sizes="100vw"
+            sizes="(min-width: 1200px) 1200px, 100vw"
             alt="Hardware maintenance & upgrades image"
           >
         </li>
@@ -113,7 +113,7 @@
             src="assets/images/network.webp"
             srcset="assets/images/network-small.webp 500w,
                     assets/images/network.webp 800w"
-            sizes="100vw"
+            sizes="(min-width: 1200px) 1200px, 100vw"
             alt="Network setups image"
           >
         </li>
@@ -122,7 +122,7 @@
             src="assets/images/software.webp"
             srcset="assets/images/software-small.webp 500w,
                     assets/images/software.webp 969w"
-            sizes="100vw"
+            sizes="(min-width: 1200px) 1200px, 100vw"
             alt="Software upgrade image"
           >
         </li>
@@ -131,7 +131,7 @@
             src="assets/images/onlinesupport.webp"
             srcset="assets/images/onlinesupport-small.webp 500w,
                     assets/images/onlinesupport.webp 1024w"
-            sizes="100vw"
+            sizes="(min-width: 1200px) 1200px, 100vw"
             alt="Online support image"
           >
         </li>
@@ -145,6 +145,7 @@
           data-bs-toggle="modal"
           data-index="0"
           aria-label="Open Consultancy & Advice Modal"
+          aria-pressed="true"
           data-active
         ></button>
         <button
@@ -154,6 +155,7 @@
           data-bs-toggle="modal"
           data-index="1"
           aria-label="Open Data Backup & Recovery Modal"
+          aria-pressed="false"
         ></button>
         <button
           class="carousel__tab"
@@ -162,6 +164,7 @@
           data-bs-toggle="modal"
           data-index="2"
           aria-label="Open Virus & Malware Removals Modal"
+          aria-pressed="false"
         ></button>
         <button
           class="carousel__tab"
@@ -170,6 +173,7 @@
           data-bs-toggle="modal"
           data-index="3"
           aria-label="Open Performance Optimisation Modal"
+          aria-pressed="false"
         ></button>
         <button
           class="carousel__tab"
@@ -178,6 +182,7 @@
           data-bs-toggle="modal"
           data-index="4"
           aria-label="Open Hardware Maintenance Modal"
+          aria-pressed="false"
         ></button>
         <button
           class="carousel__tab"
@@ -186,6 +191,7 @@
           data-bs-toggle="modal"
           data-index="5"
           aria-label="Open Network Setups Modal"
+          aria-pressed="false"
         ></button>
         <button
           class="carousel__tab"
@@ -194,6 +200,7 @@
           data-bs-toggle="modal"
           data-index="6"
           aria-label="Open Software Upgrades Modal"
+          aria-pressed="false"
         ></button>
         <button
           class="carousel__tab"
@@ -202,6 +209,7 @@
           data-bs-toggle="modal"
           data-index="7"
           aria-label="Open Online Support Modal"
+          aria-pressed="false"
         ></button>
       </div>
     </div>
@@ -438,9 +446,9 @@
         </div>
         <!-- Testimonial tabs -->
         <div class="testimonial__tabs" data-testimonial-tabs>
-          <div class="testimonial__tab" data-index="0" data-active></div>
-          <div class="testimonial__tab" data-index="1"></div>
-          <div class="testimonial__tab" data-index="2"></div>
+          <button class="testimonial__tab" data-index="0" data-active aria-label="Testimonial 1" aria-pressed="true"></button>
+          <button class="testimonial__tab" data-index="1" aria-label="Testimonial 2" aria-pressed="false"></button>
+          <button class="testimonial__tab" data-index="2" aria-label="Testimonial 3" aria-pressed="false"></button>
         </div>
         <!-- Testimonial controls -->
         <button

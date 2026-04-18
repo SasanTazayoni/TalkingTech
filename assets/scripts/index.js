@@ -69,6 +69,8 @@ function clickButton(button, auto) {
     if (tabIndex >= dataTabs.children.length) tabIndex = 0
 
     dataTabs.children[tabIndex].dataset.active = true
+    activeTab.setAttribute('aria-pressed', 'false')
+    dataTabs.children[tabIndex].setAttribute('aria-pressed', 'true')
     delete activeTab.dataset.active
 }
 
@@ -137,6 +139,8 @@ function clickTestimonialButton(button, auto) {
     if (tabIndex >= tabs.children.length) tabIndex = 0
 
     tabs.children[tabIndex].dataset.active = true
+    activeTab.setAttribute('aria-pressed', 'false')
+    tabs.children[tabIndex].setAttribute('aria-pressed', 'true')
     delete activeTab.dataset.active
 }
 
@@ -168,6 +172,8 @@ testimonialTabs.forEach(tab => {
             }
             if (!tabs.children[index].dataset.active) {
                 tabs.children[index].dataset.active = true
+                activeTab.setAttribute('aria-pressed', 'false')
+                tabs.children[index].setAttribute('aria-pressed', 'true')
                 delete activeTab.dataset.active
             }
         }
