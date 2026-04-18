@@ -118,18 +118,18 @@ resetBtn.addEventListener('click', () => {
     signUpErrorMessage.classList.remove('active')
 })
 
-logoutBtn.addEventListener('click', () => {
-    signOut(auth)
-        .then(() => {
-            logoutModal.show()
-        })
-        .catch((err) => {
-            console.log(err.message)
-        })
+logoutBtn.addEventListener('click', async () => {
+    try {
+        await signOut(auth)
+        logoutModal.show()
+    } catch (err) {
+        console.error('Sign-out failed:', err)
+        alert('Sign-out failed. Please try again.')
+    }
 })
 
 confirmLoginBtn.addEventListener('click', () => {
-    document.querySelector('[data-login-form] .login').click()
+    loginForm.requestSubmit()
 })
 
 loginForm.addEventListener('submit', async (e) => {
@@ -158,7 +158,7 @@ loginForm.addEventListener('submit', async (e) => {
 })
 
 confirmResetButton.addEventListener('click', () => {
-    document.querySelector('.reset-form .reset').click()
+    resetForm.requestSubmit()
 })
 
 resetForm.addEventListener('submit', async (e) => {
@@ -173,20 +173,14 @@ resetForm.addEventListener('submit', async (e) => {
     }
 
     try {
-        const querySnapshot = await getDocs(query(collection(db, 'Users'), where('email', '==', email)))
-
-        if (!querySnapshot.empty) {
-            await sendPasswordResetEmail(auth, email)
-            resetSuccessModal.show()
-            emailErrorMessage.textContent = ''
-            emailErrorMessage.classList.remove('active')
-            resetModal.hide()
-        } else {
-            emailErrorMessage.textContent = 'This email is not signed up in our database.'
-            emailErrorMessage.classList.add('active')
-        }
+        await sendPasswordResetEmail(auth, email)
+        resetSuccessModal.show()
+        emailErrorMessage.textContent = ''
+        emailErrorMessage.classList.remove('active')
+        resetModal.hide()
     } catch (error) {
-        emailErrorMessage.textContent = 'Error sending the password reset email: ' + error.message
+        console.error('Password reset error:', error)
+        emailErrorMessage.textContent = 'An error occurred. Please try again later.'
         emailErrorMessage.classList.add('active')
     }
 })
