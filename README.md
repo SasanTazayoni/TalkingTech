@@ -314,7 +314,7 @@ For Firebase:
 For deployment of the website:
 
 1. Log into [GitHub](https://github.com/).
-2. Locate the [repository](https://github.com/SasanTazayoni/Rock-paper-scissors-lizard-spock-game-CI-PP2).
+2. Locate the [repository](https://github.com/SasanTazayoni/TalkingTech).
 3. Locate the settings option along the options bar at the top of the page.
 4. Locate the 'Pages' option on the left side bar and click on it.
 5. Under the 'Branch' subheading there should be a drop-down menu - select 'Master' from the branch options.
