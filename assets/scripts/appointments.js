@@ -2,10 +2,7 @@ import { initializeApp } from 'firebase/app'
 import {
     getFirestore,
     collection,
-    getDocs,
-    addDoc,
-    query,
-    where
+    addDoc
 } from 'firebase/firestore'
 import {
     getAuth,
@@ -83,38 +80,30 @@ form.addEventListener('submit', async (e) => {
         signUpErrorMessage.textContent = ''
         signUpErrorMessage.classList.remove('active')
         try {
-            // Check if email already exists
-            const querySnapshot = await getDocs(query(collection(db, 'Users'), where('email', '==', emailInput)))
-            if (!querySnapshot.empty) {
-                signUpErrorMessage.textContent = 'Email already in use'
-                signUpErrorMessage.classList.add('active')
-            } else {
-                await createUserWithEmailAndPassword(auth, emailInput, passwordInput)
+            await createUserWithEmailAndPassword(auth, emailInput, passwordInput)
 
-                await addDoc(colRef, {
-                    firstname: form.fname.value,
-                    lastname: form.lname.value,
-                    email: emailInput,
-                    phone: form.contact.value,
-                    address: form.address.value,
-                    address2: form.address2.value,
-                    postcode: form.postcode.value
-                })
-                form.reset()
+            await addDoc(colRef, {
+                firstname: form.fname.value,
+                lastname: form.lname.value,
+                email: emailInput,
+                phone: form.contact.value,
+                address: form.address.value,
+                address2: form.address2.value,
+                postcode: form.postcode.value
+            })
+            form.reset()
 
-                signupModal.show()
-            }
+            signupModal.show()
         } catch (error) {
             if (error.code === 'auth/email-already-in-use') {
-                signUpErrorMessage.textContent =
-                'There is a problem with your account. Please contact TalkingTech.'
+                signUpErrorMessage.textContent = 'Email already in use.'
                 signUpErrorMessage.classList.add('active')
             } else {
                 signUpErrorMessage.textContent =
                 'An error occurred during sign-up. Please try again later.'
                 signUpErrorMessage.classList.add('active')
             }
-            console.error('Error checking email in Firestore or signing up:', error)
+            console.error('Sign-up error:', error)
         }
     }
 })

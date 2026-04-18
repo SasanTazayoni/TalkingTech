@@ -1483,7 +1483,7 @@ input::-webkit-inner-spin-button {
   text-align: center;
   color: rgb(255, 0, 0);
   font-weight: bold;
-  font-size: 32px;
+  font-size: 20px;
   background: rgba(0, 0, 0, 0.4);
   display: none;
   padding: 0 20px;
@@ -1522,11 +1522,11 @@ input::-webkit-inner-spin-button {
   text-align: center;
   color: rgb(255, 0, 0);
   font-weight: bold;
-  font-size: 32px;
+  font-size: 20px;
   background: rgba(0, 0, 0, 0.4);
   padding: 10px;
   border-radius: 10px;
-  line-height: 40px;
+  line-height: 1.4;
   margin: 1rem;
   display: none;
 }
@@ -1564,14 +1564,6 @@ input::-webkit-inner-spin-button {
     font-size: 14px;
   }
 
-  .signup__error,
-  .form__error {
-    font-size: 24px;
-  }
-
-  .form__error {
-    line-height: 30px;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1630,9 +1622,6 @@ input::-webkit-inner-spin-button {
     padding-top: 0.5rem;
   }
 
-  .form__error {
-    line-height: 20px;
-  }
 }
 
 @media screen and (max-width: 324px) {
@@ -1654,7 +1643,6 @@ input::-webkit-inner-spin-button {
 
   .form__error {
     font-size: 16px;
-    line-height: 20px;
   }
 
   .signup__footnote {
