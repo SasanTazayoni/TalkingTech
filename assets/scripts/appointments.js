@@ -53,6 +53,12 @@ const firebaseConfig = {
   appId: process.env.FIREBASE_APP_ID
 }
 
+const calendlyUsername = document.getElementById('calendly').dataset.calendlyUsername
+const calendlyFallbackLink = document.getElementById('calendly-fallback-link')
+const calendlyUrl = `https://calendly.com/${calendlyUsername}`
+calendlyFallbackLink.href = calendlyUrl
+calendlyFallbackLink.textContent = calendlyUrl
+
 // Initialise firebase
 initializeApp(firebaseConfig)
 
