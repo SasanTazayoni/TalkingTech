@@ -22,7 +22,6 @@ This project serves two core objectives:
 
 The scheduling application includes several features to enhance the user experience and minimise last-minute cancellations:
 
-- **Deposit System**: Clients can be required to make a deposit when booking appointments. This deposit can be refunded or applied towards the service fee upon completion of the appointment, ensuring commitment.
 - **Appointment Booking**: Clients can browse the consultant's availability, select suitable time slots, and submit their appointment requests through an intuitive interface.
 - **Automated Appointment Reminders**: To reduce last-minute cancellations, the system sends automated reminders to clients via email, keeping them well-informed about upcoming appointments.
 
@@ -36,9 +35,9 @@ The website can be accessed [here](https://sasantazayoni.github.io/TalkingTech).
 **Challenge:** Needed secure user authentication without building a custom backend.  
 **Solution:** Integrated Firebase Authentication to handle user sign-up, login, and credential storage in cloud Firestore. Implemented session management to display different UI states based on authentication status.
 
-### 2. Appointment Scheduling with Deposit System
-**Challenge:** Required professional booking system with deposit management to reduce no-shows.  
-**Solution:** Integrated Calendly API for appointment scheduling while implementing a deposit system that requires upfront commitment. Automated email reminders ensure clients stay informed about upcoming appointments.
+### 2. Appointment Scheduling
+**Challenge:** Required a professional booking system accessible only to registered users.  
+**Solution:** Integrated Calendly for appointment scheduling, embedded directly in the appointments page and accessible only after Firebase Authentication. Calendly's built-in email reminders keep clients informed about upcoming appointments.
 
 ### 3. Webpack Module Bundling
 **Challenge:** Managing multiple JavaScript modules and dependencies efficiently for production deployment.  
