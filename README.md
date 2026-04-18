@@ -23,7 +23,7 @@ This project serves two core objectives:
 The scheduling application includes several features to enhance the user experience and minimise last-minute cancellations:
 
 - **Appointment Booking**: Clients can browse the consultant's availability, select suitable time slots, and submit their appointment requests through an intuitive interface.
-- **Automated Appointment Reminders**: To reduce last-minute cancellations, the system sends automated reminders to clients via email, keeping them well-informed about upcoming appointments.
+- **Automated Appointment Reminders**: To reduce last-minute cancellations, Calendly automatically sends email reminders to clients ahead of their appointments.
 
 The website can be accessed [here](https://sasantazayoni.github.io/TalkingTech).
 
